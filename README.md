@@ -42,6 +42,8 @@ python examples/newton/example_idss_docking.py # full docking sequence, live loa
 python examples/newton/example_idss_docking.py --offset 0.08 --misalign 3 --closing-speed 0.1 --undock-after 5
 ```
 
+![The Newton docking example running in the Newton RTX viewer, from approach through soft capture, retraction and hard capture](docs/images/newton_docking.gif)
+
 The example loads `assets/ida/ida.usda` (fixed to the station) and `assets/nds/nds.usda` (on a free-floating 13 t crew vehicle in zero g). It runs the IDSS/NDS concept of operations as a state machine:
 
 1. Approach
@@ -54,8 +56,6 @@ The example loads `assets/ida/ida.usda` (fixed to the station) and `assets/nds/n
 8. Optional undocking
 
 Initial conditions default to the IDSS capture envelope: 0.08 m/s closing speed, 40 mm lateral offset and 2° misalignment. Press `u` to undock.
-
-![The Newton docking example running in the Newton RTX viewer, from approach through soft capture, retraction and hard capture](docs/images/newton_docking.gif)
 
 ### Stewart platform example
 

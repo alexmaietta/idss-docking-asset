@@ -33,7 +33,9 @@
 # Initial conditions default to the IDSS IDD capture envelope (closing
 # 0.05-0.10 m/s, lateral offset up to 0.10 m, misalignment up to 4 deg).
 #
-# Keys: u undock, r restart. The GUI shows the docking phase and live loads.
+# Keys: u undock, x x-ray. The panel shows the docking phase, live interface
+# measurements and loads, and an x-ray toggle that makes the fixed IDA and NDS
+# structure see-through so the latches, guide pins and hooks stay visible.
 #
 # Command (from the idss repo root):
 #   python examples/newton/example_idss_docking.py
@@ -81,6 +83,32 @@ PHASES = ["approach", "contact", "capture failed", "captured", "attenuate", "ali
           "docked", "undock", "separated", "diverged"]
 (APPROACH, CONTACT, CAPTURE_FAILED, CAPTURED, ATTENUATE, ALIGN, RETRACT, HOOK1, HOOK2, DOCKED, UNDOCK, SEPARATED,
  DIVERGED) = range(len(PHASES))
+SEQUENCE = ["approach", "contact", "captured", "attenuate", "align", "retract", "hook gang 1", "hook gang 2", "docked"]
+EXPLAIN = {
+    "approach": "Closing on the IDA; NDS ring extended to ready-to-capture.",
+    "contact": "Guide petals slide over the IDA petals; the compliant ring aligns itself and is pressed home.",
+    "capture failed": "The latches did not all pass their striker steps in time.",
+    "captured": "All three capture latches are past the 2 mm striker steps: soft capture.",
+    "attenuate": "Soft, heavily damped actuators absorb the residual relative motion.",
+    "align": "The hexapod nulls the lateral and angular offsets, swinging the vehicle into line.",
+    "retract": "The ring reels the vehicle in; the guide pins seat in their receptacles.",
+    "hook gang 1": "Gang 1 swings over the passive hooks, then pulls down to preload them.",
+    "hook gang 2": "Gang 2 closes and preloads: the interface is clamped and the seals compressed.",
+    "docked": "Hard docked: 12 hooks preloaded, interface sealed.",
+    "undock": "Hooks open and the capture latches release.",
+    "separated": "The spring separators have pushed the vehicle away.",
+    "diverged": "The simulation diverged; try more --substeps.",
+}
+PRELOAD_BAND = (12 * 31e3, 12 * 44e3)   # IDSS total hook preload, 12 hooks at 31-44 kN [N]
+# x-ray: the fixed structure (merged base-body meshes, by material) and the dressing turn see-through
+XRAY_TOKENS = {
+    "ida_base": ("mli", "hcs", "aluminium", "aluminium_machined", "seal_land", "target", "handrail", "connector"),
+    "nds_base": ("hcs", "iridite", "aluminium_machined", "black_anodize", "seal_silicone", "steel"),
+}
+XRAY_DRESSING = ("visiting_vehicle", "pma_stub")
+# panel colours (RGBA): text stays neutral; the accent marks the phase and progress, green only with a label
+C_MUTED, C_ACCENT, C_GOOD, C_WARN = (0.60, 0.60, 0.58, 1.0), (0.42, 0.66, 0.98, 1.0), (0.30, 0.78, 0.36, 1.0), \
+    (0.98, 0.70, 0.25, 1.0)
 EV_LATCH, EV_LOCKED, EV_DOCKED = 20, 30, 31  # non-phase event codes (latch k past its step: EV_LATCH + k)
 # solver DOF-property sets (gains, effort limits, limit stiffness), one per stage of the sequence
 CFG_CAPTURE, CFG_BRAKE, CFG_ATTENUATE, CFG_ALIGN, CFG_RELEASE = range(5)
@@ -573,6 +601,7 @@ class Example:
 
         self._build_dof_configs()
         self._init_controller()
+        self._init_xray()
         self.viewer.set_model(self.model)
         self.viewer.show_contacts = args.show_contacts
         self.capture()
@@ -636,6 +665,31 @@ class Example:
         b.body_inv_inertia[i] = wp.mat33(*np.linalg.inv(inertia).flatten())
         b.add_shape_mesh(i, mesh=vehicle_mesh(), cfg=newton.ModelBuilder.ShapeConfig(has_shape_collision=False),
                          color=(0.86, 0.86, 0.84), label="visiting_vehicle")
+
+    def _init_xray(self):
+        """Shapes the x-ray toggle fades: the fixed IDA / NDS structure and the dressing (moving parts stay solid)."""
+        body, labels, blabels = self.model.shape_body.numpy(), list(self.model.shape_label), list(self.model.body_label)
+        idx = []
+        for i, lab in enumerate(labels):
+            name = lab.rsplit("/", 1)[-1]
+            b = blabels[body[i]].rsplit("/", 1)[-1] if body[i] >= 0 else ""
+            mat = name.split("__", 1)[1] if "__" in name else ""
+            if (b in XRAY_TOKENS and mat.startswith(XRAY_TOKENS[b])) or name in XRAY_DRESSING:
+                idx.append(i)
+        self._xray_shapes = np.array(idx, dtype=int)
+        self._opacity0 = self.model.shape_opacity.numpy().copy()
+        self.xray, self.xray_opacity, self._x_down = self.args.xray, 0.2, False
+        self.set_xray(self.xray)
+
+    def set_xray(self, on, opacity=None):
+        """Toggle the x-ray view (an input-time write of the shape opacities; the viewer picks it up next frame)."""
+        self.xray = bool(on)
+        if opacity is not None:
+            self.xray_opacity = float(opacity)
+        op = self._opacity0.copy()
+        if self.xray:
+            op[self._xray_shapes] = self.xray_opacity
+        self.model.shape_opacity.assign(op)
 
     # -------------------------------------------------------------- controller setup
     def _build_dof_configs(self):
@@ -893,6 +947,10 @@ class Example:
             return
         if self.viewer.is_key_down("u"):
             self.undock()
+        x = self.viewer.is_key_down("x")
+        if x and not self._x_down:
+            self.set_xray(not self.xray)
+        self._x_down = x
         if self.graph:
             wp.capture_launch(self.graph)
         else:
@@ -912,23 +970,113 @@ class Example:
             self.viewer.log_scalar("Hook preload, total [kN]", float(np.sum(m["preload"])) / 1000.0)
         self.viewer.end_frame()
 
+    # -------------------------------------------------------------- panel
+    @staticmethod
+    def _right(ui, text, color=None):
+        """Text right-aligned on the current line (call after same_line())."""
+        pad = ui.get_content_region_avail().x - ui.calc_text_size(text).x
+        if pad > 0:
+            ui.set_cursor_pos_x(ui.get_cursor_pos_x() + pad)
+        if color:
+            ui.text_colored(ui.ImVec4(*color), text)
+        else:
+            ui.text(text)
+
+    @staticmethod
+    def _rows(ui, table_id, rows, label_w=0.48):
+        """Two-column table: muted label, right-aligned value (optionally coloured)."""
+        if not ui.begin_table(table_id, 2, ui.TableFlags_.sizing_stretch_prop):
+            return
+        ui.table_setup_column("label", ui.TableColumnFlags_.width_stretch, label_w)
+        ui.table_setup_column("value", ui.TableColumnFlags_.width_stretch, 1.0 - label_w)
+        for row in rows:
+            label, value, color = (*row, None) if len(row) == 2 else row
+            ui.table_next_row()
+            ui.table_next_column()
+            ui.text_colored(ui.ImVec4(*C_MUTED), label)
+            ui.table_next_column()
+            Example._right(ui, value, color)
+        ui.end_table()
+
     def gui(self, ui):
         sn = self._snap
         m = sn["meas"]
-        ui.text(f"Phase: {sn['phase']}  ({self.sim_time:.1f} s)")
+        phase = sn["phase"]
+        # header: phase, sim time, place in the sequence, what is happening
+        ui.text_colored(ui.ImVec4(*(C_WARN if phase in ("capture failed", "diverged") else C_ACCENT)),
+                        phase[:1].upper() + phase[1:])
+        ui.same_line()
+        self._right(ui, f"{self.sim_time:.1f} s")
+        if phase in SEQUENCE:
+            i = SEQUENCE.index(phase)
+            ui.progress_bar((i + 1) / len(SEQUENCE), ui.ImVec2(-1.0, 0.0), f"Step {i + 1} of {len(SEQUENCE)}")
+        ui.push_style_color(ui.Col_.text, ui.ImVec4(*C_MUTED))
+        ui.text_wrapped(EXPLAIN.get(phase, ""))
+        ui.pop_style_color()
         if m is None:
             return
-        ui.text(f"HCS gap {m['gap'] * 1000:8.2f} mm   lateral {m['lateral'] * 1000:6.2f} mm   tilt {m['tilt']:5.2f} deg")
-        ui.text("Latches " + "  ".join(("LOCKED" if sn["latched"][k] else f"{math.degrees(m['latch'][k]):4.1f} deg")
-                                       for k in range(3)))
-        ui.text("Leg loads [N] " + " ".join(f"{f:7.0f}" for f in m["leg_f"]))
+        latched = all(sn["latched"])
         hook, pull = sn["hook_cmd"], sn["pull_cmd"]
-        ui.text(f"Hook gangs {math.degrees(hook[0]):5.1f} / {math.degrees(hook[1]):5.1f} deg, pull "
-                f"{pull[0] * 1000:4.1f} / {pull[1] * 1000:4.1f} mm   "
-                f"preload {np.sum(m['preload']) / 1000:6.1f} kN")
-        ui.text(f"Contacts {m['contacts']}")
-        if sn["phase"] == "docked" and ui.button("Undock (u)"):
+        pre = float(np.sum(m["preload"]))
+        # interface
+        ui.separator_text("Interface")
+        self._rows(ui, "interface", [
+            ("HCS gap", f"{m['gap'] * 1000:.1f} mm"),
+            ("Lateral offset", f"{m['lateral'] * 1000:.2f} mm"),
+            ("Tilt", f"{m['tilt']:.2f}°"),
+            ("Contacts", f"{m['contacts']}"),
+        ])
+        # soft capture
+        ui.separator_text("Soft capture")
+        latch = "Locked" if latched else "  ".join(f"{math.degrees(a):.1f}°" for a in m["latch"])
+        self._rows(ui, "soft", [
+            ("Capture latches", latch, C_GOOD if latched else None),
+            ("Ring axial load", f"{m['ring_load'] / 1000:.2f} kN"),
+            ("Peak actuator load", f"{sn['peak'] / 1000:.2f} kN"),
+        ])
+        if ui.begin_table("legs", 6, ui.TableFlags_.sizing_stretch_same):
+            for k in range(6):
+                ui.table_next_column()
+                ui.text_colored(ui.ImVec4(*C_MUTED), f"A{k + 1}")
+            for k in range(6):
+                ui.table_next_column()
+                ui.text(f"{m['leg_f'][k]:.0f}")
+            ui.end_table()
+        ui.text_colored(ui.ImVec4(*C_MUTED), "Actuator loads [N]")
+        # hard capture
+        ui.separator_text("Hard capture")
+        self._rows(ui, "hard", [
+            ("Hook gang 1", f"{math.degrees(hook[0]):.1f}° · {pull[0] * 1000:.1f} mm"),
+            ("Hook gang 2", f"{math.degrees(hook[1]):.1f}° · {pull[1] * 1000:.1f} mm"),
+        ])
+        in_band = PRELOAD_BAND[0] <= pre <= PRELOAD_BAND[1]
+        ui.text_colored(ui.ImVec4(*C_MUTED), "Hook preload")
+        ui.same_line()
+        self._right(ui, "In IDSS range" if in_band else f"IDSS {PRELOAD_BAND[0] / 1000:.0f}-{PRELOAD_BAND[1] / 1000:.0f} kN",
+                    C_GOOD if in_band else C_MUTED)
+        ui.progress_bar(min(1.0, pre / PRELOAD_BAND[1]), ui.ImVec2(-1.0, 0.0), f"{pre / 1000:.0f} kN")
+        # view
+        ui.separator_text("View")
+        changed, on = ui.checkbox("X-ray structure (x)", self.xray)
+        if changed:
+            self.set_xray(on)
+        ui.set_item_tooltip("Make the fixed IDA and NDS structure see-through, so the latches, guide pins "
+                            "and hooks stay visible.")
+        ui.begin_disabled(not self.xray)
+        ui.set_next_item_width(-1.0)
+        changed, op = ui.slider_float("##xray_opacity", self.xray_opacity, 0.05, 0.6, "Opacity %.2f")
+        if changed:
+            self.set_xray(True, op)
+        ui.end_disabled()
+        # controls
+        ui.separator_text("Controls")
+        can_undock = phase in ("docked", "hook gang 2")
+        ui.begin_disabled(not can_undock)
+        if ui.button("Undock (u)", ui.ImVec2(-1.0, 0.0)):
             self.undock()
+        ui.end_disabled()
+        if not can_undock:
+            ui.set_item_tooltip("Available once hard docked.")
 
     def test_final(self):
         self._poll(wait=True)
@@ -986,6 +1134,7 @@ class Example:
                             help="Run collision detection every N substeps (1 = every substep, slowest).")
         parser.add_argument("--nconmax", type=int, default=6000, help="MuJoCo contact buffer (raise if it overflows).")
         parser.add_argument("--show-contacts", action="store_true", help="Draw contact points and normals.")
+        parser.add_argument("--xray", action="store_true", help="Start with the x-ray view on (toggle with x).")
         parser.add_argument("--record", default="", help="Save per-frame body poses and docking telemetry (.npz).")
         return parser
 
