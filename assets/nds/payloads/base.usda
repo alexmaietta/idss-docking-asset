@@ -17,7 +17,7 @@ def Xform "nds" (
     assetInfo = {
         asset identifier = @./nds.usda@
         string name = "nds"
-        string version = "0.1.0"
+        string version = "0.2.0"
     }
     doc = "Active IDSS-compliant docking system (NASA Docking System Block 1): six-DOF soft-capture ring on six electromechanical actuators (Stewart platform) with three guide petals and three capture latches, and the hard-capture ring with 12 active/passive hook pairs, guide pins, dual seals, separators and sensors."
     kind = "component"
@@ -4246,10 +4246,6 @@ def Xform "nds" (
     }
 
     def Scope "Materials"
-    {
-    }
-
-    def Scope "VisualMaterials"
     {
     }
 }

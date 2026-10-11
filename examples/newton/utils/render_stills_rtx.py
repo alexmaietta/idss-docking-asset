@@ -52,14 +52,14 @@ SHOTS = {
 THUMB = {"ida": "ida_studio", "nds": "nds_studio"}   # thumbnails reuse the studio camera, square
 
 
-def asset_model(name, assets):
+def asset_model(name, assets, fidelity="full", materials="full"):
     """One asset on its own, fixed, at its rest pose (the joints' default positions)."""
     import newton
     from pxr import Usd
 
     st = Usd.Stage.Open(os.path.join(assets, name, f"{name}.usda"))
     root = st.GetDefaultPrim()
-    for vset, sel in (("Physics", "physics"), ("Fidelity", "full"), ("Contact", "exact")):
+    for vset, sel in (("Physics", "physics"), ("Fidelity", fidelity), ("Materials", materials), ("Contact", "exact")):
         root.GetVariantSet(vset).SetVariantSelection(sel)
     b = newton.ModelBuilder(up_axis=newton.Axis.Z, gravity=(0.0, 0.0, 0.0))
     newton.solvers.SolverMuJoCo.register_custom_attributes(b)
@@ -76,7 +76,7 @@ def render_shot(a, name, out_path, res=None):
     viewer = rtx.ProductionRTX(w, h, rig=rig, spp=a.spp, spp_per_step=a.spp_per_step, fov=rtx.lens_fov(lens, w / h))
     t0 = time.perf_counter()
     if pose[0] == "rest":
-        model, state = asset_model(assets[0], a.assets)
+        model, state = asset_model(assets[0], a.assets, a.fidelity, a.materials)
         viewer.set_model(model)
         t = 0.0
     else:
@@ -102,6 +102,8 @@ def main():
     ap.add_argument("--sim", default=os.path.join(rtx.REPO, "build", "sim", "docking.npz"))
     ap.add_argument("--assets", default=os.environ.get("IDSS_ASSETS", os.path.join(rtx.REPO, "assets")),
                     help="Folder holding <asset>/<asset>.usda.")
+    ap.add_argument("--fidelity", default="full", help="Fidelity variant for the studio shots (full/medium/low/proxy).")
+    ap.add_argument("--materials", default="full", help="Materials variant for the studio shots (full/simple/none).")
     ap.add_argument("--spp", type=int, default=256, help="Path-traced samples per pixel.")
     ap.add_argument("--spp-per-step", type=int, default=32)
     ap.add_argument("--thumb", choices=list(THUMB), default=None,

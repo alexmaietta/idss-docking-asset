@@ -159,7 +159,7 @@ over "nds" (
     ]
     token isaac:robotType = "Manipulator"
     string isaac:source = "idss pipeline (scripts/package.py)"
-    string isaac:version = "0.1.0"
+    string isaac:version = "0.2.0"
 
     over "Geometry"
     {

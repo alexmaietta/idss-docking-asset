@@ -21,7 +21,7 @@ for a in "$@"; do case $a in nds|ida) assets+=("$a") ;; *) steps+=("$a") ;; esac
 
 textures() { $PY scripts/textures.py --asset "$1" --res "$RES"; }
 build()    { $BLENDER -b --factory-startup -P scripts/build.py -- --asset "$1"; }
-export_()  { for lod in full proxy; do $BLENDER -b "build/$1/$1.blend" -P scripts/export.py -- --asset "$1" --lod $lod; done; }
+export_()  { for lod in full medium low proxy; do $BLENDER -b "build/$1/$1.blend" -P scripts/export.py -- --asset "$1" --lod $lod; done; }
 package()  { $PY scripts/package.py --asset "$1"; }
 # 256x256 USD thumbnail, path traced by OVRTX from the packaged asset (build/<id>/usd/<id>/.thumbs/256x256/)
 thumb()    { $PY examples/newton/utils/render_stills_rtx.py --thumb "$1" --assets "build/$1/usd"; }

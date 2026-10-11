@@ -1,0 +1,3665 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "nds"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "nds"
+{
+    def Scope "Looks"
+    {
+        def Material "titanium_dfl" (
+            prepend references = @../materials.usda@</Materials/titanium_dfl>
+        )
+        {
+        }
+
+        def Material "steel" (
+            prepend references = @../materials.usda@</Materials/steel>
+        )
+        {
+        }
+
+        def Material "aluminium_machined" (
+            prepend references = @../materials.usda@</Materials/aluminium_machined>
+        )
+        {
+        }
+
+        def Material "black_anodize" (
+            prepend references = @../materials.usda@</Materials/black_anodize>
+        )
+        {
+        }
+
+        def Material "iridite" (
+            prepend references = @../materials.usda@</Materials/iridite>
+        )
+        {
+        }
+
+        def Material "chrome" (
+            prepend references = @../materials.usda@</Materials/chrome>
+        )
+        {
+        }
+
+        def Material "latch_body" (
+            prepend references = @../materials.usda@</Materials/latch_body>
+        )
+        {
+        }
+
+        def Material "ptfe_anodize" (
+            prepend references = @../materials.usda@</Materials/ptfe_anodize>
+        )
+        {
+        }
+
+        def Material "hcs" (
+            prepend references = @../materials.usda@</Materials/hcs>
+        )
+        {
+        }
+
+        def Material "seal_silicone" (
+            prepend references = @../materials.usda@</Materials/seal_silicone>
+        )
+        {
+        }
+
+        def Material "inconel" (
+            prepend references = @../materials.usda@</Materials/inconel>
+        )
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "nds_base"
+        {
+            over "hook_c_11"
+            {
+                over "hook_a_11"
+                {
+                    over "hook_a_11__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_11__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_11__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_11__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_11"
+                        {
+                            over "hook_a_11"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_11__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_11__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_11"
+                    {
+                        over "hook_c_11"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_00"
+            {
+                over "hook_p_00__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_00__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_00__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_00__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_00"
+                    {
+                        over "hook_p_00"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_00"
+            {
+                over "hook_c_00__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "hook_a_00"
+                {
+                    over "hook_a_00__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_00__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_00__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_00__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_00"
+                        {
+                            over "hook_a_00"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_00__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_00"
+                    {
+                        over "hook_c_00"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "sensor_1"
+            {
+                over "sensor_1__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "sensor_1__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "sensor_1"
+                    {
+                        over "sensor_1"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "leg6_ujoint"
+            {
+                over "leg6_body"
+                {
+                    over "leg6_body__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "leg6_body__aluminium_machined" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/aluminium_machined>
+                    }
+
+                    over "leg6_body__black_anodize" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/black_anodize>
+                    }
+
+                    over "leg6_body__iridite" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/iridite>
+                    }
+
+                    over "leg6_rod"
+                    {
+                        over "leg6_rod__chrome" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/chrome>
+                        }
+
+                        over "leg6_rod__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "lod_medium"
+                        {
+                            over "leg6_rod__chrome" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/chrome>
+                            }
+
+                            over "leg6_rod__steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+
+                        over "lod_low"
+                        {
+                            over "leg6_rod"
+                            {
+                                over "leg6_rod"
+                                {
+                                    over "chrome" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/chrome>
+                                    }
+
+                                    over "steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "leg6_body__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "leg6_body__aluminium_machined" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/aluminium_machined>
+                        }
+
+                        over "leg6_body__black_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/black_anodize>
+                        }
+
+                        over "leg6_body__iridite" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/iridite>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "leg6_body"
+                        {
+                            over "leg6_body"
+                            {
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "aluminium_machined" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/aluminium_machined>
+                                }
+
+                                over "iridite" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/iridite>
+                                }
+
+                                over "black_anodize" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/black_anodize>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "leg6_ujoint__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "leg6_ujoint__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "leg6_ujoint"
+                    {
+                        over "leg6_ujoint"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_10"
+            {
+                over "hook_a_10"
+                {
+                    over "hook_a_10__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_10__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_10__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_10__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_10"
+                        {
+                            over "hook_a_10"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_10__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_10__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_10"
+                    {
+                        over "hook_c_10"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_01"
+            {
+                over "hook_c_01__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "hook_a_01"
+                {
+                    over "hook_a_01__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_01__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_01__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_01__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_01"
+                        {
+                            over "hook_a_01"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_01__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_01"
+                    {
+                        over "hook_c_01"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "leg2_ujoint"
+            {
+                over "leg2_ujoint__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "leg2_body"
+                {
+                    over "leg2_rod"
+                    {
+                        over "leg2_rod__chrome" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/chrome>
+                        }
+
+                        over "leg2_rod__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "lod_medium"
+                        {
+                            over "leg2_rod__chrome" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/chrome>
+                            }
+
+                            over "leg2_rod__steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+
+                        over "lod_low"
+                        {
+                            over "leg2_rod"
+                            {
+                                over "leg2_rod"
+                                {
+                                    over "chrome" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/chrome>
+                                    }
+
+                                    over "steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    over "leg2_body__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "leg2_body__black_anodize" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/black_anodize>
+                    }
+
+                    over "leg2_body__aluminium_machined" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/aluminium_machined>
+                    }
+
+                    over "leg2_body__iridite" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/iridite>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "leg2_body__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "leg2_body__black_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/black_anodize>
+                        }
+
+                        over "leg2_body__aluminium_machined" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/aluminium_machined>
+                        }
+
+                        over "leg2_body__iridite" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/iridite>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "leg2_body"
+                        {
+                            over "leg2_body"
+                            {
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "black_anodize" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/black_anodize>
+                                }
+
+                                over "aluminium_machined" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/aluminium_machined>
+                                }
+
+                                over "iridite" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/iridite>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "leg2_ujoint__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "leg2_ujoint"
+                    {
+                        over "leg2_ujoint"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_02"
+            {
+                over "hook_c_02__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "hook_a_02"
+                {
+                    over "hook_a_02__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_02__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_02__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_02__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_02"
+                        {
+                            over "hook_a_02"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_02__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_02"
+                    {
+                        over "hook_c_02"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_07"
+            {
+                over "hook_c_07__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "hook_a_07"
+                {
+                    over "hook_a_07__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_07__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_07__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_07__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_07"
+                        {
+                            over "hook_a_07"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_07__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_07"
+                    {
+                        over "hook_c_07"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_03"
+            {
+                over "hook_p_03__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_03__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_03__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_03__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_03"
+                    {
+                        over "hook_p_03"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "separator_1"
+            {
+                over "separator_1__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "separator_1__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "separator_1"
+                    {
+                        over "separator_1"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_04"
+            {
+                over "hook_p_04__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_04__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_04__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_04__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_04"
+                    {
+                        over "hook_p_04"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "leg1_ujoint"
+            {
+                over "leg1_body"
+                {
+                    over "leg1_rod"
+                    {
+                        over "leg1_rod__chrome" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/chrome>
+                        }
+
+                        over "leg1_rod__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "scs_ring"
+                        {
+                            over "latch_2"
+                            {
+                                over "latch_2__latch_body" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/latch_body>
+                                }
+
+                                over "latch_2__steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "lod_medium"
+                                {
+                                    over "latch_2__latch_body" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/latch_body>
+                                    }
+
+                                    over "latch_2__steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+
+                                over "lod_low"
+                                {
+                                    over "latch_2"
+                                    {
+                                        over "latch_2"
+                                        {
+                                            over "latch_body" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </nds/Looks/latch_body>
+                                            }
+
+                                            over "steel" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </nds/Looks/steel>
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "scs_ring__ptfe_anodize" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/ptfe_anodize>
+                            }
+
+                            over "scs_ring__black_anodize" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/black_anodize>
+                            }
+
+                            over "scs_ring__aluminium_machined" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/aluminium_machined>
+                            }
+
+                            over "latch_3"
+                            {
+                                over "latch_3__latch_body" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/latch_body>
+                                }
+
+                                over "latch_3__steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "lod_medium"
+                                {
+                                    over "latch_3__latch_body" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/latch_body>
+                                    }
+
+                                    over "latch_3__steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+
+                                over "lod_low"
+                                {
+                                    over "latch_3"
+                                    {
+                                        over "latch_3"
+                                        {
+                                            over "latch_body" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </nds/Looks/latch_body>
+                                            }
+
+                                            over "steel" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </nds/Looks/steel>
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "latch_1"
+                            {
+                                over "latch_1__latch_body" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/latch_body>
+                                }
+
+                                over "latch_1__steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "lod_medium"
+                                {
+                                    over "latch_1__latch_body" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/latch_body>
+                                    }
+
+                                    over "latch_1__steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+
+                                over "lod_low"
+                                {
+                                    over "latch_1"
+                                    {
+                                        over "latch_1"
+                                        {
+                                            over "latch_body" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </nds/Looks/latch_body>
+                                            }
+
+                                            over "steel" (
+                                                prepend apiSchemas = ["MaterialBindingAPI"]
+                                            )
+                                            {
+                                                rel material:binding = </nds/Looks/steel>
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "lod_medium"
+                            {
+                                over "scs_ring__black_anodize" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/black_anodize>
+                                }
+
+                                over "scs_ring__ptfe_anodize" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/ptfe_anodize>
+                                }
+
+                                over "scs_ring__aluminium_machined" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/aluminium_machined>
+                                }
+                            }
+
+                            over "lod_low"
+                            {
+                                over "scs_ring"
+                                {
+                                    over "scs_ring"
+                                    {
+                                        over "black_anodize" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </nds/Looks/black_anodize>
+                                        }
+
+                                        over "ptfe_anodize" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </nds/Looks/ptfe_anodize>
+                                        }
+
+                                        over "aluminium_machined" (
+                                            prepend apiSchemas = ["MaterialBindingAPI"]
+                                        )
+                                        {
+                                            rel material:binding = </nds/Looks/aluminium_machined>
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        over "lod_medium"
+                        {
+                            over "leg1_rod__chrome" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/chrome>
+                            }
+
+                            over "leg1_rod__steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+
+                        over "lod_low"
+                        {
+                            over "leg1_rod"
+                            {
+                                over "leg1_rod"
+                                {
+                                    over "chrome" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/chrome>
+                                    }
+
+                                    over "steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    over "leg1_body__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "leg1_body__aluminium_machined" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/aluminium_machined>
+                    }
+
+                    over "leg1_body__black_anodize" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/black_anodize>
+                    }
+
+                    over "leg1_body__iridite" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/iridite>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "leg1_body__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "leg1_body__black_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/black_anodize>
+                        }
+
+                        over "leg1_body__iridite" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/iridite>
+                        }
+
+                        over "leg1_body__aluminium_machined" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/aluminium_machined>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "leg1_body"
+                        {
+                            over "leg1_body"
+                            {
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "black_anodize" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/black_anodize>
+                                }
+
+                                over "iridite" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/iridite>
+                                }
+
+                                over "aluminium_machined" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/aluminium_machined>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "leg1_ujoint__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "leg1_ujoint__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "leg1_ujoint"
+                    {
+                        over "leg1_ujoint"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "sensor_3"
+            {
+                over "sensor_3__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "sensor_3__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "sensor_3"
+                    {
+                        over "sensor_3"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_05"
+            {
+                over "hook_a_05"
+                {
+                    over "hook_a_05__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_05__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_05__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_05__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_05"
+                        {
+                            over "hook_a_05"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_05__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_05__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_05"
+                    {
+                        over "hook_c_05"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "leg5_ujoint"
+            {
+                over "leg5_body"
+                {
+                    over "leg5_body__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "leg5_body__black_anodize" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/black_anodize>
+                    }
+
+                    over "leg5_body__aluminium_machined" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/aluminium_machined>
+                    }
+
+                    over "leg5_body__iridite" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/iridite>
+                    }
+
+                    over "leg5_rod"
+                    {
+                        over "leg5_rod__chrome" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/chrome>
+                        }
+
+                        over "leg5_rod__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "lod_medium"
+                        {
+                            over "leg5_rod__chrome" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/chrome>
+                            }
+
+                            over "leg5_rod__steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+
+                        over "lod_low"
+                        {
+                            over "leg5_rod"
+                            {
+                                over "leg5_rod"
+                                {
+                                    over "chrome" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/chrome>
+                                    }
+
+                                    over "steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "leg5_body__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "leg5_body__iridite" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/iridite>
+                        }
+
+                        over "leg5_body__black_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/black_anodize>
+                        }
+
+                        over "leg5_body__aluminium_machined" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/aluminium_machined>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "leg5_body"
+                        {
+                            over "leg5_body"
+                            {
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "aluminium_machined" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/aluminium_machined>
+                                }
+
+                                over "iridite" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/iridite>
+                                }
+
+                                over "black_anodize" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/black_anodize>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "leg5_ujoint__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "leg5_ujoint__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "leg5_ujoint"
+                    {
+                        over "leg5_ujoint"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_04"
+            {
+                over "hook_a_04"
+                {
+                    over "hook_a_04__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_04__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_04__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_04__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_04"
+                        {
+                            over "hook_a_04"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_04__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_04__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_04"
+                    {
+                        over "hook_c_04"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "leg3_ujoint"
+            {
+                over "leg3_body"
+                {
+                    over "leg3_body__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "leg3_body__black_anodize" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/black_anodize>
+                    }
+
+                    over "leg3_body__aluminium_machined" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/aluminium_machined>
+                    }
+
+                    over "leg3_body__iridite" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/iridite>
+                    }
+
+                    over "leg3_rod"
+                    {
+                        over "leg3_rod__chrome" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/chrome>
+                        }
+
+                        over "leg3_rod__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "lod_medium"
+                        {
+                            over "leg3_rod__chrome" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/chrome>
+                            }
+
+                            over "leg3_rod__steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+
+                        over "lod_low"
+                        {
+                            over "leg3_rod"
+                            {
+                                over "leg3_rod"
+                                {
+                                    over "chrome" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/chrome>
+                                    }
+
+                                    over "steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "leg3_body__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "leg3_body__aluminium_machined" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/aluminium_machined>
+                        }
+
+                        over "leg3_body__black_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/black_anodize>
+                        }
+
+                        over "leg3_body__iridite" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/iridite>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "leg3_body"
+                        {
+                            over "leg3_body"
+                            {
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "iridite" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/iridite>
+                                }
+
+                                over "black_anodize" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/black_anodize>
+                                }
+
+                                over "aluminium_machined" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/aluminium_machined>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "leg3_ujoint__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "leg3_ujoint__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "leg3_ujoint"
+                    {
+                        over "leg3_ujoint"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_07"
+            {
+                over "hook_p_07__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_07__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_07__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_07__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_07"
+                    {
+                        over "hook_p_07"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "leg4_ujoint"
+            {
+                over "leg4_body"
+                {
+                    over "leg4_rod"
+                    {
+                        over "leg4_rod__chrome" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/chrome>
+                        }
+
+                        over "leg4_rod__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "lod_medium"
+                        {
+                            over "leg4_rod__chrome" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/chrome>
+                            }
+
+                            over "leg4_rod__steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+
+                        over "lod_low"
+                        {
+                            over "leg4_rod"
+                            {
+                                over "leg4_rod"
+                                {
+                                    over "chrome" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/chrome>
+                                    }
+
+                                    over "steel" (
+                                        prepend apiSchemas = ["MaterialBindingAPI"]
+                                    )
+                                    {
+                                        rel material:binding = </nds/Looks/steel>
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    over "leg4_body__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "leg4_body__aluminium_machined" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/aluminium_machined>
+                    }
+
+                    over "leg4_body__black_anodize" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/black_anodize>
+                    }
+
+                    over "leg4_body__iridite" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/iridite>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "leg4_body__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "leg4_body__iridite" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/iridite>
+                        }
+
+                        over "leg4_body__aluminium_machined" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/aluminium_machined>
+                        }
+
+                        over "leg4_body__black_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/black_anodize>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "leg4_body"
+                        {
+                            over "leg4_body"
+                            {
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+
+                                over "aluminium_machined" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/aluminium_machined>
+                                }
+
+                                over "iridite" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/iridite>
+                                }
+
+                                over "black_anodize" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/black_anodize>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "leg4_ujoint__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "leg4_ujoint__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "leg4_ujoint"
+                    {
+                        over "leg4_ujoint"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_02"
+            {
+                over "hook_p_02__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_02__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_02__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_02__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_02"
+                    {
+                        over "hook_p_02"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_08"
+            {
+                over "hook_p_08__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_08__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_08__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_08__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_08"
+                    {
+                        over "hook_p_08"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_06"
+            {
+                over "hook_a_06"
+                {
+                    over "hook_a_06__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_06__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_06__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_06__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_06"
+                        {
+                            over "hook_a_06"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_06__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_06__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_06"
+                    {
+                        over "hook_c_06"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_08"
+            {
+                over "hook_c_08__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "hook_a_08"
+                {
+                    over "hook_a_08__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_08__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_08__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_08__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_08"
+                        {
+                            over "hook_a_08"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_08__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_08"
+                    {
+                        over "hook_c_08"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_10"
+            {
+                over "hook_p_10__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_10__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_10__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_10__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_10"
+                    {
+                        over "hook_p_10"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_11"
+            {
+                over "hook_p_11__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_11__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_11__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_11__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_11"
+                    {
+                        over "hook_p_11"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "nds_base__steel" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </nds/Looks/steel>
+            }
+
+            over "nds_base__aluminium_machined" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </nds/Looks/aluminium_machined>
+            }
+
+            over "nds_base__hcs" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </nds/Looks/hcs>
+            }
+
+            over "nds_base__seal_silicone" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </nds/Looks/seal_silicone>
+            }
+
+            over "nds_base__black_anodize" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </nds/Looks/black_anodize>
+            }
+
+            over "nds_base__inconel" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </nds/Looks/inconel>
+            }
+
+            over "nds_base__iridite" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </nds/Looks/iridite>
+            }
+
+            over "hook_p_05"
+            {
+                over "hook_p_05__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_05__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_05__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_05__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_05"
+                    {
+                        over "hook_p_05"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "separator_2"
+            {
+                over "separator_2__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "separator_2__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "separator_2"
+                    {
+                        over "separator_2"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "sensor_2"
+            {
+                over "sensor_2__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "sensor_2__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "sensor_2"
+                    {
+                        over "sensor_2"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_03"
+            {
+                over "hook_c_03__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "hook_a_03"
+                {
+                    over "hook_a_03__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_03__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_03__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_03__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_03"
+                        {
+                            over "hook_a_03"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_03__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_03"
+                    {
+                        over "hook_c_03"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_09"
+            {
+                over "hook_c_09__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "hook_a_09"
+                {
+                    over "hook_a_09__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_09__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_09__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_09__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_09"
+                        {
+                            over "hook_a_09"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </nds/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_09__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_09"
+                    {
+                        over "hook_c_09"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "separator_3"
+            {
+                over "separator_3__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "separator_3__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "separator_3"
+                    {
+                        over "separator_3"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_06"
+            {
+                over "hook_p_06__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_06__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_06__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_06__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_06"
+                    {
+                        over "hook_p_06"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_01"
+            {
+                over "hook_p_01__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_01__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_01__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_01__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_01"
+                    {
+                        over "hook_p_01"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_09"
+            {
+                over "hook_p_09__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/titanium_dfl>
+                }
+
+                over "hook_p_09__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_09__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_09__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </nds/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_09"
+                    {
+                        over "hook_p_09"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </nds/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "lod_medium"
+            {
+                over "nds_base__seal_silicone" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/seal_silicone>
+                }
+
+                over "nds_base__aluminium_machined" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/aluminium_machined>
+                }
+
+                over "nds_base__iridite" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/iridite>
+                }
+
+                over "nds_base__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/steel>
+                }
+
+                over "nds_base__black_anodize" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/black_anodize>
+                }
+
+                over "nds_base__inconel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/inconel>
+                }
+
+                over "nds_base__hcs" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </nds/Looks/hcs>
+                }
+            }
+
+            over "lod_low"
+            {
+                over "nds_base"
+                {
+                    over "nds_base"
+                    {
+                        over "hcs" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/hcs>
+                        }
+
+                        over "iridite" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/iridite>
+                        }
+
+                        over "inconel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/inconel>
+                        }
+
+                        over "steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/steel>
+                        }
+
+                        over "aluminium_machined" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/aluminium_machined>
+                        }
+
+                        over "black_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/black_anodize>
+                        }
+
+                        over "seal_silicone" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </nds/Looks/seal_silicone>
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

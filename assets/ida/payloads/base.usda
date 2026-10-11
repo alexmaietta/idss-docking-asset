@@ -17,7 +17,7 @@ def Xform "ida" (
     assetInfo = {
         asset identifier = @./ida.usda@
         string name = "ida"
-        string version = "0.1.0"
+        string version = "0.2.0"
     }
     doc = "International Docking Adapter (IDA-2/IDA-3) on the ISS: passive IDSS docking port with the fixed capture ring, three truss guide petals and three strikers, the hard-capture ring with 12 active/passive hook pairs, guide pins, a flat sealing land, retractable separators and interface sensors, under white MLI with handrails, peripheral docking targets, retro-reflectors and trunnions."
     kind = "component"
@@ -3127,10 +3127,6 @@ def Xform "ida" (
     }
 
     def Scope "Materials"
-    {
-    }
-
-    def Scope "VisualMaterials"
     {
     }
 }

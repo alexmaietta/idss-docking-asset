@@ -1,0 +1,2515 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "nds"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "nds"
+{
+    def "Geometry"
+    {
+        def "nds_base"
+        {
+            def "hook_c_11"
+            {
+                def "hook_a_11"
+                {
+                    over "hook_a_11__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_11__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_11__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_11__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_11__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_11__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "hook_c_11__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_11__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_11__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_00"
+            {
+                over "hook_p_00__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_00__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_00__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_00__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_00__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_00__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_00"
+            {
+                over "hook_c_00__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def "hook_a_00"
+                {
+                    over "hook_a_00__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_00__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_00__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_00__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_00__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_00__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_00__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_00__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "sensor_1"
+            {
+                over "sensor_1__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "sensor_1__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/sensor_1__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "leg6_ujoint"
+            {
+                def "leg6_body"
+                {
+                    over "leg6_body__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg6_body__aluminium_machined" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg6_body__black_anodize" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg6_body__iridite" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def "leg6_rod"
+                    {
+                        over "leg6_rod__chrome" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        over "leg6_rod__steel" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "lod_medium"
+                        {
+                            def Xform "leg6_rod__chrome" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg6_rod__chrome>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+
+                            def Xform "leg6_rod__steel" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg6_rod__steel>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "leg6_body__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg6_body__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg6_body__aluminium_machined" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg6_body__aluminium_machined>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg6_body__black_anodize" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg6_body__black_anodize>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg6_body__iridite" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg6_body__iridite>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "leg6_ujoint__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "leg6_ujoint__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/leg6_ujoint__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_10"
+            {
+                def "hook_a_10"
+                {
+                    over "hook_a_10__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_10__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_10__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_10__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_10__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_10__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "hook_c_10__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_10__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_10__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_01"
+            {
+                over "hook_c_01__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def "hook_a_01"
+                {
+                    over "hook_a_01__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_01__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_01__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_01__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_01__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_01__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_01__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_01__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "leg2_ujoint"
+            {
+                over "leg2_ujoint__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def "leg2_body"
+                {
+                    def "leg2_rod"
+                    {
+                        over "leg2_rod__chrome" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        over "leg2_rod__steel" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "lod_medium"
+                        {
+                            def Xform "leg2_rod__chrome" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg2_rod__chrome>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+
+                            def Xform "leg2_rod__steel" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg2_rod__steel>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+
+                    over "leg2_body__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg2_body__black_anodize" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg2_body__aluminium_machined" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg2_body__iridite" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "leg2_body__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg2_body__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg2_body__black_anodize" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg2_body__black_anodize>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg2_body__aluminium_machined" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg2_body__aluminium_machined>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg2_body__iridite" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg2_body__iridite>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "leg2_ujoint__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/leg2_ujoint__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_02"
+            {
+                over "hook_c_02__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def "hook_a_02"
+                {
+                    over "hook_a_02__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_02__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_02__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_02__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_02__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_02__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_02__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_02__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_07"
+            {
+                over "hook_c_07__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def "hook_a_07"
+                {
+                    over "hook_a_07__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_07__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_07__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_07__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_07__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_07__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_07__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_07__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_03"
+            {
+                over "hook_p_03__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_03__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_03__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_03__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_03__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_03__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "separator_1"
+            {
+                over "separator_1__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "separator_1__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/separator_1__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_04"
+            {
+                over "hook_p_04__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_04__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_04__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_04__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_04__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_04__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "leg1_ujoint"
+            {
+                def "leg1_body"
+                {
+                    def "leg1_rod"
+                    {
+                        over "leg1_rod__chrome" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        over "leg1_rod__steel" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def "scs_ring"
+                        {
+                            def "latch_2"
+                            {
+                                over "latch_2__latch_body" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "latch_2__steel" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                def Xform "lod_medium"
+                                {
+                                    def Xform "latch_2__latch_body" (
+                                        instanceable = true
+                                        prepend references = @../geometries.usd@</Geometries/lod_medium/latch_2__latch_body>
+                                    )
+                                    {
+                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                        double3 xformOp:scale = (1, 1, 1)
+                                        double3 xformOp:translate = (0, 0, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                    }
+
+                                    def Xform "latch_2__steel" (
+                                        instanceable = true
+                                        prepend references = @../geometries.usd@</Geometries/lod_medium/latch_2__steel>
+                                    )
+                                    {
+                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                        double3 xformOp:scale = (1, 1, 1)
+                                        double3 xformOp:translate = (0, 0, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                    }
+                                }
+                            }
+
+                            over "scs_ring__ptfe_anodize" (
+                                active = false
+                            )
+                            {
+                            }
+
+                            over "scs_ring__black_anodize" (
+                                active = false
+                            )
+                            {
+                            }
+
+                            over "scs_ring__aluminium_machined" (
+                                active = false
+                            )
+                            {
+                            }
+
+                            def "latch_3"
+                            {
+                                over "latch_3__latch_body" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "latch_3__steel" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                def Xform "lod_medium"
+                                {
+                                    def Xform "latch_3__latch_body" (
+                                        instanceable = true
+                                        prepend references = @../geometries.usd@</Geometries/lod_medium/latch_3__latch_body>
+                                    )
+                                    {
+                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                        double3 xformOp:scale = (1, 1, 1)
+                                        double3 xformOp:translate = (0, 0, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                    }
+
+                                    def Xform "latch_3__steel" (
+                                        instanceable = true
+                                        prepend references = @../geometries.usd@</Geometries/lod_medium/latch_3__steel>
+                                    )
+                                    {
+                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                        double3 xformOp:scale = (1, 1, 1)
+                                        double3 xformOp:translate = (0, 0, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                    }
+                                }
+                            }
+
+                            def "latch_1"
+                            {
+                                over "latch_1__latch_body" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "latch_1__steel" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                def Xform "lod_medium"
+                                {
+                                    def Xform "latch_1__latch_body" (
+                                        instanceable = true
+                                        prepend references = @../geometries.usd@</Geometries/lod_medium/latch_1__latch_body>
+                                    )
+                                    {
+                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                        double3 xformOp:scale = (1, 1, 1)
+                                        double3 xformOp:translate = (0, 0, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                    }
+
+                                    def Xform "latch_1__steel" (
+                                        instanceable = true
+                                        prepend references = @../geometries.usd@</Geometries/lod_medium/latch_1__steel>
+                                    )
+                                    {
+                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                        double3 xformOp:scale = (1, 1, 1)
+                                        double3 xformOp:translate = (0, 0, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                    }
+                                }
+                            }
+
+                            def Xform "lod_medium"
+                            {
+                                def Xform "scs_ring__black_anodize" (
+                                    instanceable = true
+                                    prepend references = @../geometries.usd@</Geometries/lod_medium/scs_ring__black_anodize>
+                                )
+                                {
+                                    quatd xformOp:orient = (1, 0, 0, 0)
+                                    double3 xformOp:scale = (1, 1, 1)
+                                    double3 xformOp:translate = (0, 0, 0)
+                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                }
+
+                                def Xform "scs_ring__ptfe_anodize" (
+                                    instanceable = true
+                                    prepend references = @../geometries.usd@</Geometries/lod_medium/scs_ring__ptfe_anodize>
+                                )
+                                {
+                                    quatd xformOp:orient = (1, 0, 0, 0)
+                                    double3 xformOp:scale = (1, 1, 1)
+                                    double3 xformOp:translate = (0, 0, 0)
+                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                }
+
+                                def Xform "scs_ring__aluminium_machined" (
+                                    instanceable = true
+                                    prepend references = @../geometries.usd@</Geometries/lod_medium/scs_ring__aluminium_machined>
+                                )
+                                {
+                                    quatd xformOp:orient = (1, 0, 0, 0)
+                                    double3 xformOp:scale = (1, 1, 1)
+                                    double3 xformOp:translate = (0, 0, 0)
+                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                }
+                            }
+                        }
+
+                        def Xform "lod_medium"
+                        {
+                            def Xform "leg1_rod__chrome" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg1_rod__chrome>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+
+                            def Xform "leg1_rod__steel" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg1_rod__steel>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+
+                    over "leg1_body__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg1_body__aluminium_machined" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg1_body__black_anodize" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg1_body__iridite" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "leg1_body__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg1_body__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg1_body__black_anodize" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg1_body__black_anodize>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg1_body__iridite" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg1_body__iridite>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg1_body__aluminium_machined" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg1_body__aluminium_machined>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "leg1_ujoint__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "leg1_ujoint__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/leg1_ujoint__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "sensor_3"
+            {
+                over "sensor_3__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "sensor_3__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/sensor_3__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_05"
+            {
+                def "hook_a_05"
+                {
+                    over "hook_a_05__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_05__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_05__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_05__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_05__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_05__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "hook_c_05__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_05__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_05__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "leg5_ujoint"
+            {
+                def "leg5_body"
+                {
+                    over "leg5_body__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg5_body__black_anodize" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg5_body__aluminium_machined" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg5_body__iridite" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def "leg5_rod"
+                    {
+                        over "leg5_rod__chrome" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        over "leg5_rod__steel" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "lod_medium"
+                        {
+                            def Xform "leg5_rod__chrome" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg5_rod__chrome>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+
+                            def Xform "leg5_rod__steel" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg5_rod__steel>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "leg5_body__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg5_body__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg5_body__iridite" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg5_body__iridite>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg5_body__black_anodize" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg5_body__black_anodize>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg5_body__aluminium_machined" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg5_body__aluminium_machined>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "leg5_ujoint__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "leg5_ujoint__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/leg5_ujoint__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_04"
+            {
+                def "hook_a_04"
+                {
+                    over "hook_a_04__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_04__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_04__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_04__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_04__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_04__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "hook_c_04__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_04__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_04__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "leg3_ujoint"
+            {
+                def "leg3_body"
+                {
+                    over "leg3_body__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg3_body__black_anodize" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg3_body__aluminium_machined" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg3_body__iridite" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def "leg3_rod"
+                    {
+                        over "leg3_rod__chrome" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        over "leg3_rod__steel" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "lod_medium"
+                        {
+                            def Xform "leg3_rod__chrome" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg3_rod__chrome>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+
+                            def Xform "leg3_rod__steel" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg3_rod__steel>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "leg3_body__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg3_body__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg3_body__aluminium_machined" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg3_body__aluminium_machined>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg3_body__black_anodize" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg3_body__black_anodize>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg3_body__iridite" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg3_body__iridite>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "leg3_ujoint__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "leg3_ujoint__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/leg3_ujoint__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_07"
+            {
+                over "hook_p_07__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_07__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_07__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_07__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_07__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_07__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "leg4_ujoint"
+            {
+                def "leg4_body"
+                {
+                    def "leg4_rod"
+                    {
+                        over "leg4_rod__chrome" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        over "leg4_rod__steel" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "lod_medium"
+                        {
+                            def Xform "leg4_rod__chrome" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg4_rod__chrome>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+
+                            def Xform "leg4_rod__steel" (
+                                instanceable = true
+                                prepend references = @../geometries.usd@</Geometries/lod_medium/leg4_rod__steel>
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+
+                    over "leg4_body__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg4_body__aluminium_machined" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg4_body__black_anodize" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "leg4_body__iridite" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "leg4_body__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg4_body__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg4_body__iridite" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg4_body__iridite>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg4_body__aluminium_machined" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg4_body__aluminium_machined>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "leg4_body__black_anodize" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/leg4_body__black_anodize>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "leg4_ujoint__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "leg4_ujoint__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/leg4_ujoint__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_02"
+            {
+                over "hook_p_02__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_02__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_02__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_02__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_02__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_02__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_08"
+            {
+                over "hook_p_08__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_08__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_08__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_08__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_08__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_08__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_06"
+            {
+                def "hook_a_06"
+                {
+                    over "hook_a_06__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_06__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_06__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_06__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_06__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_06__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                over "hook_c_06__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_06__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_06__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_08"
+            {
+                over "hook_c_08__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def "hook_a_08"
+                {
+                    over "hook_a_08__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_08__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_08__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_08__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_08__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_08__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_08__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_08__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_10"
+            {
+                over "hook_p_10__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_10__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_10__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_10__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_10__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_10__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_11"
+            {
+                over "hook_p_11__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_11__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_11__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_11__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_11__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_11__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            over "nds_base__steel" (
+                active = false
+            )
+            {
+            }
+
+            over "nds_base__aluminium_machined" (
+                active = false
+            )
+            {
+            }
+
+            over "nds_base__hcs" (
+                active = false
+            )
+            {
+            }
+
+            over "nds_base__seal_silicone" (
+                active = false
+            )
+            {
+            }
+
+            over "nds_base__black_anodize" (
+                active = false
+            )
+            {
+            }
+
+            over "nds_base__inconel" (
+                active = false
+            )
+            {
+            }
+
+            over "nds_base__iridite" (
+                active = false
+            )
+            {
+            }
+
+            def "hook_p_05"
+            {
+                over "hook_p_05__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_05__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_05__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_05__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_05__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_05__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "separator_2"
+            {
+                over "separator_2__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "separator_2__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/separator_2__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "sensor_2"
+            {
+                over "sensor_2__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "sensor_2__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/sensor_2__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_03"
+            {
+                over "hook_c_03__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def "hook_a_03"
+                {
+                    over "hook_a_03__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_03__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_03__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_03__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_03__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_03__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_03__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_03__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_09"
+            {
+                over "hook_c_09__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def "hook_a_09"
+                {
+                    over "hook_a_09__titanium_dfl" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "hook_a_09__steel" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "lod_medium"
+                    {
+                        def Xform "hook_a_09__titanium_dfl" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_09__titanium_dfl>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "hook_a_09__steel" (
+                            instanceable = true
+                            prepend references = @../geometries.usd@</Geometries/lod_medium/hook_a_09__steel>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_c_09__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_c_09__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "separator_3"
+            {
+                over "separator_3__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "separator_3__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/separator_3__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_06"
+            {
+                over "hook_p_06__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_06__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_06__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_06__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_06__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_06__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_01"
+            {
+                over "hook_p_01__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_01__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_01__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_01__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_01__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_01__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_09"
+            {
+                over "hook_p_09__titanium_dfl" (
+                    active = false
+                )
+                {
+                }
+
+                over "hook_p_09__steel" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "lod_medium"
+                {
+                    def Xform "hook_p_09__titanium_dfl" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_09__titanium_dfl>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "hook_p_09__steel" (
+                        instanceable = true
+                        prepend references = @../geometries.usd@</Geometries/lod_medium/hook_p_09__steel>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def Xform "lod_medium"
+            {
+                def Xform "nds_base__seal_silicone" (
+                    instanceable = true
+                    prepend references = @../geometries.usd@</Geometries/lod_medium/nds_base__seal_silicone>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "nds_base__aluminium_machined" (
+                    instanceable = true
+                    prepend references = @../geometries.usd@</Geometries/lod_medium/nds_base__aluminium_machined>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "nds_base__iridite" (
+                    instanceable = true
+                    prepend references = @../geometries.usd@</Geometries/lod_medium/nds_base__iridite>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "nds_base__steel" (
+                    instanceable = true
+                    prepend references = @../geometries.usd@</Geometries/lod_medium/nds_base__steel>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "nds_base__black_anodize" (
+                    instanceable = true
+                    prepend references = @../geometries.usd@</Geometries/lod_medium/nds_base__black_anodize>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "nds_base__inconel" (
+                    instanceable = true
+                    prepend references = @../geometries.usd@</Geometries/lod_medium/nds_base__inconel>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "nds_base__hcs" (
+                    instanceable = true
+                    prepend references = @../geometries.usd@</Geometries/lod_medium/nds_base__hcs>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+        }
+    }
+}
+

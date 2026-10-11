@@ -124,11 +124,37 @@ Each USD asset has a `Contact` variant set:
 
 Run with `--contact sdf` or `--contact hydro`. The two halves use complementary collision groups, so only IDA-NDS pairs are tested.
 
+## Visual variants
+
+The visuals can be cut down for simulation without touching the physics. Colliders, joints and masses are the same in every variant.
+
+| `Fidelity` | IDA meshes / triangles | NDS meshes / triangles | What it is |
+|---|---|---|---|
+| `full` (default) | 82 / 158k | 124 / 143k | As built: one mesh per link per material, instanced |
+| `medium` | 82 / 55k | 124 / 50k | Collapse-decimated to about 35% of the triangles, UVs kept |
+| `low` | 43 / 16k | 65 / 15k | About 10% of the triangles, merged to one mesh per rigid link with a material subset per material |
+| `proxy` | 82 / 1k | 124 / 1.5k | One box per part |
+| `none` | 0 | 0 | No visual geometry, for headless simulation |
+
+| `Materials` | What it is |
+|---|---|
+| `full` (default) | Textured UsdPreviewSurface |
+| `simple` | Flat UsdPreviewSurface per material: the textures' average colour, metallic and roughness, no textures |
+| `none` | No material bindings; every mesh carries its material's colour as `displayColor` |
+
+```python
+root = stage.GetDefaultPrim()
+root.GetVariantSet("Fidelity").SetVariantSelection("low")
+root.GetVariantSet("Materials").SetVariantSelection("none")
+```
+
+The Newton example takes them as `--fidelity` and `--materials`.
+
 ## Formats
 
 | Format | Path | Notes |
 |---|---|---|
-| USD | `assets/ida/ida.usda`, `assets/nds/nds.usda` | Primary assets in the Isaac Sim robot layout. Variants: `Physics` (physics/physx/mujoco), `Fidelity` (full/proxy), `Contact` (exact/sdf/hydro). Stewart-platform loops are `excludeFromArticulation` ball joints. |
+| USD | `assets/ida/ida.usda`, `assets/nds/nds.usda` | Primary assets in the Isaac Sim robot layout. Variants: `Physics` (physics/physx/mujoco), `Fidelity` (full/medium/low/proxy/none), `Materials` (full/simple/none), `Contact` (exact/sdf/hydro). Stewart-platform loops are `excludeFromArticulation` ball joints. |
 | MJCF | `assets/mjcf/{ida,nds}/`, `assets/mjcf/idss_docking_scene.xml` | Loops as `<connect>` equalities, springs as joint stiffness + springref, servos as position actuators, convex (CoACD) collision |
 | URDF | `assets/urdf/{ida,nds}/` | No loops in URDF: the capture ring rides on a virtual 6-DOF chain and the actuator legs are open chains |
 | Blender | `assets/blender/{ida,nds}.blend` | Source models, textures packed, collider meshes included (hidden) |

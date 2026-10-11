@@ -1,0 +1,2657 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "ida"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "ida"
+{
+    def Scope "Looks"
+    {
+        def Material "steel"
+        {
+            token outputs:surface.connect = </ida/Looks/steel/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.5599926, 0.5599926, 0.56998545)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.30060238
+                token outputs:surface
+            }
+        }
+
+        def Material "titanium_dfl"
+        {
+            token outputs:surface.connect = </ida/Looks/titanium_dfl/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.064980306, 0.06597898, 0.06997753)
+                float inputs:metallic = 0.24998578
+                float inputs:opacity = 1
+                float inputs:roughness = 0.6203255
+                token outputs:surface
+            }
+        }
+
+        def Material "retroreflector"
+        {
+            token outputs:surface.connect = </ida/Looks/retroreflector/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.9, 0.9, 0.92)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.03
+                token outputs:surface
+            }
+        }
+
+        def Material "target_black"
+        {
+            token outputs:surface.connect = </ida/Looks/target_black/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.012, 0.012, 0.013)
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.7
+                token outputs:surface
+            }
+        }
+
+        def Material "a286"
+        {
+            token outputs:surface.connect = </ida/Looks/a286/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.6197709, 0.609769, 0.5997778)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.19994861
+                token outputs:surface
+            }
+        }
+
+        def Material "target_white"
+        {
+            token outputs:surface.connect = </ida/Looks/target_white/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.79992706, 0.79992706, 0.780082)
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.5499921
+                token outputs:surface
+            }
+        }
+
+        def Material "connector"
+        {
+            token outputs:surface.connect = </ida/Looks/connector/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.7, 0.7, 0.68)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.28
+                token outputs:surface
+            }
+        }
+
+        def Material "mli"
+        {
+            token outputs:surface.connect = </ida/Looks/mli/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.7265585, 0.7265585, 0.6971026)
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.7799946
+                token outputs:surface
+            }
+        }
+
+        def Material "handrail"
+        {
+            token outputs:surface.connect = </ida/Looks/handrail/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.61996067, 0.37997591, 0.044998217)
+                float inputs:metallic = 0.9019608
+                float inputs:opacity = 1
+                float inputs:roughness = 0.31994975
+                token outputs:surface
+            }
+        }
+
+        def Material "aluminium"
+        {
+            token outputs:surface.connect = </ida/Looks/aluminium/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.779639, 0.779639, 0.78964597)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.31985867
+                token outputs:surface
+            }
+        }
+
+        def Material "aluminium_machined"
+        {
+            token outputs:surface.connect = </ida/Looks/aluminium_machined/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.70018154, 0.7051839, 0.7101839)
+                float inputs:metallic = 0.9019608
+                float inputs:opacity = 1
+                float inputs:roughness = 0.38018098
+                token outputs:surface
+            }
+        }
+
+        def Material "black_anodize"
+        {
+            token outputs:surface.connect = </ida/Looks/black_anodize/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.017994499, 0.017994499, 0.020012513)
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.3603666
+                token outputs:surface
+            }
+        }
+
+        def Material "seal_silicone"
+        {
+            token outputs:surface.connect = </ida/Looks/seal_silicone/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.35995334, 0.034991063, 0.01600495)
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.55000037
+                token outputs:surface
+            }
+        }
+
+        def Material "inconel"
+        {
+            token outputs:surface.connect = </ida/Looks/inconel/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.59971136, 0.5797218, 0.5497404)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.2199806
+                token outputs:surface
+            }
+        }
+
+        def Material "seal_land"
+        {
+            token outputs:surface.connect = </ida/Looks/seal_land/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.82, 0.82, 0.83)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.12
+                token outputs:surface
+            }
+        }
+
+        def Material "hard_anodize"
+        {
+            token outputs:surface.connect = </ida/Looks/hard_anodize/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.029998407, 0.02700626, 0.024006825)
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.48038244
+                token outputs:surface
+            }
+        }
+
+        def Material "hcs"
+        {
+            token outputs:surface.connect = </ida/Looks/hcs/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.7401937, 0.7452033, 0.7501999)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.30069417
+                token outputs:surface
+            }
+        }
+
+        def Material "chrome"
+        {
+            token outputs:surface.connect = </ida/Looks/chrome/PreviewSurface.outputs:surface>
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.85, 0.85, 0.86)
+                float inputs:metallic = 1
+                float inputs:opacity = 1
+                float inputs:roughness = 0.08
+                token outputs:surface
+            }
+        }
+    }
+
+    over "Geometry"
+    {
+        over "ida_base"
+        {
+            over "separator_2"
+            {
+                over "separator_2__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "separator_2__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "separator_2"
+                    {
+                        over "separator_2"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_01"
+            {
+                over "hook_c_01__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "hook_a_01"
+                {
+                    over "hook_a_01__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_01__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_01__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_01__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_01"
+                        {
+                            over "hook_a_01"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_01__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_01"
+                    {
+                        over "hook_c_01"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_04"
+            {
+                over "hook_a_04"
+                {
+                    over "hook_a_04__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_04__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_04__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_04__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_04"
+                        {
+                            over "hook_a_04"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_04__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_04__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_04"
+                    {
+                        over "hook_c_04"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_11"
+            {
+                over "hook_a_11"
+                {
+                    over "hook_a_11__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_11__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_11__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_11__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_11"
+                        {
+                            over "hook_a_11"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_11__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_11__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_11"
+                    {
+                        over "hook_c_11"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_10"
+            {
+                over "hook_p_10__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_10__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_10__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_10__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_10"
+                    {
+                        over "hook_p_10"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_03"
+            {
+                over "hook_p_03__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_03__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_03__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_03__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_03"
+                    {
+                        over "hook_p_03"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_07"
+            {
+                over "hook_a_07"
+                {
+                    over "hook_a_07__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_07__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_07__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_07__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_07"
+                        {
+                            over "hook_a_07"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_07__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_07__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_07"
+                    {
+                        over "hook_c_07"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_02"
+            {
+                over "hook_a_02"
+                {
+                    over "hook_a_02__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_02__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_02__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_02__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_02"
+                        {
+                            over "hook_a_02"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_02__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_02__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_02"
+                    {
+                        over "hook_c_02"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_09"
+            {
+                over "hook_c_09__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "hook_a_09"
+                {
+                    over "hook_a_09__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_09__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_09__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_09__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_09"
+                        {
+                            over "hook_a_09"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_09__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_09"
+                    {
+                        over "hook_c_09"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "separator_3"
+            {
+                over "separator_3__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "separator_3__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "separator_3"
+                    {
+                        over "separator_3"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_06"
+            {
+                over "hook_a_06"
+                {
+                    over "hook_a_06__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_06__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_06__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_06__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_06"
+                        {
+                            over "hook_a_06"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_06__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_06__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_06"
+                    {
+                        over "hook_c_06"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_04"
+            {
+                over "hook_p_04__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_04__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_04__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_04__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_04"
+                    {
+                        over "hook_p_04"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_08"
+            {
+                over "hook_p_08__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_08__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_08__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_08__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_08"
+                    {
+                        over "hook_p_08"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_02"
+            {
+                over "hook_p_02__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_02__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_02__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_02__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_02"
+                    {
+                        over "hook_p_02"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_05"
+            {
+                over "hook_p_05__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_05__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_05__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_05__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_05"
+                    {
+                        over "hook_p_05"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_07"
+            {
+                over "hook_p_07__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_07__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_07__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_07__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_07"
+                    {
+                        over "hook_p_07"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_01"
+            {
+                over "hook_p_01__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_01__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_01__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_01__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_01"
+                    {
+                        over "hook_p_01"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_09"
+            {
+                over "hook_p_09__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_09__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_09__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_09__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_09"
+                    {
+                        over "hook_p_09"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_00"
+            {
+                over "hook_a_00"
+                {
+                    over "hook_a_00__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_00__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_00__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_00__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_00"
+                        {
+                            over "hook_a_00"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_00__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_00__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_00"
+                    {
+                        over "hook_c_00"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "sensor_1"
+            {
+                over "sensor_1__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "sensor_1__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "sensor_1"
+                    {
+                        over "sensor_1"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_00"
+            {
+                over "hook_p_00__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_00__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_00__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_00__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_00"
+                    {
+                        over "hook_p_00"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "separator_1"
+            {
+                over "separator_1__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "separator_1__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "separator_1"
+                    {
+                        over "separator_1"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_03"
+            {
+                over "hook_a_03"
+                {
+                    over "hook_a_03__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_03__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_03__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_03__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_03"
+                        {
+                            over "hook_a_03"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "hook_c_03__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_03__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_03"
+                    {
+                        over "hook_c_03"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_08"
+            {
+                over "hook_c_08__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "hook_a_08"
+                {
+                    over "hook_a_08__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_08__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_08__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_08__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_08"
+                        {
+                            over "hook_a_08"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_08__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_08"
+                    {
+                        over "hook_c_08"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_10"
+            {
+                over "hook_c_10__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "hook_a_10"
+                {
+                    over "hook_a_10__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_10__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_10__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_10__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_10"
+                        {
+                            over "hook_a_10"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_10__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_10"
+                    {
+                        over "hook_c_10"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_11"
+            {
+                over "hook_p_11__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_11__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_11__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_11__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_11"
+                    {
+                        over "hook_p_11"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "sensor_2"
+            {
+                over "sensor_2__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "sensor_2__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "sensor_2"
+                    {
+                        over "sensor_2"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_c_05"
+            {
+                over "hook_c_05__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "hook_a_05"
+                {
+                    over "hook_a_05__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_a_05__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+
+                    over "lod_medium"
+                    {
+                        over "hook_a_05__titanium_dfl" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/titanium_dfl>
+                        }
+
+                        over "hook_a_05__steel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/steel>
+                        }
+                    }
+
+                    over "lod_low"
+                    {
+                        over "hook_a_05"
+                        {
+                            over "hook_a_05"
+                            {
+                                over "titanium_dfl" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/titanium_dfl>
+                                }
+
+                                over "steel" (
+                                    prepend apiSchemas = ["MaterialBindingAPI"]
+                                )
+                                {
+                                    rel material:binding = </ida/Looks/steel>
+                                }
+                            }
+                        }
+                    }
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_c_05__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_c_05"
+                    {
+                        over "hook_c_05"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "hook_p_06"
+            {
+                over "hook_p_06__titanium_dfl" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/titanium_dfl>
+                }
+
+                over "hook_p_06__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "hook_p_06__titanium_dfl" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/titanium_dfl>
+                    }
+
+                    over "hook_p_06__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "hook_p_06"
+                    {
+                        over "hook_p_06"
+                        {
+                            over "titanium_dfl" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/titanium_dfl>
+                            }
+
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "ida_base__retroreflector" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/retroreflector>
+            }
+
+            over "ida_base__target_black" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/target_black>
+            }
+
+            over "ida_base__a286" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/a286>
+            }
+
+            over "ida_base__target_white" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/target_white>
+            }
+
+            over "ida_base__connector" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/connector>
+            }
+
+            over "ida_base__mli" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/mli>
+            }
+
+            over "ida_base__handrail" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/handrail>
+            }
+
+            over "ida_base__aluminium" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/aluminium>
+            }
+
+            over "ida_base__aluminium_machined" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/aluminium_machined>
+            }
+
+            over "ida_base__black_anodize" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/black_anodize>
+            }
+
+            over "ida_base__seal_silicone" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/seal_silicone>
+            }
+
+            over "ida_base__inconel" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/inconel>
+            }
+
+            over "ida_base__seal_land" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/seal_land>
+            }
+
+            over "ida_base__hard_anodize" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/hard_anodize>
+            }
+
+            over "ida_base__hcs" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/hcs>
+            }
+
+            over "ida_base__chrome" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </ida/Looks/chrome>
+            }
+
+            over "sensor_3"
+            {
+                over "sensor_3__steel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/steel>
+                }
+
+                over "lod_medium"
+                {
+                    over "sensor_3__steel" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </ida/Looks/steel>
+                    }
+                }
+
+                over "lod_low"
+                {
+                    over "sensor_3"
+                    {
+                        over "sensor_3"
+                        {
+                            over "steel" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </ida/Looks/steel>
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "lod_medium"
+            {
+                over "ida_base__mli" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/mli>
+                }
+
+                over "ida_base__black_anodize" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/black_anodize>
+                }
+
+                over "ida_base__target_black" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/target_black>
+                }
+
+                over "ida_base__hcs" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/hcs>
+                }
+
+                over "ida_base__target_white" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/target_white>
+                }
+
+                over "ida_base__aluminium" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/aluminium>
+                }
+
+                over "ida_base__retroreflector" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/retroreflector>
+                }
+
+                over "ida_base__chrome" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/chrome>
+                }
+
+                over "ida_base__inconel" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/inconel>
+                }
+
+                over "ida_base__seal_silicone" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/seal_silicone>
+                }
+
+                over "ida_base__hard_anodize" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/hard_anodize>
+                }
+
+                over "ida_base__aluminium_machined" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/aluminium_machined>
+                }
+
+                over "ida_base__a286" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/a286>
+                }
+
+                over "ida_base__connector" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/connector>
+                }
+
+                over "ida_base__seal_land" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/seal_land>
+                }
+
+                over "ida_base__handrail" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </ida/Looks/handrail>
+                }
+            }
+
+            over "lod_low"
+            {
+                over "ida_base"
+                {
+                    over "ida_base"
+                    {
+                        over "aluminium_machined" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/aluminium_machined>
+                        }
+
+                        over "seal_land" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/seal_land>
+                        }
+
+                        over "retroreflector" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/retroreflector>
+                        }
+
+                        over "chrome" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/chrome>
+                        }
+
+                        over "target_white" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/target_white>
+                        }
+
+                        over "inconel" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/inconel>
+                        }
+
+                        over "hard_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/hard_anodize>
+                        }
+
+                        over "seal_silicone" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/seal_silicone>
+                        }
+
+                        over "mli" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/mli>
+                        }
+
+                        over "target_black" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/target_black>
+                        }
+
+                        over "a286" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/a286>
+                        }
+
+                        over "connector" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/connector>
+                        }
+
+                        over "handrail" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/handrail>
+                        }
+
+                        over "hcs" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/hcs>
+                        }
+
+                        over "black_anodize" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/black_anodize>
+                        }
+
+                        over "aluminium" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </ida/Looks/aluminium>
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

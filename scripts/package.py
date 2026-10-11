@@ -6,16 +6,26 @@ Run: $PY scripts/package.py --asset nds|ida
 Inputs: build/<id>/export/{full,proxy}/ (scripts/export.py). Output: build/<id>/usd/<id>/
 
 <id>/
-  <id>.usda                     interface: variant sets Physics / Fidelity, SimReady metadata
+  <id>.usda                     interface: variant sets Physics / Fidelity / Materials / Contact, SimReady metadata
   README.md                     generated summary (links, joints, colliders, sites)
   payloads/base.usda            link tree under /<id>/Geometry, instanceable visual + collider roots, sites
   payloads/robot.usda           Isaac robot schema (links, joints, sites)
-  payloads/geometries.usd       mesh data (crate): visuals and collider meshes
-  payloads/instances.usda       instance prototypes: mesh + bound material (+ collider APIs)
+  payloads/geometries.usd       mesh data (crate): visuals, collider meshes and the medium / low visual LODs
+  payloads/instances.usda       instance prototypes: mesh (+ collider APIs); no material bindings
   payloads/materials.usda       UsdPreviewSurface materials, textures in payloads/Textures
+  payloads/Materials/{full,simple}.usda   looks + bindings (full: textured; simple: flat average colours)
   payloads/physics_materials.usda   friction / restitution + Newton contact stiffness per material
   payloads/Physics/{physics,physx,mujoco}.usda
-  payloads/Fidelity/{full,proxy}.usda
+  payloads/Fidelity/{full,medium,low,proxy,none}.usda
+
+Visual variants (independent of the physics, which never changes):
+  Fidelity   full    one mesh per link per material, instanced (as built)
+             medium  collapse-decimated to ~35 % of the triangles, one mesh per link per material
+             low     ~10 % of the triangles, merged to ONE mesh per rigid link, material GeomSubsets (sim LOD;
+                     viewers that take one material per mesh, such as Newton's, show the link's main material)
+             proxy   one box per part;  none: no visual geometry (headless simulation)
+  Materials  full    textured UsdPreviewSurface;  simple: flat PreviewSurface from the textures' average colour,
+             metallic and roughness (no textures);  none: no bindings, meshes show their displayColor
 
 Contact models (one per collider mesh, chosen in the builder):
   sdf     NewtonSDFCollisionAPI: sparse signed-distance field at a target voxel size (non-convex parts:
@@ -35,7 +45,7 @@ import shutil
 import sys
 
 import numpy as np
-from pxr import Gf, Sdf, Usd, UsdGeom, UsdPhysics, UsdShade
+from pxr import Gf, Sdf, Usd, UsdGeom, UsdPhysics, UsdShade, Vt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -165,6 +175,17 @@ class Source:
         return np.concatenate(pts) if pts else np.zeros((0, 3))
 
 
+def visual_stats(src):
+    nmesh = npts = ntri = 0
+    for items in src.items.values():
+        for _g, mp, _m, _mat in items:
+            mesh = UsdGeom.Mesh(src.stage.GetPrimAtPath(mp))
+            nmesh += 1
+            npts += len(mesh.GetPointsAttr().Get() or [])
+            ntri += sum(c - 2 for c in (mesh.GetFaceVertexCountsAttr().Get() or []))
+    return (nmesh, npts, ntri)
+
+
 def link_paths(links, root_link):
     paths = {}
 
@@ -212,7 +233,123 @@ def is_open(mesh):
 
 # ---------------------------------------------------------------- payload layers
 
-def write_geometries(src, path):
+def _set_display(mesh, rgb, uniform_count=None):
+    pv = UsdGeom.PrimvarsAPI(mesh.GetPrim())
+    for name in ("displayColor", "displayOpacity"):
+        if pv.HasPrimvar(name):
+            pv.RemovePrimvar(name)
+    if uniform_count is None:
+        mesh.CreateDisplayColorPrimvar(UsdGeom.Tokens.constant).Set([Gf.Vec3f(*rgb)])
+    else:
+        mesh.CreateDisplayColorPrimvar(UsdGeom.Tokens.uniform).Set([Gf.Vec3f(*c) for c in rgb])
+
+
+def merge_link(src, items, looks):
+    """One link's visual meshes merged into a single triangle mesh (link frame) with a GeomSubset per material.
+    The material with the most faces comes first, so viewers that read one colour per mesh show it."""
+    parts = []
+    for _g, mp, m, mat in items:
+        mesh = UsdGeom.Mesh(src.stage.GetPrimAtPath(mp))
+        pts = mesh.GetPointsAttr().Get() or []
+        counts = list(mesh.GetFaceVertexCountsAttr().Get() or [])
+        idx = list(mesh.GetFaceVertexIndicesAttr().Get() or [])
+        if not pts or not counts:
+            continue
+        p = np.array([list(m.Transform(Gf.Vec3d(*q))) for q in pts], dtype=np.float64)
+        nrm = mesh.GetNormalsAttr().Get()
+        if nrm is not None and len(nrm) == len(idx):
+            n = np.array([list(m.TransformDir(Gf.Vec3d(*q))) for q in nrm], dtype=np.float64)
+            n /= np.maximum(np.linalg.norm(n, axis=1, keepdims=True), 1e-12)
+        else:   # flat normals
+            n = np.zeros((len(idx), 3))
+            o = 0
+            for c in counts:
+                f = p[idx[o:o + c]]
+                fn = np.cross(f[1] - f[0], f[2] - f[0])
+                n[o:o + c] = fn / max(np.linalg.norm(fn), 1e-12)
+                o += c
+        st_pv = UsdGeom.PrimvarsAPI(mesh.GetPrim()).GetPrimvar("st")
+        st = np.zeros((len(idx), 2))
+        if st_pv and st_pv.GetInterpolation() == UsdGeom.Tokens.faceVarying:
+            vals = st_pv.ComputeFlattened()
+            if vals is not None and len(vals) == len(idx):
+                st = np.array(vals, dtype=np.float64)
+        parts.append({"mat": mat, "p": p, "counts": counts, "idx": idx, "n": n, "st": st, "open": is_open(mesh)})
+    nf = {}
+    for q in parts:
+        nf[q["mat"]] = nf.get(q["mat"], 0) + len(q["counts"])
+    parts.sort(key=lambda q: -nf[q["mat"]])
+    P, C, I, N, ST, face_mat = [], [], [], [], [], []
+    off = 0
+    for q in parts:
+        P.append(q["p"])
+        C += q["counts"]
+        I += [i + off for i in q["idx"]]
+        N.append(q["n"])
+        ST.append(q["st"])
+        face_mat += [q["mat"]] * len(q["counts"])
+        off += len(q["p"])
+    return {"points": np.concatenate(P), "counts": C, "indices": I, "normals": np.concatenate(N),
+            "st": np.concatenate(ST), "face_mat": face_mat, "open": any(q["open"] for q in parts)}
+
+
+def write_lod_meshes(layer_path, lods, looks):
+    """Medium (per item, as exported) and low (merged per link) visual LODs, appended to geometries.usd."""
+    stage = Usd.Stage.Open(layer_path)
+    layer = stage.GetRootLayer()
+    stats = {}
+    for lod, lsrc in lods.items():
+        root = f"/Geometries/lod_{lod}"
+        UsdGeom.Scope.Define(stage, root)
+        nmesh = npts = ntri = 0
+        if lod == "medium":
+            for items in lsrc.items.values():
+                for g, mp, _m, mat in items:
+                    UsdGeom.Xform.Define(stage, f"{root}/{g}")
+                    Sdf.CopySpec(lsrc.layer, mp, layer, Sdf.Path(f"{root}/{g}/{g}"))
+                    spec = layer.GetPrimAtPath(f"{root}/{g}/{g}")
+                    for rel in [r for r in spec.relationships if r.name.startswith("material:binding")]:
+                        spec.RemoveProperty(rel)
+                    if "apiSchemas" in spec.ListInfoKeys():
+                        spec.ClearInfo("apiSchemas")
+                    mesh = UsdGeom.Mesh(stage.GetPrimAtPath(f"{root}/{g}/{g}"))
+                    mesh.CreateSubdivisionSchemeAttr().Set(UsdGeom.Tokens.none)
+                    if is_open(mesh):
+                        mesh.CreateDoubleSidedAttr().Set(True)
+                    _set_display(mesh, looks.get(mat, {}).get("diffuse", (0.6, 0.6, 0.6)))
+                    counts = mesh.GetFaceVertexCountsAttr().Get()
+                    nmesh, npts, ntri = nmesh + 1, npts + len(mesh.GetPointsAttr().Get()), ntri + sum(c - 2 for c in counts)
+        else:
+            for link, items in lsrc.items.items():
+                mg = merge_link(lsrc, items, looks)
+                UsdGeom.Xform.Define(stage, f"{root}/{link}")
+                mesh = UsdGeom.Mesh.Define(stage, f"{root}/{link}/{link}")
+                mesh.CreatePointsAttr([Gf.Vec3f(*q) for q in mg["points"]])
+                mesh.CreateFaceVertexCountsAttr(mg["counts"])
+                mesh.CreateFaceVertexIndicesAttr(mg["indices"])
+                mesh.CreateNormalsAttr([Gf.Vec3f(*q) for q in mg["normals"]])
+                mesh.SetNormalsInterpolation(UsdGeom.Tokens.faceVarying)
+                UsdGeom.PrimvarsAPI(mesh.GetPrim()).CreatePrimvar(
+                    "st", Sdf.ValueTypeNames.TexCoord2fArray, UsdGeom.Tokens.faceVarying).Set(
+                    [Gf.Vec2f(*q) for q in mg["st"]])
+                mesh.CreateSubdivisionSchemeAttr().Set(UsdGeom.Tokens.none)
+                if mg["open"]:
+                    mesh.CreateDoubleSidedAttr().Set(True)
+                lo, hi = mg["points"].min(axis=0), mg["points"].max(axis=0)
+                mesh.CreateExtentAttr([Gf.Vec3f(*lo), Gf.Vec3f(*hi)])
+                _set_display(mesh, [looks.get(fm, {}).get("diffuse", (0.6, 0.6, 0.6)) for fm in mg["face_mat"]],
+                             uniform_count=len(mg["counts"]))
+                bind = UsdShade.MaterialBindingAPI.Apply(mesh.GetPrim())
+                for mat in dict.fromkeys(mg["face_mat"]):
+                    faces = [i for i, fm in enumerate(mg["face_mat"]) if fm == mat]
+                    bind.CreateMaterialBindSubset(sanitize(mat or "unbound"), Vt.IntArray(faces), UsdGeom.Tokens.face)
+                nmesh, npts, ntri = nmesh + 1, npts + len(mg["points"]), ntri + sum(c - 2 for c in mg["counts"])
+        stats[lod] = (nmesh, npts, ntri)
+    layer.Save()
+    return stats
+
+
+def write_geometries(src, path, looks=None):
     stage = new_stage(path, default_prim=False)
     layer = stage.GetRootLayer()
     UsdGeom.Scope.Define(stage, "/Geometries")
@@ -230,6 +367,11 @@ def write_geometries(src, path):
         mesh.CreateSubdivisionSchemeAttr().Set(UsdGeom.Tokens.none)
         if not g.startswith("col_") and is_open(mesh):
             mesh.CreateDoubleSidedAttr().Set(True)
+    if looks is not None:   # Materials=none shows each visual mesh in its material's average colour
+        for items in src.items.values():
+            for g, _mp, _m, mat in items:
+                _set_display(UsdGeom.Mesh(stage.GetPrimAtPath(f"/Geometries/{g}/{g}")),
+                             looks.get(mat, {}).get("diffuse", (0.6, 0.6, 0.6)))
     layer.Save()
 
 
@@ -269,6 +411,43 @@ def write_materials(src, path, tex_out):
     return names
 
 
+def _texture_mean(path, srgb=False, channel=None):
+    from PIL import Image
+    a = np.asarray(Image.open(path).convert("RGB"), dtype=np.float64) / 255.0
+    if srgb:
+        a = np.where(a <= 0.04045, a / 12.92, ((a + 0.055) / 1.055) ** 2.4)
+    m = a.reshape(-1, 3).mean(axis=0)
+    return float(m[0]) if channel == "r" else tuple(float(x) for x in m)
+
+
+def material_looks(materials_path):
+    """Per material: the flat look (linear diffuse colour, metallic, roughness, opacity) its textures average to."""
+    stage = Usd.Stage.Open(materials_path)
+    looks = {}
+    for mat in [p for p in stage.Traverse() if p.IsA(UsdShade.Material)]:
+        surf = next((UsdShade.Shader(p) for p in Usd.PrimRange(mat) if p.IsA(UsdShade.Shader)
+                     and UsdShade.Shader(p).GetIdAttr().Get() == "UsdPreviewSurface"), None)
+        look = {"diffuse": (0.6, 0.6, 0.6), "metallic": 0.0, "roughness": 0.5, "opacity": 1.0}
+        if surf is not None:
+            for key, name in (("diffuse", "diffuseColor"), ("metallic", "metallic"), ("roughness", "roughness"),
+                              ("opacity", "opacity")):
+                inp = surf.GetInput(name)
+                if not inp:
+                    continue
+                if inp.HasConnectedSource():
+                    src, out, _ = inp.GetConnectedSource()
+                    tex = UsdShade.Shader(src.GetPrim())
+                    f = tex.GetInput("file").Get() if tex.GetInput("file") else None
+                    if f is not None and f.resolvedPath and os.path.exists(f.resolvedPath):
+                        srgb = tex.GetInput("sourceColorSpace").Get() == "sRGB" if tex.GetInput("sourceColorSpace") else False
+                        look[key] = _texture_mean(f.resolvedPath, srgb, None if key == "diffuse" else "r")
+                elif inp.Get() is not None:
+                    v = inp.Get()
+                    look[key] = tuple(float(x) for x in v) if key == "diffuse" else float(v)
+        looks[mat.GetName()] = look
+    return looks
+
+
 def write_physics_materials(path, cfg):
     stage = new_stage(path, default_prim=False)
     UsdGeom.Scope.Define(stage, "/PhysicsMaterials")
@@ -300,13 +479,8 @@ def write_instances(src, path, colliders, cfg):
         for g, _mp, _m, mat in items:
             inst = UsdGeom.Xform.Define(stage, f"/Instances/{g}").GetPrim()
             inst.GetReferences().AddReference("./geometries.usd", f"/Geometries/{g}")
-            if mat:
-                UsdGeom.Scope.Define(stage, f"/Instances/{g}/VisualMaterials")
-                mp = stage.DefinePrim(f"/Instances/{g}/VisualMaterials/{mat}", "Material")
-                mp.GetReferences().AddReference("./materials.usda", f"/Materials/{mat}")
-                mp.SetInstanceable(True)
-                mesh = stage.OverridePrim(f"/Instances/{g}/{g}")
-                UsdShade.MaterialBindingAPI.Apply(mesh).Bind(UsdShade.Material(mp))
+            # the look is bound on the instance prim by the Materials variant (bindings inside a prototype could
+            # not be switched)
     for cols in src.colliders.values():
         for name, _mp, _m in cols:
             spec = colliders.get(name, {"model": "convex", "material": "anodize"})
@@ -369,7 +543,6 @@ def write_base(src, path, links, paths, sites, cfg):
     UsdGeom.Scope.Define(stage, f"{ROOT}/Geometry")
     UsdGeom.Scope.Define(stage, f"{ROOT}/Physics")
     UsdGeom.Scope.Define(stage, f"{ROOT}/Materials")
-    UsdGeom.Scope.Define(stage, f"{ROOT}/VisualMaterials")
     for name in paths:
         L = links[name]
         po = Gf.Vec3d(*links[L["parent"]]["origin"]) if L["parent"] else Gf.Vec3d(0, 0, 0)
@@ -662,10 +835,74 @@ def write_contact(out_dir, src, colliders, paths):
         st.GetRootLayer().Save()
 
 
-def write_fidelity(out_dir, src, proxy, paths):
+def write_material_variants(out_dir, src, lods, paths, looks):
+    """Materials/full.usda (textured looks) and Materials/simple.usda (flat looks), each binding the full visual
+    instances, the medium instances and the low LOD's material subsets. Materials=none authors nothing."""
+    t = Sdf.ValueTypeNames
+    targets = []   # (prim path, material)
+    for link, items in src.items.items():
+        targets += [(f"{paths[link]}/{g}", mat) for g, _mp, _m, mat in items if mat]
+    if "medium" in lods:
+        for link, items in lods["medium"].items.items():
+            targets += [(f"{paths[link]}/lod_medium/{g}", mat) for g, _mp, _m, mat in items if mat]
+    if "low" in lods:
+        for link, items in lods["low"].items.items():
+            for mat in dict.fromkeys(m for *_x, m in items):
+                if mat:
+                    targets.append((f"{paths[link]}/lod_low/{link}/{link}/{sanitize(mat)}", mat))
+    for variant in ("full", "simple"):
+        st = new_stage(os.path.join(out_dir, f"{variant}.usda"))
+        st.OverridePrim(ROOT)
+        UsdGeom.Scope.Define(st, f"{ROOT}/Looks")
+        for mat, look in looks.items():
+            mp = st.DefinePrim(f"{ROOT}/Looks/{mat}", "Material")
+            if variant == "full":
+                mp.GetReferences().AddReference("../materials.usda", f"/Materials/{mat}")
+                continue
+            sh = UsdShade.Shader.Define(st, f"{ROOT}/Looks/{mat}/PreviewSurface")
+            sh.CreateIdAttr("UsdPreviewSurface")
+            sh.CreateInput("diffuseColor", t.Color3f).Set(Gf.Vec3f(*look["diffuse"]))
+            sh.CreateInput("metallic", t.Float).Set(float(look["metallic"]))
+            sh.CreateInput("roughness", t.Float).Set(float(look["roughness"]))
+            sh.CreateInput("opacity", t.Float).Set(float(look["opacity"]))
+            UsdShade.Material(mp).CreateSurfaceOutput().ConnectToSource(sh.ConnectableAPI(), "surface")
+        for path, mat in targets:
+            prim = st.OverridePrim(path)
+            UsdShade.MaterialBindingAPI.Apply(prim).Bind(UsdShade.Material(st.GetPrimAtPath(f"{ROOT}/Looks/{mat}")))
+        st.GetRootLayer().Save()
+
+
+def write_fidelity(out_dir, src, proxy, paths, lods=None):
     full = new_stage(os.path.join(out_dir, "full.usda"))
     full.OverridePrim(ROOT)
     full.GetRootLayer().Save()
+
+    def hide_full(st):
+        st.OverridePrim(ROOT)
+        for link, items in src.items.items():
+            for g, *_ in items:
+                st.OverridePrim(f"{paths[link]}/{g}").SetActive(False)
+
+    none = new_stage(os.path.join(out_dir, "none.usda"))   # no visual geometry (headless simulation)
+    hide_full(none)
+    none.GetRootLayer().Save()
+    for lod, lsrc in (lods or {}).items():
+        st = new_stage(os.path.join(out_dir, f"{lod}.usda"))
+        hide_full(st)
+        for link, items in lsrc.items.items():
+            holder = f"{paths[link]}/lod_{lod}"
+            UsdGeom.Xform.Define(st, holder)
+            if lod == "medium":   # instanced like the full LOD, one prototype per link and material
+                for g, _mp, m, _mat in items:
+                    inst = st.DefinePrim(f"{holder}/{g}", "Xform")
+                    inst.GetReferences().AddReference("../geometries.usd", f"/Geometries/lod_medium/{g}")
+                    inst.SetInstanceable(True)
+                    tf = Gf.Transform(m)
+                    xform_ops(inst, tf.GetTranslation(), tf.GetRotation().GetQuat(), tf.GetScale())
+            else:                 # one merged mesh per link (already in the link frame); its subsets are bound
+                prim = st.DefinePrim(f"{holder}/{link}", "Xform")
+                prim.GetReferences().AddReference("../geometries.usd", f"/Geometries/lod_{lod}/{link}")
+        st.GetRootLayer().Save()
     st = new_stage(os.path.join(out_dir, "proxy.usda"))
     layer = st.GetRootLayer()
     st.OverridePrim(ROOT)
@@ -694,14 +931,16 @@ def write_interface(path, cfg, links, extents, default_physics="physics"):
     sets = [
         ("Physics", {"none": None, "physics": "Physics/physics.usda", "physx": "Physics/physx.usda",
                      "mujoco": "Physics/mujoco.usda"}, default_physics),
-        ("Fidelity", {"none": None, "full": "Fidelity/full.usda", "proxy": "Fidelity/proxy.usda"}, "full"),
+        ("Fidelity", {"full": "Fidelity/full.usda", "medium": "Fidelity/medium.usda", "low": "Fidelity/low.usda",
+                      "proxy": "Fidelity/proxy.usda", "none": "Fidelity/none.usda"}, "full"),
+        ("Materials", {"full": "Materials/full.usda", "simple": "Materials/simple.usda", "none": None}, "full"),
         ("Contact", {"exact": "Contact/exact.usda", "sdf": "Contact/sdf.usda", "hydro": "Contact/hydro.usda"}, "exact"),
     ]
     for set_name, options, default in sets:
         vs = root.GetVariantSets().AddVariantSet(set_name)
         for opt, payload in options.items():
             vs.AddVariant(opt)
-            if payload:
+            if payload and os.path.exists(os.path.join(os.path.dirname(path), "payloads", payload)):
                 vs.SetVariantSelection(opt)
                 with vs.GetVariantEditContext():
                     root.GetPayloads().AddPayload(f"./payloads/{payload}")
@@ -729,7 +968,7 @@ def finish_extents(asset_dir, asset):
     return tuple(rng.GetSize())
 
 
-def write_readme(path, cfg, links, joints, loops, colliders, sites, masses):
+def write_readme(path, cfg, links, joints, loops, colliders, sites, masses, lod_stats=None):
     lines = [f"# {cfg.TITLE}", "", cfg.DOC, "", f"Version {cfg.VERSION}. Generated by `scripts/package.py`.", "",
              "## Links", "", "| Link | Parent | Joint | Role | Mass (kg) |", "|---|---|---|---|---|"]
     for n, L in links.items():
@@ -739,6 +978,9 @@ def write_readme(path, cfg, links, joints, loops, colliders, sites, masses):
     if loops:
         lines += ["", "## Loop joints (excludeFromArticulation)", ""]
         lines += [f"- `{lp['name']}`: {lp['type']} `{lp['parent']}` -> `{lp['child']}`" for lp in loops]
+    if lod_stats:
+        lines += ["", "## Visual LODs (Fidelity variant)", "", "| Fidelity | Meshes | Points | Triangles |", "|---|---|---|---|"]
+        lines += [f"| {k} | {v[0]} | {v[1]} | {v[2]} |" for k, v in lod_stats.items()]
     kinds = {}
     for c in colliders.values():
         kinds[c["model"]] = kinds.get(c["model"], 0) + 1
@@ -766,12 +1008,17 @@ def main():
     colliders = {sanitize(k): v for k, v in graph.get("colliders", {}).items()}
     src = Source(os.path.join(exp, "full"), colliders)
     proxy = Source(os.path.join(exp, "proxy")) if os.path.exists(os.path.join(exp, "proxy", "visuals.usdc")) else None
+    lods = {lod: Source(os.path.join(exp, lod)) for lod in ("medium", "low")
+            if os.path.exists(os.path.join(exp, lod, "visuals.usdc"))}
     links, sites, loops = graph["links"], graph["sites"], graph.get("loops", [])
     root_link = next(n for n, L in links.items() if L["parent"] is None)
     paths = link_paths(links, root_link)
 
-    write_geometries(src, os.path.join(pay, "geometries.usd"))
     write_materials(src, os.path.join(pay, "materials.usda"), os.path.join(pay, "Textures"))
+    looks = material_looks(os.path.join(pay, "materials.usda"))
+    write_geometries(src, os.path.join(pay, "geometries.usd"), looks)
+    lod_stats = {"full": visual_stats(src)}
+    lod_stats.update(write_lod_meshes(os.path.join(pay, "geometries.usd"), lods, looks))
     write_physics_materials(os.path.join(pay, "physics_materials.usda"), cfg)
     write_instances(src, os.path.join(pay, "instances.usda"), colliders, cfg)
     masses = mass_props(src, links)
@@ -781,12 +1028,13 @@ def main():
     write_robot(os.path.join(pay, "robot.usda"), links, paths, sites, joints, loops, root_link, cfg)
     write_base(src, os.path.join(pay, "base.usda"), links, paths, sites, cfg)
     if proxy:
-        write_fidelity(os.path.join(pay, "Fidelity"), src, proxy, paths)
+        write_fidelity(os.path.join(pay, "Fidelity"), src, proxy, paths, lods)
+    write_material_variants(os.path.join(pay, "Materials"), src, lods, paths, looks)
     write_contact(os.path.join(pay, "Contact"), src, colliders, paths)
     write_interface(os.path.join(out, f"{asset}.usda"), cfg, links, (0, 0, 0))
     extents = finish_extents(out, asset)
     write_interface(os.path.join(out, f"{asset}.usda"), cfg, links, extents)
-    write_readme(os.path.join(out, "README.md"), cfg, links, joints, loops, colliders, sites, masses)
+    write_readme(os.path.join(out, "README.md"), cfg, links, joints, loops, colliders, sites, masses, lod_stats)
     ncol = sum(len(v) for v in src.colliders.values())
     print(f"packaged {asset}: {len(links)} links, {len(joints)} joints + {len(loops)} loops, {len(sites)} sites, "
           f"{ncol} colliders, {sum(m[0] for m in masses.values()):.1f} kg, extents "

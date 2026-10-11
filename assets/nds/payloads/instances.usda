@@ -14,2728 +14,744 @@ def Scope "Instances"
         prepend references = @./geometries.usd@</Geometries/hook_a_11__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_11__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_11__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_11__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_11__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_11__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_11__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_00__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_00__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_00__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_00__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_00__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_00__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_00__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_00__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_00__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_00__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_00__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_00__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "sensor_1__steel" (
         prepend references = @./geometries.usd@</Geometries/sensor_1__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "sensor_1__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/sensor_1__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg6_body__steel" (
         prepend references = @./geometries.usd@</Geometries/leg6_body__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg6_body__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg6_body__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg6_body__aluminium_machined" (
         prepend references = @./geometries.usd@</Geometries/leg6_body__aluminium_machined>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "aluminium_machined" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/aluminium_machined>
-            )
-            {
-            }
-        }
-
-        over "leg6_body__aluminium_machined" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg6_body__aluminium_machined/VisualMaterials/aluminium_machined>
-        }
     }
 
     def Xform "leg6_body__black_anodize" (
         prepend references = @./geometries.usd@</Geometries/leg6_body__black_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "black_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/black_anodize>
-            )
-            {
-            }
-        }
-
-        over "leg6_body__black_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg6_body__black_anodize/VisualMaterials/black_anodize>
-        }
     }
 
     def Xform "leg6_body__iridite" (
         prepend references = @./geometries.usd@</Geometries/leg6_body__iridite>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "iridite" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/iridite>
-            )
-            {
-            }
-        }
-
-        over "leg6_body__iridite" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg6_body__iridite/VisualMaterials/iridite>
-        }
     }
 
     def Xform "hook_a_10__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_10__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_10__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_10__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_10__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_10__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_10__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_10__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_10__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_10__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_10__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_10__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_01__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_01__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_01__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_01__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg6_rod__chrome" (
         prepend references = @./geometries.usd@</Geometries/leg6_rod__chrome>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "chrome" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/chrome>
-            )
-            {
-            }
-        }
-
-        over "leg6_rod__chrome" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg6_rod__chrome/VisualMaterials/chrome>
-        }
     }
 
     def Xform "leg6_rod__steel" (
         prepend references = @./geometries.usd@</Geometries/leg6_rod__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg6_rod__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg6_rod__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg2_ujoint__steel" (
         prepend references = @./geometries.usd@</Geometries/leg2_ujoint__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg2_ujoint__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg2_ujoint__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_02__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_02__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_02__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_02__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg6_ujoint__steel" (
         prepend references = @./geometries.usd@</Geometries/leg6_ujoint__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg6_ujoint__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg6_ujoint__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_07__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_07__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_07__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_07__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_03__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_03__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_03__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_03__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_03__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_03__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_03__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_03__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "separator_1__steel" (
         prepend references = @./geometries.usd@</Geometries/separator_1__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "separator_1__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/separator_1__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_04__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_04__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_04__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_04__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_04__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_04__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_04__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_04__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg1_rod__chrome" (
         prepend references = @./geometries.usd@</Geometries/leg1_rod__chrome>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "chrome" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/chrome>
-            )
-            {
-            }
-        }
-
-        over "leg1_rod__chrome" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg1_rod__chrome/VisualMaterials/chrome>
-        }
     }
 
     def Xform "leg1_rod__steel" (
         prepend references = @./geometries.usd@</Geometries/leg1_rod__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg1_rod__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg1_rod__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "sensor_3__steel" (
         prepend references = @./geometries.usd@</Geometries/sensor_3__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "sensor_3__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/sensor_3__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_05__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_05__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_05__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_05__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_05__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_05__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_05__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_05__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "latch_2__latch_body" (
         prepend references = @./geometries.usd@</Geometries/latch_2__latch_body>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "latch_body" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/latch_body>
-            )
-            {
-            }
-        }
-
-        over "latch_2__latch_body" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/latch_2__latch_body/VisualMaterials/latch_body>
-        }
     }
 
     def Xform "latch_2__steel" (
         prepend references = @./geometries.usd@</Geometries/latch_2__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "latch_2__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/latch_2__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg5_body__steel" (
         prepend references = @./geometries.usd@</Geometries/leg5_body__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg5_body__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg5_body__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg5_body__black_anodize" (
         prepend references = @./geometries.usd@</Geometries/leg5_body__black_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "black_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/black_anodize>
-            )
-            {
-            }
-        }
-
-        over "leg5_body__black_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg5_body__black_anodize/VisualMaterials/black_anodize>
-        }
     }
 
     def Xform "leg5_body__aluminium_machined" (
         prepend references = @./geometries.usd@</Geometries/leg5_body__aluminium_machined>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "aluminium_machined" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/aluminium_machined>
-            )
-            {
-            }
-        }
-
-        over "leg5_body__aluminium_machined" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg5_body__aluminium_machined/VisualMaterials/aluminium_machined>
-        }
     }
 
     def Xform "leg5_body__iridite" (
         prepend references = @./geometries.usd@</Geometries/leg5_body__iridite>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "iridite" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/iridite>
-            )
-            {
-            }
-        }
-
-        over "leg5_body__iridite" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg5_body__iridite/VisualMaterials/iridite>
-        }
     }
 
     def Xform "hook_c_11__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_11__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_11__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_11__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_04__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_04__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_04__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_04__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_04__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_04__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_04__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_04__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg3_body__steel" (
         prepend references = @./geometries.usd@</Geometries/leg3_body__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg3_body__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg3_body__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg3_body__black_anodize" (
         prepend references = @./geometries.usd@</Geometries/leg3_body__black_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "black_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/black_anodize>
-            )
-            {
-            }
-        }
-
-        over "leg3_body__black_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg3_body__black_anodize/VisualMaterials/black_anodize>
-        }
     }
 
     def Xform "leg3_body__aluminium_machined" (
         prepend references = @./geometries.usd@</Geometries/leg3_body__aluminium_machined>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "aluminium_machined" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/aluminium_machined>
-            )
-            {
-            }
-        }
-
-        over "leg3_body__aluminium_machined" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg3_body__aluminium_machined/VisualMaterials/aluminium_machined>
-        }
     }
 
     def Xform "leg3_body__iridite" (
         prepend references = @./geometries.usd@</Geometries/leg3_body__iridite>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "iridite" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/iridite>
-            )
-            {
-            }
-        }
-
-        over "leg3_body__iridite" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg3_body__iridite/VisualMaterials/iridite>
-        }
     }
 
     def Xform "scs_ring__ptfe_anodize" (
         prepend references = @./geometries.usd@</Geometries/scs_ring__ptfe_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "ptfe_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/ptfe_anodize>
-            )
-            {
-            }
-        }
-
-        over "scs_ring__ptfe_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/scs_ring__ptfe_anodize/VisualMaterials/ptfe_anodize>
-        }
     }
 
     def Xform "scs_ring__black_anodize" (
         prepend references = @./geometries.usd@</Geometries/scs_ring__black_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "black_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/black_anodize>
-            )
-            {
-            }
-        }
-
-        over "scs_ring__black_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/scs_ring__black_anodize/VisualMaterials/black_anodize>
-        }
     }
 
     def Xform "scs_ring__aluminium_machined" (
         prepend references = @./geometries.usd@</Geometries/scs_ring__aluminium_machined>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "aluminium_machined" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/aluminium_machined>
-            )
-            {
-            }
-        }
-
-        over "scs_ring__aluminium_machined" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/scs_ring__aluminium_machined/VisualMaterials/aluminium_machined>
-        }
     }
 
     def Xform "latch_3__latch_body" (
         prepend references = @./geometries.usd@</Geometries/latch_3__latch_body>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "latch_body" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/latch_body>
-            )
-            {
-            }
-        }
-
-        over "latch_3__latch_body" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/latch_3__latch_body/VisualMaterials/latch_body>
-        }
     }
 
     def Xform "latch_3__steel" (
         prepend references = @./geometries.usd@</Geometries/latch_3__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "latch_3__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/latch_3__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_07__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_07__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_07__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_07__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_07__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_07__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_07__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_07__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_04__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_04__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_04__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_04__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_05__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_05__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_05__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_05__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg4_rod__chrome" (
         prepend references = @./geometries.usd@</Geometries/leg4_rod__chrome>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "chrome" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/chrome>
-            )
-            {
-            }
-        }
-
-        over "leg4_rod__chrome" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg4_rod__chrome/VisualMaterials/chrome>
-        }
     }
 
     def Xform "leg4_rod__steel" (
         prepend references = @./geometries.usd@</Geometries/leg4_rod__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg4_rod__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg4_rod__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_02__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_02__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_02__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_02__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_02__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_02__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_02__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_02__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_08__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_08__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_08__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_08__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_08__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_08__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_08__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_08__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_06__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_06__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_06__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_06__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_06__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_06__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_06__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_06__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_08__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_08__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_08__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_08__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg4_ujoint__steel" (
         prepend references = @./geometries.usd@</Geometries/leg4_ujoint__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg4_ujoint__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg4_ujoint__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_08__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_08__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_08__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_08__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_08__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_08__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_08__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_08__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_10__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_10__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_10__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_10__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_10__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_10__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_10__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_10__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "latch_1__latch_body" (
         prepend references = @./geometries.usd@</Geometries/latch_1__latch_body>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "latch_body" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/latch_body>
-            )
-            {
-            }
-        }
-
-        over "latch_1__latch_body" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/latch_1__latch_body/VisualMaterials/latch_body>
-        }
     }
 
     def Xform "latch_1__steel" (
         prepend references = @./geometries.usd@</Geometries/latch_1__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "latch_1__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/latch_1__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg2_rod__chrome" (
         prepend references = @./geometries.usd@</Geometries/leg2_rod__chrome>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "chrome" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/chrome>
-            )
-            {
-            }
-        }
-
-        over "leg2_rod__chrome" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg2_rod__chrome/VisualMaterials/chrome>
-        }
     }
 
     def Xform "leg2_rod__steel" (
         prepend references = @./geometries.usd@</Geometries/leg2_rod__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg2_rod__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg2_rod__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_01__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_01__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_01__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_01__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_01__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_01__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_01__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_01__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_11__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_11__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_11__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_11__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_11__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_11__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_11__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_11__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "nds_base__steel" (
         prepend references = @./geometries.usd@</Geometries/nds_base__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "nds_base__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/nds_base__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "nds_base__aluminium_machined" (
         prepend references = @./geometries.usd@</Geometries/nds_base__aluminium_machined>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "aluminium_machined" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/aluminium_machined>
-            )
-            {
-            }
-        }
-
-        over "nds_base__aluminium_machined" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/nds_base__aluminium_machined/VisualMaterials/aluminium_machined>
-        }
     }
 
     def Xform "nds_base__hcs" (
         prepend references = @./geometries.usd@</Geometries/nds_base__hcs>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "hcs" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/hcs>
-            )
-            {
-            }
-        }
-
-        over "nds_base__hcs" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/nds_base__hcs/VisualMaterials/hcs>
-        }
     }
 
     def Xform "nds_base__seal_silicone" (
         prepend references = @./geometries.usd@</Geometries/nds_base__seal_silicone>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "seal_silicone" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/seal_silicone>
-            )
-            {
-            }
-        }
-
-        over "nds_base__seal_silicone" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/nds_base__seal_silicone/VisualMaterials/seal_silicone>
-        }
     }
 
     def Xform "nds_base__black_anodize" (
         prepend references = @./geometries.usd@</Geometries/nds_base__black_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "black_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/black_anodize>
-            )
-            {
-            }
-        }
-
-        over "nds_base__black_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/nds_base__black_anodize/VisualMaterials/black_anodize>
-        }
     }
 
     def Xform "nds_base__inconel" (
         prepend references = @./geometries.usd@</Geometries/nds_base__inconel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "inconel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/inconel>
-            )
-            {
-            }
-        }
-
-        over "nds_base__inconel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/nds_base__inconel/VisualMaterials/inconel>
-        }
     }
 
     def Xform "nds_base__iridite" (
         prepend references = @./geometries.usd@</Geometries/nds_base__iridite>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "iridite" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/iridite>
-            )
-            {
-            }
-        }
-
-        over "nds_base__iridite" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/nds_base__iridite/VisualMaterials/iridite>
-        }
     }
 
     def Xform "hook_p_05__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_05__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_05__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_05__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_05__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_05__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_05__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_05__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "separator_2__steel" (
         prepend references = @./geometries.usd@</Geometries/separator_2__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "separator_2__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/separator_2__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "sensor_2__steel" (
         prepend references = @./geometries.usd@</Geometries/sensor_2__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "sensor_2__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/sensor_2__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_06__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_06__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_06__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_06__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_02__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_02__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_02__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_02__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_02__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_02__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_02__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_02__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg1_ujoint__steel" (
         prepend references = @./geometries.usd@</Geometries/leg1_ujoint__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg1_ujoint__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg1_ujoint__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_00__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_00__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_00__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_00__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_00__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_00__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_00__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_00__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_03__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_03__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_03__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_03__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_07__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_07__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_07__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_07__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_07__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_07__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_07__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_07__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_c_09__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_c_09__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_c_09__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_c_09__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "separator_3__steel" (
         prepend references = @./geometries.usd@</Geometries/separator_3__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "separator_3__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/separator_3__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_06__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_06__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_06__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_06__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_06__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_06__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_06__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_06__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg3_rod__chrome" (
         prepend references = @./geometries.usd@</Geometries/leg3_rod__chrome>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "chrome" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/chrome>
-            )
-            {
-            }
-        }
-
-        over "leg3_rod__chrome" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg3_rod__chrome/VisualMaterials/chrome>
-        }
     }
 
     def Xform "leg3_rod__steel" (
         prepend references = @./geometries.usd@</Geometries/leg3_rod__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg3_rod__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg3_rod__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg3_ujoint__steel" (
         prepend references = @./geometries.usd@</Geometries/leg3_ujoint__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg3_ujoint__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg3_ujoint__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg5_ujoint__steel" (
         prepend references = @./geometries.usd@</Geometries/leg5_ujoint__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg5_ujoint__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg5_ujoint__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg1_body__steel" (
         prepend references = @./geometries.usd@</Geometries/leg1_body__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg1_body__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg1_body__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg1_body__aluminium_machined" (
         prepend references = @./geometries.usd@</Geometries/leg1_body__aluminium_machined>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "aluminium_machined" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/aluminium_machined>
-            )
-            {
-            }
-        }
-
-        over "leg1_body__aluminium_machined" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg1_body__aluminium_machined/VisualMaterials/aluminium_machined>
-        }
     }
 
     def Xform "leg1_body__black_anodize" (
         prepend references = @./geometries.usd@</Geometries/leg1_body__black_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "black_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/black_anodize>
-            )
-            {
-            }
-        }
-
-        over "leg1_body__black_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg1_body__black_anodize/VisualMaterials/black_anodize>
-        }
     }
 
     def Xform "leg1_body__iridite" (
         prepend references = @./geometries.usd@</Geometries/leg1_body__iridite>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "iridite" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/iridite>
-            )
-            {
-            }
-        }
-
-        over "leg1_body__iridite" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg1_body__iridite/VisualMaterials/iridite>
-        }
     }
 
     def Xform "hook_p_01__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_01__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_01__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_01__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_01__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_01__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_01__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_01__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_a_09__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_09__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_09__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_09__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_09__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_09__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_09__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_09__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg2_body__steel" (
         prepend references = @./geometries.usd@</Geometries/leg2_body__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg2_body__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg2_body__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg2_body__black_anodize" (
         prepend references = @./geometries.usd@</Geometries/leg2_body__black_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "black_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/black_anodize>
-            )
-            {
-            }
-        }
-
-        over "leg2_body__black_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg2_body__black_anodize/VisualMaterials/black_anodize>
-        }
     }
 
     def Xform "leg2_body__aluminium_machined" (
         prepend references = @./geometries.usd@</Geometries/leg2_body__aluminium_machined>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "aluminium_machined" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/aluminium_machined>
-            )
-            {
-            }
-        }
-
-        over "leg2_body__aluminium_machined" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg2_body__aluminium_machined/VisualMaterials/aluminium_machined>
-        }
     }
 
     def Xform "leg2_body__iridite" (
         prepend references = @./geometries.usd@</Geometries/leg2_body__iridite>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "iridite" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/iridite>
-            )
-            {
-            }
-        }
-
-        over "leg2_body__iridite" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg2_body__iridite/VisualMaterials/iridite>
-        }
     }
 
     def Xform "leg5_rod__chrome" (
         prepend references = @./geometries.usd@</Geometries/leg5_rod__chrome>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "chrome" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/chrome>
-            )
-            {
-            }
-        }
-
-        over "leg5_rod__chrome" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg5_rod__chrome/VisualMaterials/chrome>
-        }
     }
 
     def Xform "leg5_rod__steel" (
         prepend references = @./geometries.usd@</Geometries/leg5_rod__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg5_rod__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg5_rod__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "hook_p_09__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_p_09__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_p_09__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_09__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_p_09__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_p_09__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_p_09__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_p_09__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg4_body__steel" (
         prepend references = @./geometries.usd@</Geometries/leg4_body__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "leg4_body__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg4_body__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "leg4_body__aluminium_machined" (
         prepend references = @./geometries.usd@</Geometries/leg4_body__aluminium_machined>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "aluminium_machined" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/aluminium_machined>
-            )
-            {
-            }
-        }
-
-        over "leg4_body__aluminium_machined" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg4_body__aluminium_machined/VisualMaterials/aluminium_machined>
-        }
     }
 
     def Xform "leg4_body__black_anodize" (
         prepend references = @./geometries.usd@</Geometries/leg4_body__black_anodize>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "black_anodize" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/black_anodize>
-            )
-            {
-            }
-        }
-
-        over "leg4_body__black_anodize" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg4_body__black_anodize/VisualMaterials/black_anodize>
-        }
     }
 
     def Xform "leg4_body__iridite" (
         prepend references = @./geometries.usd@</Geometries/leg4_body__iridite>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "iridite" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/iridite>
-            )
-            {
-            }
-        }
-
-        over "leg4_body__iridite" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/leg4_body__iridite/VisualMaterials/iridite>
-        }
     }
 
     def Xform "hook_a_03__titanium_dfl" (
         prepend references = @./geometries.usd@</Geometries/hook_a_03__titanium_dfl>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "titanium_dfl" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/titanium_dfl>
-            )
-            {
-            }
-        }
-
-        over "hook_a_03__titanium_dfl" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_03__titanium_dfl/VisualMaterials/titanium_dfl>
-        }
     }
 
     def Xform "hook_a_03__steel" (
         prepend references = @./geometries.usd@</Geometries/hook_a_03__steel>
     )
     {
-        def Scope "VisualMaterials"
-        {
-            def Material "steel" (
-                instanceable = true
-                prepend references = @./materials.usda@</Materials/steel>
-            )
-            {
-            }
-        }
-
-        over "hook_a_03__steel" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </Instances/hook_a_03__steel/VisualMaterials/steel>
-        }
     }
 
     def Xform "col_hook_a_11" (

@@ -1,6 +1,9 @@
 """Export a built .blend: per-link visual meshes (USD) plus the link/joint/site graph (JSON).
 
-Run: blender -b build/<id>/<id>.blend -P scripts/export.py -- --asset <id> [--lod full|proxy]
+Run: blender -b build/<id>/<id>.blend -P scripts/export.py -- --asset <id> [--lod full|medium|low|proxy]
+
+LODs: full (as built), medium / low (collapse-decimated to DECIMATE of the triangles, UVs kept), proxy (one box
+per part). Colliders come from the full export only.
 
 Writes build/<id>/export/<lod>/:
   visuals.usdc   one prim per link (/visuals/L_<link>), meshes in link-local coordinates, UsdPreviewSurface
@@ -72,6 +75,27 @@ def bake_uv_tiling():
     return len(scale)
 
 
+DECIMATE = {"medium": 0.35, "low": 0.10}   # target triangle fraction per visual mesh
+MIN_TRIS = 24                              # small parts keep at least this many triangles
+
+
+def decimate(ratio):
+    """Collapse-decimate every visual mesh to `ratio` of its triangles (at least MIN_TRIS); keeps UVs and materials."""
+    before = after = 0
+    for ob in [o for o in bpy.data.objects if o.type == "MESH"]:
+        tris = sum(len(p.vertices) - 2 for p in ob.data.polygons)
+        before += tris
+        if tris <= MIN_TRIS:
+            after += tris
+            continue
+        mod = ob.modifiers.new("lod_decimate", "DECIMATE")
+        mod.decimate_type = "COLLAPSE"
+        mod.ratio = max(ratio, MIN_TRIS / tris)
+        mod.use_collapse_triangulate = True
+        after += round(tris * mod.ratio)
+    return before, after
+
+
 def proxy():
     """One box per part in its average colour (Fidelity=proxy)."""
     flat = {}
@@ -129,10 +153,14 @@ def main():
         e.rotation_euler = (0, 0, 0)
         e.name = f"L_{e['link']}"
     bpy.context.view_layer.update()
-    if lod == "proxy":
+    if lod != "full":
         for ob in [o for o in bpy.data.objects if "collider" in o]:   # colliders come from the full export
             bpy.data.objects.remove(ob)
+    if lod == "proxy":
         proxy()
+    elif lod in DECIMATE:
+        before, after = decimate(DECIMATE[lod])
+        print(f"decimated {lod}: ~{before} -> ~{after} triangles")
     print(f"baked UV tiling for {bake_uv_tiling()} materials")
     bpy.ops.wm.usd_export(
         filepath=os.path.join(outdir, "visuals.usdc"), root_prim_path="/visuals", export_materials=True,

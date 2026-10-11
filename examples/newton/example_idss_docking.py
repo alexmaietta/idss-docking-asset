@@ -552,6 +552,7 @@ class Example:
             root = st.GetDefaultPrim()
             root.GetVariantSet("Physics").SetVariantSelection("physics")
             root.GetVariantSet("Fidelity").SetVariantSelection(args.fidelity)
+            root.GetVariantSet("Materials").SetVariantSelection(args.materials)
             root.GetVariantSet("Contact").SetVariantSelection(args.contact)
             return st
 
@@ -1095,7 +1096,11 @@ class Example:
     def create_parser():
         parser = newton.examples.create_parser()
         parser.add_argument("--assets", default=ASSETS, help="Folder holding nds/nds.usda and ida/ida.usda.")
-        parser.add_argument("--fidelity", default="full", choices=["full", "proxy"], help="Visual detail variant.")
+        parser.add_argument("--fidelity", default="full", choices=["full", "medium", "low", "proxy", "none"],
+                            help="Visual LOD variant: full, medium (~35%% of the triangles), low (~10%%, one mesh per "
+                                 "link), proxy (boxes) or none (no visuals). Physics is the same for all.")
+        parser.add_argument("--materials", default="full", choices=["full", "simple", "none"],
+                            help="Materials variant: full (textured), simple (flat colours) or none (display colours).")
         parser.add_argument("--contact", default="exact", choices=["exact", "sdf", "hydro"],
                             help="Contact model variant: exact (convex/mesh for the sub-mm fits + SDF hooks), "
                                  "sdf (all sparse SDF) or hydro (SDF hydroelastic pressure-field contact).")
