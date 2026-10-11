@@ -1,0 +1,5 @@
+newmtl steel
+Kd 0.7749 0.7749 0.7823
+Ks 0.5 0.5 0.5
+Ns 139.9
+map_Kd ../textures/steel.png

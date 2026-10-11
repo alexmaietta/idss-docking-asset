@@ -1,0 +1,1613 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "ida"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "ida"
+{
+    def "Geometry"
+    {
+        def "ida_base"
+        {
+            def "separator_2"
+            {
+                def "colliders"
+                {
+                    over "col_separator_2_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_separator_2_sdf_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_separator_2_sdf_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    over "col_separator_2" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            def "hook_c_01"
+            {
+                def "hook_a_01"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_01" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_01_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_01_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_c_04"
+            {
+                def "hook_a_04"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_04" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_04_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_04_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_c_11"
+            {
+                def "hook_a_11"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_11" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_11_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_11_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_p_10"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_10" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_10_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_10_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_03"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_03" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_03_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_03_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_07"
+            {
+                def "hook_a_07"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_07" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_07_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_07_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_c_02"
+            {
+                def "hook_a_02"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_02" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_02_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_02_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "separator_3"
+            {
+                def "colliders"
+                {
+                    over "col_separator_3" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "col_separator_3_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_separator_3_sdf_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_separator_3_sdf_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_06"
+            {
+                def "hook_a_06"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_06" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_06_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_06_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_p_04"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_04" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_04_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_04_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_08"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_08" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_08_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_08_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_02"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_02" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_02_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_02_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_09"
+            {
+                def "hook_a_09"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_09" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_09_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_09_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_p_05"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_05" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_05_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_05_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_07"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_07" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_07_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_07_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_01"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_01" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_01_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_01_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_p_09"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_09" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_09_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_09_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_00"
+            {
+                def "hook_a_00"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_00" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_00_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_00_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "sensor_1"
+            {
+                def "colliders"
+                {
+                    over "col_sensor_1_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_sensor_1_sdf_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_sensor_1_sdf_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    over "col_sensor_1" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            def "hook_p_00"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_00" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_00_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_00_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "separator_1"
+            {
+                def "colliders"
+                {
+                    over "col_separator_1_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_separator_1_sdf_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_separator_1_sdf_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    over "col_separator_1" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            def "hook_c_03"
+            {
+                def "hook_a_03"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_03" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_03_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_03_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_p_11"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_11" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_11_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_11_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "sensor_2"
+            {
+                def "colliders"
+                {
+                    over "col_sensor_2" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    over "col_sensor_2_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_sensor_2_sdf_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_sensor_2_sdf_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_08"
+            {
+                def "hook_a_08"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_08" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_08_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_08_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_c_05"
+            {
+                def "hook_a_05"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_05" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_05_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_05_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "hook_p_06"
+            {
+                def "colliders"
+                {
+                    over "col_hook_p_06" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_hook_p_06_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_hook_p_06_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+            }
+
+            def "hook_c_10"
+            {
+                def "hook_a_10"
+                {
+                    def "colliders"
+                    {
+                        over "col_hook_a_10" (
+                            active = false
+                        )
+                        {
+                        }
+
+                        def Xform "col_hook_a_10_hydro" (
+                            instanceable = true
+                            prepend references = @../instances.usda@</Instances/col_hook_a_10_hydro>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def "colliders"
+            {
+                over "col_petal_2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land04" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land28" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_2_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_petal_2_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_petal_2_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_striker_3_lower2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_striker_1_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_striker_1_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_hcs_land27" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land02" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land41" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land06" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land13" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_1_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_petal_1_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_petal_1_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_hcs_land44" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land24" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land34" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_striker_2_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_striker_2_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_striker_1_lower5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land05" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land16" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land35" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land25" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land14" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land38" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land42" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land18" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land32" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_2_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_guide_pin_2_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_guide_pin_2_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_hcs_land01" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_capture_ring_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_capture_ring_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_capture_ring_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_hcs_land40" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land22" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_capture_ring_chamfers" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land36" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land45" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land37" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_3_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_petal_3_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_petal_3_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_hcs_land07" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land17" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land39" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_1_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_guide_receptacle_1_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_guide_receptacle_1_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_striker_1_upper7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land46" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_striker_3_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_striker_3_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_striker_2_upper4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land21" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_hcs_land_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_hcs_land_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_striker_2_lower7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land43" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land11" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land09" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_2_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_guide_receptacle_2_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_guide_receptacle_2_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_striker_2_lower5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land08" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land15" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land30" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land29" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land12" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land26" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land31" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land03" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land00" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_1_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                def Xform "col_guide_pin_1_sdf_hydro" (
+                    instanceable = true
+                    prepend references = @../instances.usda@</Instances/col_guide_pin_1_sdf_hydro>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "col_striker_2_upper0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land23" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land33" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land20" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land10" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land19" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land47" (
+                    active = false
+                )
+                {
+                }
+            }
+
+            def "sensor_3"
+            {
+                def "colliders"
+                {
+                    over "col_sensor_3_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+
+                    def Xform "col_sensor_3_sdf_hydro" (
+                        instanceable = true
+                        prepend references = @../instances.usda@</Instances/col_sensor_3_sdf_hydro>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    over "col_sensor_3" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+        }
+    }
+}
+

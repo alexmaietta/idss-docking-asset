@@ -1,0 +1,1495 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "ida"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "ida"
+{
+    over "Geometry"
+    {
+        over "ida_base" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "PhysicsArticulationRootAPI", "NewtonArticulationRootAPI"]
+        )
+        {
+            bool newton:selfCollisionEnabled = 0
+            point3f physics:centerOfMass = (-0.031388566, 0.01898307, 0.29748493)
+            float3 physics:diagonalInertia = (117.91257, 145.98296, 196.98041)
+            float physics:mass = 507.2
+            quatf physics:principalAxes = (0.9928639, 0.0070148213, 0.0151536325, -0.118078396)
+
+            over "hook_c_00" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (3.0691805e-19, -3.928551e-19, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849368, 0.00011309963, 0.000113099646)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.60876095, -2.0701371e-17, 2.6978587e-17, 0.79335374)
+
+                over "hook_a_00" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.0019615213, -0.007320521, 0.016910365)
+                    float3 physics:diagonalInertia = (0.00006355181, 0.000112357666, 0.00012684296)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (0.7060142, 0.1447782, -0.6921268, 0.039289802)
+                }
+            }
+
+            over "hook_c_01" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-3.9285552e-19, 1.4901161e-8, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849324, 0.00011309955, 0.00011309957)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.27059826, 0.27059826, 0.6532814, 0.6532814)
+
+                over "hook_a_01" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.005358996, -0.0053589996, 0.01691038)
+                    float3 physics:diagonalInertia = (0.00006355183, 0.000112357695, 0.00012684299)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (0.67178816, 0.3189811, -0.6310715, 0.2206818)
+                }
+            }
+
+            over "hook_c_02" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (3.7234786e-9, -1.2441533e-12, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849368, 0.0001130996, 0.000113099624)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.99144477, -0.00027424475, 0.000036105263, -0.13052681)
+
+                over "hook_a_02" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.0073205205, -0.0019615213, 0.016910365)
+                    float3 physics:diagonalInertia = (0.00006355181, 0.000112357666, 0.00012684296)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (-0.3870339, -0.52700955, -0.47144535, 0.5917812)
+                }
+            }
+
+            over "hook_c_03" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-5.202261e-19, 1.2276723e-19, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849368, 0.00011309963, 0.000113099646)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.1305268, 2.5933758e-17, 1.9698553e-16, 0.99144477)
+
+                over "hook_a_03" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.007320521, 0.0019615213, 0.016910365)
+                    float3 physics:diagonalInertia = (0.00006355181, 0.000112357666, 0.00012684296)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (0.52700955, 0.3870339, 0.5917812, -0.47144535)
+                }
+            }
+
+            over "hook_c_04" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-1.4901161e-8, 5.892833e-19, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849324, 0.00011309955, 0.00011309957)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.27059785, -0.27059785, 0.65328157, 0.65328157)
+
+                over "hook_a_04" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.0053589996, 0.005358996, 0.01691038)
+                    float3 physics:diagonalInertia = (0.00006355183, 0.000112357695, 0.00012684299)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (0.6717887, -0.31898037, -0.63107157, -0.22068125)
+                }
+            }
+
+            over "hook_c_05" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (1.2441539e-12, 3.7234786e-9, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849368, 0.0001130996, 0.000113099624)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.6087609, -0.00016839009, 0.00021945067, 0.7933537)
+
+                over "hook_a_05" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.0019615213, 0.0073205205, 0.016910365)
+                    float3 physics:diagonalInertia = (0.00006355181, 0.000112357666, 0.00012684296)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (0.7060142, -0.14477819, -0.6921268, -0.039289813)
+                }
+            }
+
+            over "hook_c_06" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-8.5937054e-20, -3.928551e-19, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849368, 0.00011309963, 0.000113099646)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.60876095, 9.4313926e-18, -1.22912455e-17, 0.79335374)
+
+                over "hook_a_06" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.0019615213, 0.007320521, 0.016910365)
+                    float3 physics:diagonalInertia = (0.00006355181, 0.000112357666, 0.00012684296)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (-0.6921268, -0.039289802, 0.7060142, -0.1447782)
+                }
+            }
+
+            over "hook_c_07" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (7.665287e-19, -1.4901161e-8, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849324, 0.00011309955, 0.00011309957)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.27059826, 0.27059826, 0.6532814, 0.6532814)
+
+                over "hook_a_07" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.005358996, 0.0053589996, 0.01691038)
+                    float3 physics:diagonalInertia = (0.00006355183, 0.000112357695, 0.00012684299)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (-0.6310715, -0.2206818, 0.67178816, -0.3189811)
+                }
+            }
+
+            over "hook_c_08" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-3.7234786e-9, 1.2441539e-12, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849368, 0.0001130996, 0.000113099624)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.99144477, 0.00027424478, -0.000036105266, -0.13052681)
+
+                over "hook_a_08" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.0073205205, 0.0019615213, 0.016910365)
+                    float3 physics:diagonalInertia = (0.00006355181, 0.000112357666, 0.00012684296)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (0.47144535, 0.5917812, 0.3870339, -0.52700955)
+                }
+            }
+
+            over "hook_c_09" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-3.2303124e-19, 3.6830168e-19, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849368, 0.00011309963, 0.000113099646)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.1305268, 1.1814339e-17, 8.973839e-17, 0.99144477)
+
+                over "hook_a_09" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.007320521, -0.0019615213, 0.016910365)
+                    float3 physics:diagonalInertia = (0.00006355181, 0.000112357666, 0.00012684296)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (0.5917812, 0.47144535, 0.52700955, -0.3870339)
+                }
+            }
+
+            over "hook_c_10" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (1.4901161e-8, -1.7187429e-19, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849324, 0.00011309955, 0.00011309957)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.27059785, -0.27059785, 0.65328157, 0.65328157)
+
+                over "hook_a_10" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.0053589996, -0.005358996, 0.01691038)
+                    float3 physics:diagonalInertia = (0.00006355183, 0.000112357695, 0.00012684299)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (-0.63107157, 0.22068125, 0.6717887, 0.31898037)
+                }
+            }
+
+            over "hook_c_11" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-1.2441535e-12, -3.7234786e-9, -0.012000024)
+                float3 physics:diagonalInertia = (0.000059849368, 0.0001130996, 0.000113099624)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.00021945061, 0.7933537, 0.6087609, -0.00016839006)
+
+                over "hook_a_11" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.0019615213, -0.0073205205, 0.016910365)
+                    float3 physics:diagonalInertia = (0.00006355181, 0.000112357666, 0.00012684296)
+                    float physics:mass = 0.5
+                    quatf physics:principalAxes = (-0.6921268, 0.039289813, 0.7060142, 0.14477819)
+                }
+            }
+
+            over "hook_p_00" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.001718375, -0.006411771, 0.015098783)
+                float3 physics:diagonalInertia = (0.000046291756, 0.0000956219, 0.00011695262)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.7055106, 0.22822271, -0.6692861, -0.047173373)
+            }
+
+            over "hook_p_01" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.0046926816, -0.004692706, 0.015092656)
+                float3 physics:diagonalInertia = (0.00004629341, 0.00009565944, 0.00011699418)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.5874021, -0.13700476, 0.6937071, 0.3936482)
+            }
+
+            over "hook_p_02" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.0064117736, -0.0017183748, 0.015098785)
+                float3 physics:diagonalInertia = (0.000046291763, 0.000095621916, 0.00011695263)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.53222805, 0.63463455, 0.3118789, 0.46551463)
+            }
+
+            over "hook_p_03" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.006411771, 0.001718375, 0.015098783)
+                float3 physics:diagonalInertia = (0.000046291756, 0.0000956219, 0.00011695262)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.63463455, -0.53222793, -0.46551472, -0.3118789)
+            }
+
+            over "hook_p_04" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.004692706, 0.0046926816, 0.015092656)
+                float3 physics:diagonalInertia = (0.00004629341, 0.00009565944, 0.00011699418)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.13700469, -0.587402, 0.393648, 0.69370735)
+            }
+
+            over "hook_p_05" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.0017183748, 0.0064117736, 0.015098785)
+                float3 physics:diagonalInertia = (0.000046291763, 0.000095621916, 0.00011695263)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.2282227, 0.7055106, 0.047173515, 0.6692861)
+            }
+
+            over "hook_p_06" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.001718375, 0.006411771, 0.015098783)
+                float3 physics:diagonalInertia = (0.000046291756, 0.0000956219, 0.00011695262)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.22822271, 0.7055106, -0.047173373, -0.6692861)
+            }
+
+            over "hook_p_07" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.0046926816, 0.004692706, 0.015092656)
+                float3 physics:diagonalInertia = (0.00004629341, 0.00009565944, 0.00011699418)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.13700476, 0.5874021, 0.3936482, 0.6937071)
+            }
+
+            over "hook_p_08" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.0064117736, 0.0017183748, 0.015098785)
+                float3 physics:diagonalInertia = (0.000046291763, 0.000095621916, 0.00011695263)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.3118789, 0.46551463, 0.53222805, 0.63463455)
+            }
+
+            over "hook_p_09" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.006411771, -0.001718375, 0.015098783)
+                float3 physics:diagonalInertia = (0.000046291756, 0.0000956219, 0.00011695262)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.46551472, 0.3118789, 0.63463455, 0.53222793)
+            }
+
+            over "hook_p_10" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.004692706, -0.0046926816, 0.015092656)
+                float3 physics:diagonalInertia = (0.00004629341, 0.00009565944, 0.00011699418)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.587402, 0.13700469, 0.69370735, 0.393648)
+            }
+
+            over "hook_p_11" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.0017183748, -0.0064117736, 0.015098785)
+                float3 physics:diagonalInertia = (0.000046291763, 0.000095621916, 0.00011695263)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.7055106, 0.2282227, 0.6692861, 0.047173515)
+            }
+
+            over "sensor_1" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (4.8173228e-20, 1.2043307e-20, -0.032476358)
+                float3 physics:diagonalInertia = (0.0000013231676, 0.00002061822, 0.00002061822)
+                float physics:mass = 0.05
+                quatf physics:principalAxes = (-0.5, 0.5, 0.5, 0.5)
+            }
+
+            over "sensor_2" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-1.2043317e-20, -3.0108292e-20, -0.03247636)
+                float3 physics:diagonalInertia = (0.0000013231665, 0.00002061822, 0.00002061822)
+                float physics:mass = 0.05
+                quatf physics:principalAxes = (6.123234e-17, 0.70710677, 0, 0.70710677)
+            }
+
+            over "sensor_3" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (4.8173228e-20, 1.2043307e-20, -0.032476358)
+                float3 physics:diagonalInertia = (0.0000013231676, 0.00002061822, 0.00002061822)
+                float physics:mass = 0.05
+                quatf physics:principalAxes = (-0.5, 0.5, 0.5, 0.5)
+            }
+
+            over "separator_1" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-3.1460086e-20, 1.3370536e-19, -0.032476358)
+                float3 physics:diagonalInertia = (0.000032417585, 0.00017586189, 0.0001758619)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.5, 0.5, 0.5, -0.5)
+            }
+
+            over "separator_2" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (2.2808575e-19, -4.9503124e-11, -0.032476358)
+                float3 physics:diagonalInertia = (0.000032417567, 0.00017586189, 0.00017586189)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (-0.5, 0.5, 0.5, 0.5)
+            }
+
+            over "separator_3" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-3.1460086e-20, 1.3370536e-19, -0.032476358)
+                float3 physics:diagonalInertia = (0.000032417585, 0.00017586189, 0.0001758619)
+                float physics:mass = 0.4
+                quatf physics:principalAxes = (0.5, 0.5, 0.5, -0.5)
+            }
+        }
+    }
+
+    def "Physics"
+    {
+        def PhysicsPrismaticJoint "hook_c_00" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull1"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_00>
+            point3f physics:localPos0 = (0.6332566, 0.20022124, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_00" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang1"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_00>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_00/hook_a_00>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.1305262, 0, 0, -0.9914449)
+            quatf physics:localRot1 = (0.1305262, 0, 0, -0.9914449)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_01" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull2"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_01>
+            point3f physics:localPos0 = (0.4483057, 0.490025, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_01" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang2"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_01>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_01/hook_a_01>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.38268343, 0, 0, -0.9238795)
+            quatf physics:localRot1 = (0.38268343, 0, 0, -0.9238795)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_02" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull1"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_02>
+            point3f physics:localPos0 = (0.14323163, 0.64852697, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_02" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang1"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_02>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_02/hook_a_02>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.6087614, 0, 0, -0.7933533)
+            quatf physics:localRot1 = (0.6087614, 0, 0, -0.7933533)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_03" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull2"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_03>
+            point3f physics:localPos0 = (-0.20022124, 0.6332566, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_03" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang2"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_03>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_03/hook_a_03>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7933533, 0, 0, -0.6087614)
+            quatf physics:localRot1 = (0.7933533, 0, 0, -0.6087614)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_04" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull1"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_04>
+            point3f physics:localPos0 = (-0.490025, 0.4483057, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_04" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang1"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_04>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_04/hook_a_04>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.9238795, 0, 0, -0.38268343)
+            quatf physics:localRot1 = (0.9238795, 0, 0, -0.38268343)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_05" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull2"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_05>
+            point3f physics:localPos0 = (-0.64852697, 0.14323163, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_05" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang2"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_05>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_05/hook_a_05>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.9914449, 0, 0, -0.1305262)
+            quatf physics:localRot1 = (0.9914449, 0, 0, -0.1305262)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_06" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull1"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_06>
+            point3f physics:localPos0 = (-0.6332566, -0.20022124, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_06" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang1"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_06>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_06/hook_a_06>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.9914449, -0, 0, 0.1305262)
+            quatf physics:localRot1 = (0.9914449, -0, 0, 0.1305262)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_07" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull2"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_07>
+            point3f physics:localPos0 = (-0.4483057, -0.490025, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_07" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang2"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_07>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_07/hook_a_07>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.9238795, -0, 0, 0.38268343)
+            quatf physics:localRot1 = (0.9238795, -0, 0, 0.38268343)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_08" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull1"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_08>
+            point3f physics:localPos0 = (-0.14323163, -0.64852697, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_08" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang1"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_08>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_08/hook_a_08>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7933533, -0, 0, 0.6087614)
+            quatf physics:localRot1 = (0.7933533, -0, 0, 0.6087614)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_09" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull2"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_09>
+            point3f physics:localPos0 = (0.20022124, -0.6332566, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_09" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang2"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_09>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_09/hook_a_09>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.6087614, -0, 0, 0.7933533)
+            quatf physics:localRot1 = (0.6087614, -0, 0, 0.7933533)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_10" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull1"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_10>
+            point3f physics:localPos0 = (0.490025, -0.4483057, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_10" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang1"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_10>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_10/hook_a_10>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.38268343, -0, 0, 0.9238795)
+            quatf physics:localRot1 = (0.38268343, -0, 0, 0.9238795)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_c_11" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 40000
+            float drive:linear:physics:maxForce = 40000
+            float drive:linear:physics:stiffness = 50000000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "hook_pull2"
+            float newton:armature = 1000
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_11>
+            point3f physics:localPos0 = (0.64852697, -0.14323163, 0.6168)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.008
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsRevoluteJoint "hook_a_11" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "PhysicsDriveAPI:angular"]
+        )
+        {
+            float drive:angular:physics:damping = 1.7453293
+            float drive:angular:physics:maxForce = 600
+            float drive:angular:physics:stiffness = 349.06586
+            float drive:angular:physics:targetPosition = 0
+            float drive:angular:physics:targetVelocity = 0
+            uniform token drive:angular:physics:type = "force"
+            custom string idss:role = "hook_gang2"
+            float newton:armature = 0.5
+            float newton:damping = 0
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base/hook_c_11>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_c_11/hook_a_11>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.1305262, -0, 0, 0.9914449)
+            quatf physics:localRot1 = (0.1305262, -0, 0, 0.9914449)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 31
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_00" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_00>
+            point3f physics:localPos0 = (0.6534445, 0.12487903, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_01" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_01>
+            point3f physics:localPos0 = (0.50346005, 0.4348707, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_02" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_02>
+            point3f physics:localPos0 = (0.21857384, 0.62833905, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_03" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_03>
+            point3f physics:localPos0 = (-0.12487903, 0.6534445, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_04" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_04>
+            point3f physics:localPos0 = (-0.4348707, 0.50346005, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_05" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_05>
+            point3f physics:localPos0 = (-0.62833905, 0.21857384, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_06" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_06>
+            point3f physics:localPos0 = (-0.6534445, -0.12487903, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_07" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_07>
+            point3f physics:localPos0 = (-0.50346005, -0.4348707, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_08" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_08>
+            point3f physics:localPos0 = (-0.21857384, -0.62833905, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_09" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_09>
+            point3f physics:localPos0 = (0.12487903, -0.6534445, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_10" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_10>
+            point3f physics:localPos0 = (0.4348707, -0.50346005, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "hook_p_11" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "hook_passive"
+            float mjc:springref = -0.0001
+            float mjc:stiffness = 80000000
+            float newton:armature = 1500
+            float newton:damping = 20000
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/hook_p_11>
+            point3f physics:localPos0 = (0.62833905, -0.21857384, 0.6188)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "sensor_1" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "sensor"
+            float mjc:springref = -0.002
+            float mjc:stiffness = 2000
+            float newton:armature = 0.05
+            float newton:damping = 5
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/sensor_1>
+            point3f physics:localPos0 = (-0.60702646, 0.3227617, 0.645)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "sensor_2" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "sensor"
+            float mjc:springref = -0.002
+            float mjc:stiffness = 2000
+            float newton:armature = 0.05
+            float newton:damping = 5
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/sensor_2>
+            point3f physics:localPos0 = (0.023993403, -0.6870812, 0.645)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "sensor_3" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            custom string idss:role = "sensor"
+            float mjc:springref = -0.002
+            float mjc:stiffness = 2000
+            float newton:armature = 0.05
+            float newton:damping = 5
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/sensor_3>
+            point3f physics:localPos0 = (0.5830331, 0.3643195, 0.645)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, -0, 0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, -0, 0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.004
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "separator_1" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 400
+            float drive:linear:physics:maxForce = 2000
+            float drive:linear:physics:stiffness = 200000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "separator"
+            custom float idss:springFreeLength = 1.017
+            custom float idss:springStiffness = 700
+            float mjc:springref = 1.017
+            float mjc:stiffness = 700
+            float newton:armature = 1
+            float newton:damping = 400
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/separator_1>
+            point3f physics:localPos0 = (0.32804665, 0.6041868, 0.6405)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.0329
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "separator_2" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 400
+            float drive:linear:physics:maxForce = 2000
+            float drive:linear:physics:stiffness = 200000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "separator"
+            custom float idss:springFreeLength = 1.017
+            custom float idss:springStiffness = 700
+            float mjc:springref = 1.017
+            float mjc:stiffness = 700
+            float newton:armature = 1
+            float newton:damping = 400
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/separator_2>
+            point3f physics:localPos0 = (-0.68726444, -0.017996652, 0.6405)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.0329
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+
+        def PhysicsPrismaticJoint "separator_3" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI", "PhysicsDriveAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 400
+            float drive:linear:physics:maxForce = 2000
+            float drive:linear:physics:stiffness = 200000
+            float drive:linear:physics:targetPosition = 0
+            float drive:linear:physics:targetVelocity = 0
+            uniform token drive:linear:physics:type = "force"
+            custom string idss:role = "separator"
+            custom float idss:springFreeLength = 1.017
+            custom float idss:springStiffness = 700
+            float mjc:springref = 1.017
+            float mjc:stiffness = 700
+            float newton:armature = 1
+            float newton:damping = 400
+            uniform token physics:axis = "X"
+            rel physics:body0 = </ida/Geometry/ida_base>
+            rel physics:body1 = </ida/Geometry/ida_base/separator_3>
+            point3f physics:localPos0 = (0.35921776, -0.5861901, 0.6405)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.70710677, 0, -0.70710677, 0)
+            quatf physics:localRot1 = (0.70710677, 0, -0.70710677, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 0.0329
+            float state:linear:physics:position = 0
+            float state:linear:physics:velocity = 0
+        }
+    }
+}
+

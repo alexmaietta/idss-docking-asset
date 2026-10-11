@@ -1,0 +1,986 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "nds"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "nds"
+{
+    over "Geometry"
+    {
+        over "nds_base"
+        {
+            over "sensor_1"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_1" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "separator_1"
+            {
+                over "colliders"
+                {
+                    over "col_separator_1" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "sensor_3"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_3" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "leg1_ujoint"
+            {
+                over "leg1_body"
+                {
+                    over "leg1_rod"
+                    {
+                        over "scs_ring"
+                        {
+                            over "latch_2"
+                            {
+                                over "colliders"
+                                {
+                                    over "col_latch_2_tooth" (
+                                        active = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+
+                            over "colliders"
+                            {
+                                over "col_capture_ring_crest16" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest05" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_petal_1" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest33" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest24" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest10" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest07" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest15" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest26" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest04" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest09" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest25" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest28" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest14" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest19" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest30" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest13" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest08" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest31" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest29" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest32" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest18" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_petal_2" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest34" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest23" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest17" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest35" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_petal_3" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest12" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_chamfers" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest01" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest11" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest02" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest06" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest00" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest20" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest03" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest27" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest21" (
+                                    active = false
+                                )
+                                {
+                                }
+
+                                over "col_capture_ring_crest22" (
+                                    active = false
+                                )
+                                {
+                                }
+                            }
+
+                            over "latch_3"
+                            {
+                                over "colliders"
+                                {
+                                    over "col_latch_3_tooth" (
+                                        active = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+
+                            over "latch_1"
+                            {
+                                over "colliders"
+                                {
+                                    over "col_latch_1_tooth" (
+                                        active = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            over "colliders"
+            {
+                over "col_hcs_land22" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_06" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land08" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land00" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land11" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_21" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_19" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land27" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land36" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_01" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_08" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land10" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_14" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land38" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_04" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land31" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_09" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land43" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_12" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land09" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_05" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land30" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_14" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land44" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_00" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land18" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_11" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_06" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_23" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land29" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_07" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land20" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_22" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_04" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_12" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land03" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land47" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_21" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_02" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_02" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land42" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_13" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_23" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_22" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land37" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land34" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land24" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_08" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_07" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land07" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land33" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land02" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_09" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land16" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land28" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_03" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land05" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land26" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_00" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land15" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_11" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land41" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land32" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_10" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_18" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land25" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_13" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land01" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_20" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land14" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_19" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land17" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_15" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_17" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land40" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_17" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_03" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_01" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land45" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land19" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_16" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_18" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land13" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_05" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land46" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land21" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_15" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land04" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land23" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_10" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land12" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1273_16" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land06" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_seal_1304_20" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land39" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land35" (
+                    active = false
+                )
+                {
+                }
+            }
+
+            over "separator_2"
+            {
+                over "colliders"
+                {
+                    over "col_separator_2" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "sensor_2"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_2" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "separator_3"
+            {
+                over "colliders"
+                {
+                    over "col_separator_3" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+        }
+    }
+}
+

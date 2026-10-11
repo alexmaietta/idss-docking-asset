@@ -1,0 +1,92 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary SimReady_Metadata = {
+            float3 asset_extents = (1.47, 1.4920557, 0.8704)
+            string asset_license = "CC-BY-4.0"
+            string asset_name = "nds"
+            string asset_type = "robot"
+            string asset_version = "0.1.0"
+            string category = "spacecraft_mechanism"
+            double mass = 323.45
+            int rigid_body_count = 65
+            string source_file = "build/nds/nds.blend (scripts/build.py)"
+            string usd_date_generated = "2026-10-10"
+            string usd_version = "(0, 26, 8)"
+        }
+        string asset_name = "nds"
+        string asset_type = "robot"
+        string asset_version = "0.1.0"
+        string creator = "idss pipeline (scripts/package.py)"
+        string usd_date_generated = "2026-10-10"
+    }
+    defaultPrim = "nds"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "nds" (
+    prepend references = @./payloads/base.usda@
+    variants = {
+        string Contact = "exact"
+        string Fidelity = "full"
+        string Physics = "physics"
+    }
+    prepend variantSets = ["Physics", "Fidelity", "Contact"]
+)
+{
+    variantSet "Physics" = {
+        "mujoco" (
+            prepend payload = @./payloads/Physics/mujoco.usda@
+        ) {
+
+        }
+        "none" {
+
+        }
+        "physics" (
+            prepend payload = @./payloads/Physics/physics.usda@
+        ) {
+
+        }
+        "physx" (
+            prepend payload = @./payloads/Physics/physx.usda@
+        ) {
+
+        }
+    }
+    variantSet "Fidelity" = {
+        "full" (
+            prepend payload = @./payloads/Fidelity/full.usda@
+        ) {
+
+        }
+        "none" {
+
+        }
+        "proxy" (
+            prepend payload = @./payloads/Fidelity/proxy.usda@
+        ) {
+
+        }
+    }
+    variantSet "Contact" = {
+        "exact" (
+            prepend payload = @./payloads/Contact/exact.usda@
+        ) {
+
+        }
+        "hydro" (
+            prepend payload = @./payloads/Contact/hydro.usda@
+        ) {
+
+        }
+        "sdf" (
+            prepend payload = @./payloads/Contact/sdf.usda@
+        ) {
+
+        }
+    }
+}
+

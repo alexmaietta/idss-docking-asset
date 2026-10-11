@@ -1,0 +1,5 @@
+newmtl ptfe_anodize
+Kd 0.4416 0.4434 0.4468
+Ks 0.5 0.5 0.5
+Ns 124.0
+map_Kd ../textures/ptfe_anodize.png

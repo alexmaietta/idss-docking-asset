@@ -1,0 +1,8 @@
+build/
+renders/
+.venv/
+__pycache__/
+textures/gen/
+TODO.md
+refs/
+imgui.ini

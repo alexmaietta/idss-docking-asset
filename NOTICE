@@ -1,0 +1,9 @@
+IDSS docking system assets (International Docking Adapter, NASA Docking System Block 1)
+Copyright 2026 Alex Maietta
+
+The code in this repository is licensed under the Apache License, Version 2.0 (LICENSE).
+The model assets (assets/) and renders (docs/images/) are licensed under Creative Commons Attribution 4.0
+International (assets/LICENSE).
+
+examples/newton/*.py derive from Newton (https://github.com/newton-physics/newton) examples,
+Copyright The Newton Developers, Apache License 2.0.

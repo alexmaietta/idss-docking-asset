@@ -1,0 +1,5 @@
+newmtl target_white
+Kd 0.8904 0.8904 0.8886
+Ks 0.5 0.5 0.5
+Ns 90.0
+map_Kd ../textures/target_white.png

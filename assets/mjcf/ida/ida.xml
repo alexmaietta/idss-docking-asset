@@ -1,0 +1,1360 @@
+<mujoco model="ida">
+  <compiler angle="radian" autolimits="true" inertiafromgeom="false" />
+  <option timestep="0.001" gravity="0 0 0" integrator="implicitfast" cone="elliptic" impratio="10" iterations="60" ls_iterations="50" />
+  <visual>
+    <headlight ambient="0.35 0.35 0.35" diffuse="0.6 0.6 0.6" />
+    <quality shadowsize="4096" />
+  </visual>
+  <asset>
+    <material name="retroreflector" specular="0.75" shininess="0.97" reflectance="0.15" rgba="0.954687 0.954687 0.963976 1" />
+    <material name="target_black" specular="0.25" shininess="0.3" reflectance="0" rgba="0.112075 0.112075 0.117741 1" />
+    <texture name="a286" type="2d" file="textures/a286.png" />
+    <material name="a286" specular="0.75" shininess="0.800051" reflectance="0.15" texture="a286" />
+    <texture name="target_white" type="2d" file="textures/target_white.png" />
+    <material name="target_white" specular="0.25" shininess="0.450008" reflectance="0" texture="target_white" />
+    <material name="connector" specular="0.75" shininess="0.72" reflectance="0.15" rgba="0.854306 0.854306 0.843389 1" />
+    <texture name="mli" type="2d" file="textures/mli.png" />
+    <material name="mli" specular="0.25" shininess="0.220005" reflectance="0" texture="mli" />
+    <texture name="handrail" type="2d" file="textures/handrail.png" />
+    <material name="handrail" specular="0.70098" shininess="0.68005" reflectance="0.135294" texture="handrail" />
+    <texture name="aluminium" type="2d" file="textures/aluminium.png" />
+    <material name="aluminium" specular="0.75" shininess="0.680141" reflectance="0.15" texture="aluminium" />
+    <texture name="aluminium_machined" type="2d" file="textures/aluminium_machined.png" />
+    <material name="aluminium_machined" specular="0.70098" shininess="0.619819" reflectance="0.135294" texture="aluminium_machined" />
+    <texture name="black_anodize" type="2d" file="textures/black_anodize.png" />
+    <material name="black_anodize" specular="0.25" shininess="0.639633" reflectance="0" texture="black_anodize" />
+    <texture name="seal_silicone" type="2d" file="textures/seal_silicone.png" />
+    <material name="seal_silicone" specular="0.25" shininess="0.45" reflectance="0" texture="seal_silicone" />
+    <texture name="inconel" type="2d" file="textures/inconel.png" />
+    <material name="inconel" specular="0.75" shininess="0.780019" reflectance="0.15" texture="inconel" />
+    <material name="seal_land" specular="0.75" shininess="0.88" reflectance="0.15" rgba="0.916274 0.916274 0.921191 1" />
+    <texture name="hard_anodize" type="2d" file="textures/hard_anodize.png" />
+    <material name="hard_anodize" specular="0.25" shininess="0.519618" reflectance="0" texture="hard_anodize" />
+    <texture name="hcs" type="2d" file="textures/hcs.png" />
+    <material name="hcs" specular="0.75" shininess="0.699306" reflectance="0.15" texture="hcs" />
+    <material name="chrome" specular="0.75" shininess="0.92" reflectance="0.15" rgba="0.930925 0.930925 0.935741 1" />
+    <texture name="steel" type="2d" file="textures/steel.png" />
+    <material name="steel" specular="0.75" shininess="0.699398" reflectance="0.15" texture="steel" />
+    <texture name="titanium_dfl" type="2d" file="textures/titanium_dfl.png" />
+    <material name="titanium_dfl" specular="0.374993" shininess="0.379674" reflectance="0.037498" texture="titanium_dfl" />
+    <mesh name="ida_base__retroreflector" file="meshes/ida_base__retroreflector.obj" />
+    <mesh name="ida_base__target_black" file="meshes/ida_base__target_black.obj" />
+    <mesh name="ida_base__a286" file="meshes/ida_base__a286.obj" />
+    <mesh name="ida_base__target_white" file="meshes/ida_base__target_white.obj" />
+    <mesh name="ida_base__connector" file="meshes/ida_base__connector.obj" />
+    <mesh name="ida_base__mli" file="meshes/ida_base__mli.obj" />
+    <mesh name="ida_base__handrail" file="meshes/ida_base__handrail.obj" />
+    <mesh name="ida_base__aluminium" file="meshes/ida_base__aluminium.obj" />
+    <mesh name="ida_base__aluminium_machined" file="meshes/ida_base__aluminium_machined.obj" />
+    <mesh name="ida_base__black_anodize" file="meshes/ida_base__black_anodize.obj" />
+    <mesh name="ida_base__seal_silicone" file="meshes/ida_base__seal_silicone.obj" />
+    <mesh name="ida_base__inconel" file="meshes/ida_base__inconel.obj" />
+    <mesh name="ida_base__seal_land" file="meshes/ida_base__seal_land.obj" />
+    <mesh name="ida_base__hard_anodize" file="meshes/ida_base__hard_anodize.obj" />
+    <mesh name="ida_base__hcs" file="meshes/ida_base__hcs.obj" />
+    <mesh name="ida_base__chrome" file="meshes/ida_base__chrome.obj" />
+    <mesh name="hook_c_00__steel" file="meshes/hook_c_00__steel.obj" />
+    <mesh name="hook_a_00__titanium_dfl" file="meshes/hook_a_00__titanium_dfl.obj" />
+    <mesh name="hook_a_00__steel" file="meshes/hook_a_00__steel.obj" />
+    <mesh name="hook_c_01__steel" file="meshes/hook_c_01__steel.obj" />
+    <mesh name="hook_a_01__titanium_dfl" file="meshes/hook_a_01__titanium_dfl.obj" />
+    <mesh name="hook_a_01__steel" file="meshes/hook_a_01__steel.obj" />
+    <mesh name="hook_c_02__steel" file="meshes/hook_c_02__steel.obj" />
+    <mesh name="hook_a_02__titanium_dfl" file="meshes/hook_a_02__titanium_dfl.obj" />
+    <mesh name="hook_a_02__steel" file="meshes/hook_a_02__steel.obj" />
+    <mesh name="hook_c_03__steel" file="meshes/hook_c_03__steel.obj" />
+    <mesh name="hook_a_03__titanium_dfl" file="meshes/hook_a_03__titanium_dfl.obj" />
+    <mesh name="hook_a_03__steel" file="meshes/hook_a_03__steel.obj" />
+    <mesh name="hook_c_04__steel" file="meshes/hook_c_04__steel.obj" />
+    <mesh name="hook_a_04__titanium_dfl" file="meshes/hook_a_04__titanium_dfl.obj" />
+    <mesh name="hook_a_04__steel" file="meshes/hook_a_04__steel.obj" />
+    <mesh name="hook_c_05__steel" file="meshes/hook_c_05__steel.obj" />
+    <mesh name="hook_a_05__titanium_dfl" file="meshes/hook_a_05__titanium_dfl.obj" />
+    <mesh name="hook_a_05__steel" file="meshes/hook_a_05__steel.obj" />
+    <mesh name="hook_c_06__steel" file="meshes/hook_c_06__steel.obj" />
+    <mesh name="hook_a_06__titanium_dfl" file="meshes/hook_a_06__titanium_dfl.obj" />
+    <mesh name="hook_a_06__steel" file="meshes/hook_a_06__steel.obj" />
+    <mesh name="hook_c_07__steel" file="meshes/hook_c_07__steel.obj" />
+    <mesh name="hook_a_07__titanium_dfl" file="meshes/hook_a_07__titanium_dfl.obj" />
+    <mesh name="hook_a_07__steel" file="meshes/hook_a_07__steel.obj" />
+    <mesh name="hook_c_08__steel" file="meshes/hook_c_08__steel.obj" />
+    <mesh name="hook_a_08__titanium_dfl" file="meshes/hook_a_08__titanium_dfl.obj" />
+    <mesh name="hook_a_08__steel" file="meshes/hook_a_08__steel.obj" />
+    <mesh name="hook_c_09__steel" file="meshes/hook_c_09__steel.obj" />
+    <mesh name="hook_a_09__titanium_dfl" file="meshes/hook_a_09__titanium_dfl.obj" />
+    <mesh name="hook_a_09__steel" file="meshes/hook_a_09__steel.obj" />
+    <mesh name="hook_c_10__steel" file="meshes/hook_c_10__steel.obj" />
+    <mesh name="hook_a_10__titanium_dfl" file="meshes/hook_a_10__titanium_dfl.obj" />
+    <mesh name="hook_a_10__steel" file="meshes/hook_a_10__steel.obj" />
+    <mesh name="hook_c_11__steel" file="meshes/hook_c_11__steel.obj" />
+    <mesh name="hook_a_11__titanium_dfl" file="meshes/hook_a_11__titanium_dfl.obj" />
+    <mesh name="hook_a_11__steel" file="meshes/hook_a_11__steel.obj" />
+    <mesh name="hook_p_00__titanium_dfl" file="meshes/hook_p_00__titanium_dfl.obj" />
+    <mesh name="hook_p_00__steel" file="meshes/hook_p_00__steel.obj" />
+    <mesh name="hook_p_01__titanium_dfl" file="meshes/hook_p_01__titanium_dfl.obj" />
+    <mesh name="hook_p_01__steel" file="meshes/hook_p_01__steel.obj" />
+    <mesh name="hook_p_02__titanium_dfl" file="meshes/hook_p_02__titanium_dfl.obj" />
+    <mesh name="hook_p_02__steel" file="meshes/hook_p_02__steel.obj" />
+    <mesh name="hook_p_03__titanium_dfl" file="meshes/hook_p_03__titanium_dfl.obj" />
+    <mesh name="hook_p_03__steel" file="meshes/hook_p_03__steel.obj" />
+    <mesh name="hook_p_04__titanium_dfl" file="meshes/hook_p_04__titanium_dfl.obj" />
+    <mesh name="hook_p_04__steel" file="meshes/hook_p_04__steel.obj" />
+    <mesh name="hook_p_05__titanium_dfl" file="meshes/hook_p_05__titanium_dfl.obj" />
+    <mesh name="hook_p_05__steel" file="meshes/hook_p_05__steel.obj" />
+    <mesh name="hook_p_06__titanium_dfl" file="meshes/hook_p_06__titanium_dfl.obj" />
+    <mesh name="hook_p_06__steel" file="meshes/hook_p_06__steel.obj" />
+    <mesh name="hook_p_07__titanium_dfl" file="meshes/hook_p_07__titanium_dfl.obj" />
+    <mesh name="hook_p_07__steel" file="meshes/hook_p_07__steel.obj" />
+    <mesh name="hook_p_08__titanium_dfl" file="meshes/hook_p_08__titanium_dfl.obj" />
+    <mesh name="hook_p_08__steel" file="meshes/hook_p_08__steel.obj" />
+    <mesh name="hook_p_09__titanium_dfl" file="meshes/hook_p_09__titanium_dfl.obj" />
+    <mesh name="hook_p_09__steel" file="meshes/hook_p_09__steel.obj" />
+    <mesh name="hook_p_10__titanium_dfl" file="meshes/hook_p_10__titanium_dfl.obj" />
+    <mesh name="hook_p_10__steel" file="meshes/hook_p_10__steel.obj" />
+    <mesh name="hook_p_11__titanium_dfl" file="meshes/hook_p_11__titanium_dfl.obj" />
+    <mesh name="hook_p_11__steel" file="meshes/hook_p_11__steel.obj" />
+    <mesh name="sensor_1__steel" file="meshes/sensor_1__steel.obj" />
+    <mesh name="sensor_2__steel" file="meshes/sensor_2__steel.obj" />
+    <mesh name="sensor_3__steel" file="meshes/sensor_3__steel.obj" />
+    <mesh name="separator_1__steel" file="meshes/separator_1__steel.obj" />
+    <mesh name="separator_2__steel" file="meshes/separator_2__steel.obj" />
+    <mesh name="separator_3__steel" file="meshes/separator_3__steel.obj" />
+    <mesh name="col_petal_2" file="collision/col_petal_2.stl" />
+    <mesh name="col_guide_receptacle_1_00" file="collision/col_guide_receptacle_1_00.stl" />
+    <mesh name="col_guide_receptacle_1_01" file="collision/col_guide_receptacle_1_01.stl" />
+    <mesh name="col_guide_receptacle_1_02" file="collision/col_guide_receptacle_1_02.stl" />
+    <mesh name="col_guide_receptacle_1_03" file="collision/col_guide_receptacle_1_03.stl" />
+    <mesh name="col_guide_receptacle_1_04" file="collision/col_guide_receptacle_1_04.stl" />
+    <mesh name="col_guide_receptacle_1_05" file="collision/col_guide_receptacle_1_05.stl" />
+    <mesh name="col_guide_receptacle_1_06" file="collision/col_guide_receptacle_1_06.stl" />
+    <mesh name="col_guide_receptacle_1_07" file="collision/col_guide_receptacle_1_07.stl" />
+    <mesh name="col_guide_receptacle_1_08" file="collision/col_guide_receptacle_1_08.stl" />
+    <mesh name="col_guide_receptacle_1_09" file="collision/col_guide_receptacle_1_09.stl" />
+    <mesh name="col_guide_receptacle_1_10" file="collision/col_guide_receptacle_1_10.stl" />
+    <mesh name="col_guide_receptacle_1_11" file="collision/col_guide_receptacle_1_11.stl" />
+    <mesh name="col_guide_receptacle_1_12" file="collision/col_guide_receptacle_1_12.stl" />
+    <mesh name="col_guide_receptacle_1_13" file="collision/col_guide_receptacle_1_13.stl" />
+    <mesh name="col_guide_receptacle_1_14" file="collision/col_guide_receptacle_1_14.stl" />
+    <mesh name="col_guide_receptacle_1_15" file="collision/col_guide_receptacle_1_15.stl" />
+    <mesh name="col_guide_receptacle_1_16" file="collision/col_guide_receptacle_1_16.stl" />
+    <mesh name="col_guide_receptacle_1_17" file="collision/col_guide_receptacle_1_17.stl" />
+    <mesh name="col_guide_receptacle_1_18" file="collision/col_guide_receptacle_1_18.stl" />
+    <mesh name="col_guide_receptacle_1_19" file="collision/col_guide_receptacle_1_19.stl" />
+    <mesh name="col_guide_receptacle_1_20" file="collision/col_guide_receptacle_1_20.stl" />
+    <mesh name="col_guide_receptacle_1_21" file="collision/col_guide_receptacle_1_21.stl" />
+    <mesh name="col_guide_receptacle_1_22" file="collision/col_guide_receptacle_1_22.stl" />
+    <mesh name="col_guide_receptacle_1_23" file="collision/col_guide_receptacle_1_23.stl" />
+    <mesh name="col_guide_receptacle_1_24" file="collision/col_guide_receptacle_1_24.stl" />
+    <mesh name="col_guide_receptacle_1_25" file="collision/col_guide_receptacle_1_25.stl" />
+    <mesh name="col_guide_receptacle_1_26" file="collision/col_guide_receptacle_1_26.stl" />
+    <mesh name="col_guide_receptacle_1_27" file="collision/col_guide_receptacle_1_27.stl" />
+    <mesh name="col_guide_receptacle_1_28" file="collision/col_guide_receptacle_1_28.stl" />
+    <mesh name="col_guide_receptacle_1_29" file="collision/col_guide_receptacle_1_29.stl" />
+    <mesh name="col_guide_receptacle_1_30" file="collision/col_guide_receptacle_1_30.stl" />
+    <mesh name="col_guide_receptacle_1_31" file="collision/col_guide_receptacle_1_31.stl" />
+    <mesh name="col_guide_receptacle_1_32" file="collision/col_guide_receptacle_1_32.stl" />
+    <mesh name="col_guide_receptacle_1_33" file="collision/col_guide_receptacle_1_33.stl" />
+    <mesh name="col_hcs_land04" file="collision/col_hcs_land04.stl" />
+    <mesh name="col_hcs_land28" file="collision/col_hcs_land28.stl" />
+    <mesh name="col_striker_3_lower2" file="collision/col_striker_3_lower2.stl" />
+    <mesh name="col_hcs_land27" file="collision/col_hcs_land27.stl" />
+    <mesh name="col_striker_1_lower4" file="collision/col_striker_1_lower4.stl" />
+    <mesh name="col_hcs_land02" file="collision/col_hcs_land02.stl" />
+    <mesh name="col_hcs_land41" file="collision/col_hcs_land41.stl" />
+    <mesh name="col_striker_3_upper5" file="collision/col_striker_3_upper5.stl" />
+    <mesh name="col_hcs_land06" file="collision/col_hcs_land06.stl" />
+    <mesh name="col_hcs_land13" file="collision/col_hcs_land13.stl" />
+    <mesh name="col_striker_3_lower1" file="collision/col_striker_3_lower1.stl" />
+    <mesh name="col_guide_receptacle_2_00" file="collision/col_guide_receptacle_2_00.stl" />
+    <mesh name="col_guide_receptacle_2_01" file="collision/col_guide_receptacle_2_01.stl" />
+    <mesh name="col_guide_receptacle_2_02" file="collision/col_guide_receptacle_2_02.stl" />
+    <mesh name="col_guide_receptacle_2_03" file="collision/col_guide_receptacle_2_03.stl" />
+    <mesh name="col_guide_receptacle_2_04" file="collision/col_guide_receptacle_2_04.stl" />
+    <mesh name="col_guide_receptacle_2_05" file="collision/col_guide_receptacle_2_05.stl" />
+    <mesh name="col_guide_receptacle_2_06" file="collision/col_guide_receptacle_2_06.stl" />
+    <mesh name="col_guide_receptacle_2_07" file="collision/col_guide_receptacle_2_07.stl" />
+    <mesh name="col_guide_receptacle_2_08" file="collision/col_guide_receptacle_2_08.stl" />
+    <mesh name="col_guide_receptacle_2_09" file="collision/col_guide_receptacle_2_09.stl" />
+    <mesh name="col_guide_receptacle_2_10" file="collision/col_guide_receptacle_2_10.stl" />
+    <mesh name="col_guide_receptacle_2_11" file="collision/col_guide_receptacle_2_11.stl" />
+    <mesh name="col_guide_receptacle_2_12" file="collision/col_guide_receptacle_2_12.stl" />
+    <mesh name="col_guide_receptacle_2_13" file="collision/col_guide_receptacle_2_13.stl" />
+    <mesh name="col_guide_receptacle_2_14" file="collision/col_guide_receptacle_2_14.stl" />
+    <mesh name="col_guide_receptacle_2_15" file="collision/col_guide_receptacle_2_15.stl" />
+    <mesh name="col_guide_receptacle_2_16" file="collision/col_guide_receptacle_2_16.stl" />
+    <mesh name="col_guide_receptacle_2_17" file="collision/col_guide_receptacle_2_17.stl" />
+    <mesh name="col_guide_receptacle_2_18" file="collision/col_guide_receptacle_2_18.stl" />
+    <mesh name="col_guide_receptacle_2_19" file="collision/col_guide_receptacle_2_19.stl" />
+    <mesh name="col_guide_receptacle_2_20" file="collision/col_guide_receptacle_2_20.stl" />
+    <mesh name="col_guide_receptacle_2_21" file="collision/col_guide_receptacle_2_21.stl" />
+    <mesh name="col_guide_receptacle_2_22" file="collision/col_guide_receptacle_2_22.stl" />
+    <mesh name="col_guide_receptacle_2_23" file="collision/col_guide_receptacle_2_23.stl" />
+    <mesh name="col_guide_receptacle_2_24" file="collision/col_guide_receptacle_2_24.stl" />
+    <mesh name="col_guide_receptacle_2_25" file="collision/col_guide_receptacle_2_25.stl" />
+    <mesh name="col_guide_receptacle_2_26" file="collision/col_guide_receptacle_2_26.stl" />
+    <mesh name="col_guide_receptacle_2_27" file="collision/col_guide_receptacle_2_27.stl" />
+    <mesh name="col_guide_receptacle_2_28" file="collision/col_guide_receptacle_2_28.stl" />
+    <mesh name="col_guide_receptacle_2_29" file="collision/col_guide_receptacle_2_29.stl" />
+    <mesh name="col_guide_receptacle_2_30" file="collision/col_guide_receptacle_2_30.stl" />
+    <mesh name="col_guide_receptacle_2_31" file="collision/col_guide_receptacle_2_31.stl" />
+    <mesh name="col_guide_receptacle_2_32" file="collision/col_guide_receptacle_2_32.stl" />
+    <mesh name="col_guide_receptacle_2_33" file="collision/col_guide_receptacle_2_33.stl" />
+    <mesh name="col_striker_3_upper3" file="collision/col_striker_3_upper3.stl" />
+    <mesh name="col_hcs_land44" file="collision/col_hcs_land44.stl" />
+    <mesh name="col_hcs_land24" file="collision/col_hcs_land24.stl" />
+    <mesh name="col_striker_2_upper5" file="collision/col_striker_2_upper5.stl" />
+    <mesh name="col_hcs_land34" file="collision/col_hcs_land34.stl" />
+    <mesh name="col_striker_1_lower5" file="collision/col_striker_1_lower5.stl" />
+    <mesh name="col_hcs_land05" file="collision/col_hcs_land05.stl" />
+    <mesh name="col_striker_2_upper2" file="collision/col_striker_2_upper2.stl" />
+    <mesh name="col_hcs_land16" file="collision/col_hcs_land16.stl" />
+    <mesh name="col_hcs_land35" file="collision/col_hcs_land35.stl" />
+    <mesh name="col_striker_2_lower2" file="collision/col_striker_2_lower2.stl" />
+    <mesh name="col_striker_2_upper3" file="collision/col_striker_2_upper3.stl" />
+    <mesh name="col_petal_3" file="collision/col_petal_3.stl" />
+    <mesh name="col_hcs_land25" file="collision/col_hcs_land25.stl" />
+    <mesh name="col_hcs_land14" file="collision/col_hcs_land14.stl" />
+    <mesh name="col_hcs_land38" file="collision/col_hcs_land38.stl" />
+    <mesh name="col_hcs_land42" file="collision/col_hcs_land42.stl" />
+    <mesh name="col_striker_1_lower3" file="collision/col_striker_1_lower3.stl" />
+    <mesh name="col_guide_pin_2" file="collision/col_guide_pin_2.stl" />
+    <mesh name="col_striker_3_upper2" file="collision/col_striker_3_upper2.stl" />
+    <mesh name="col_petal_1" file="collision/col_petal_1.stl" />
+    <mesh name="col_striker_1_lower2" file="collision/col_striker_1_lower2.stl" />
+    <mesh name="col_hcs_land18" file="collision/col_hcs_land18.stl" />
+    <mesh name="col_striker_1_lower7" file="collision/col_striker_1_lower7.stl" />
+    <mesh name="col_hcs_land32" file="collision/col_hcs_land32.stl" />
+    <mesh name="col_hcs_land01" file="collision/col_hcs_land01.stl" />
+    <mesh name="col_striker_1_upper3" file="collision/col_striker_1_upper3.stl" />
+    <mesh name="col_hcs_land40" file="collision/col_hcs_land40.stl" />
+    <mesh name="col_striker_1_lower1" file="collision/col_striker_1_lower1.stl" />
+    <mesh name="col_hcs_land22" file="collision/col_hcs_land22.stl" />
+    <mesh name="col_capture_ring_chamfers_00" file="collision/col_capture_ring_chamfers_00.stl" />
+    <mesh name="col_capture_ring_chamfers_01" file="collision/col_capture_ring_chamfers_01.stl" />
+    <mesh name="col_capture_ring_chamfers_02" file="collision/col_capture_ring_chamfers_02.stl" />
+    <mesh name="col_capture_ring_chamfers_03" file="collision/col_capture_ring_chamfers_03.stl" />
+    <mesh name="col_capture_ring_chamfers_04" file="collision/col_capture_ring_chamfers_04.stl" />
+    <mesh name="col_capture_ring_chamfers_05" file="collision/col_capture_ring_chamfers_05.stl" />
+    <mesh name="col_capture_ring_chamfers_06" file="collision/col_capture_ring_chamfers_06.stl" />
+    <mesh name="col_capture_ring_chamfers_07" file="collision/col_capture_ring_chamfers_07.stl" />
+    <mesh name="col_capture_ring_chamfers_08" file="collision/col_capture_ring_chamfers_08.stl" />
+    <mesh name="col_capture_ring_chamfers_09" file="collision/col_capture_ring_chamfers_09.stl" />
+    <mesh name="col_capture_ring_chamfers_10" file="collision/col_capture_ring_chamfers_10.stl" />
+    <mesh name="col_capture_ring_chamfers_11" file="collision/col_capture_ring_chamfers_11.stl" />
+    <mesh name="col_capture_ring_chamfers_12" file="collision/col_capture_ring_chamfers_12.stl" />
+    <mesh name="col_capture_ring_chamfers_13" file="collision/col_capture_ring_chamfers_13.stl" />
+    <mesh name="col_capture_ring_chamfers_14" file="collision/col_capture_ring_chamfers_14.stl" />
+    <mesh name="col_capture_ring_chamfers_15" file="collision/col_capture_ring_chamfers_15.stl" />
+    <mesh name="col_capture_ring_chamfers_16" file="collision/col_capture_ring_chamfers_16.stl" />
+    <mesh name="col_capture_ring_chamfers_17" file="collision/col_capture_ring_chamfers_17.stl" />
+    <mesh name="col_capture_ring_chamfers_18" file="collision/col_capture_ring_chamfers_18.stl" />
+    <mesh name="col_capture_ring_chamfers_19" file="collision/col_capture_ring_chamfers_19.stl" />
+    <mesh name="col_capture_ring_chamfers_20" file="collision/col_capture_ring_chamfers_20.stl" />
+    <mesh name="col_capture_ring_chamfers_21" file="collision/col_capture_ring_chamfers_21.stl" />
+    <mesh name="col_capture_ring_chamfers_22" file="collision/col_capture_ring_chamfers_22.stl" />
+    <mesh name="col_capture_ring_chamfers_23" file="collision/col_capture_ring_chamfers_23.stl" />
+    <mesh name="col_capture_ring_chamfers_24" file="collision/col_capture_ring_chamfers_24.stl" />
+    <mesh name="col_capture_ring_chamfers_25" file="collision/col_capture_ring_chamfers_25.stl" />
+    <mesh name="col_capture_ring_chamfers_26" file="collision/col_capture_ring_chamfers_26.stl" />
+    <mesh name="col_capture_ring_chamfers_27" file="collision/col_capture_ring_chamfers_27.stl" />
+    <mesh name="col_capture_ring_chamfers_28" file="collision/col_capture_ring_chamfers_28.stl" />
+    <mesh name="col_capture_ring_chamfers_29" file="collision/col_capture_ring_chamfers_29.stl" />
+    <mesh name="col_capture_ring_chamfers_30" file="collision/col_capture_ring_chamfers_30.stl" />
+    <mesh name="col_capture_ring_chamfers_31" file="collision/col_capture_ring_chamfers_31.stl" />
+    <mesh name="col_capture_ring_chamfers_32" file="collision/col_capture_ring_chamfers_32.stl" />
+    <mesh name="col_capture_ring_chamfers_33" file="collision/col_capture_ring_chamfers_33.stl" />
+    <mesh name="col_capture_ring_chamfers_34" file="collision/col_capture_ring_chamfers_34.stl" />
+    <mesh name="col_capture_ring_chamfers_35" file="collision/col_capture_ring_chamfers_35.stl" />
+    <mesh name="col_capture_ring_chamfers_36" file="collision/col_capture_ring_chamfers_36.stl" />
+    <mesh name="col_capture_ring_chamfers_37" file="collision/col_capture_ring_chamfers_37.stl" />
+    <mesh name="col_capture_ring_chamfers_38" file="collision/col_capture_ring_chamfers_38.stl" />
+    <mesh name="col_capture_ring_chamfers_39" file="collision/col_capture_ring_chamfers_39.stl" />
+    <mesh name="col_capture_ring_chamfers_40" file="collision/col_capture_ring_chamfers_40.stl" />
+    <mesh name="col_capture_ring_chamfers_41" file="collision/col_capture_ring_chamfers_41.stl" />
+    <mesh name="col_capture_ring_chamfers_42" file="collision/col_capture_ring_chamfers_42.stl" />
+    <mesh name="col_capture_ring_chamfers_43" file="collision/col_capture_ring_chamfers_43.stl" />
+    <mesh name="col_capture_ring_chamfers_44" file="collision/col_capture_ring_chamfers_44.stl" />
+    <mesh name="col_capture_ring_chamfers_45" file="collision/col_capture_ring_chamfers_45.stl" />
+    <mesh name="col_capture_ring_chamfers_46" file="collision/col_capture_ring_chamfers_46.stl" />
+    <mesh name="col_capture_ring_chamfers_47" file="collision/col_capture_ring_chamfers_47.stl" />
+    <mesh name="col_capture_ring_chamfers_48" file="collision/col_capture_ring_chamfers_48.stl" />
+    <mesh name="col_capture_ring_chamfers_49" file="collision/col_capture_ring_chamfers_49.stl" />
+    <mesh name="col_capture_ring_chamfers_50" file="collision/col_capture_ring_chamfers_50.stl" />
+    <mesh name="col_capture_ring_chamfers_51" file="collision/col_capture_ring_chamfers_51.stl" />
+    <mesh name="col_capture_ring_chamfers_52" file="collision/col_capture_ring_chamfers_52.stl" />
+    <mesh name="col_capture_ring_chamfers_53" file="collision/col_capture_ring_chamfers_53.stl" />
+    <mesh name="col_capture_ring_chamfers_54" file="collision/col_capture_ring_chamfers_54.stl" />
+    <mesh name="col_capture_ring_chamfers_55" file="collision/col_capture_ring_chamfers_55.stl" />
+    <mesh name="col_capture_ring_chamfers_56" file="collision/col_capture_ring_chamfers_56.stl" />
+    <mesh name="col_capture_ring_chamfers_57" file="collision/col_capture_ring_chamfers_57.stl" />
+    <mesh name="col_capture_ring_chamfers_58" file="collision/col_capture_ring_chamfers_58.stl" />
+    <mesh name="col_capture_ring_chamfers_59" file="collision/col_capture_ring_chamfers_59.stl" />
+    <mesh name="col_capture_ring_chamfers_60" file="collision/col_capture_ring_chamfers_60.stl" />
+    <mesh name="col_capture_ring_chamfers_61" file="collision/col_capture_ring_chamfers_61.stl" />
+    <mesh name="col_capture_ring_chamfers_62" file="collision/col_capture_ring_chamfers_62.stl" />
+    <mesh name="col_capture_ring_chamfers_63" file="collision/col_capture_ring_chamfers_63.stl" />
+    <mesh name="col_capture_ring_chamfers_64" file="collision/col_capture_ring_chamfers_64.stl" />
+    <mesh name="col_capture_ring_chamfers_65" file="collision/col_capture_ring_chamfers_65.stl" />
+    <mesh name="col_capture_ring_chamfers_66" file="collision/col_capture_ring_chamfers_66.stl" />
+    <mesh name="col_capture_ring_chamfers_67" file="collision/col_capture_ring_chamfers_67.stl" />
+    <mesh name="col_capture_ring_chamfers_68" file="collision/col_capture_ring_chamfers_68.stl" />
+    <mesh name="col_capture_ring_chamfers_69" file="collision/col_capture_ring_chamfers_69.stl" />
+    <mesh name="col_capture_ring_chamfers_70" file="collision/col_capture_ring_chamfers_70.stl" />
+    <mesh name="col_capture_ring_chamfers_71" file="collision/col_capture_ring_chamfers_71.stl" />
+    <mesh name="col_capture_ring_chamfers_72" file="collision/col_capture_ring_chamfers_72.stl" />
+    <mesh name="col_capture_ring_chamfers_73" file="collision/col_capture_ring_chamfers_73.stl" />
+    <mesh name="col_capture_ring_chamfers_74" file="collision/col_capture_ring_chamfers_74.stl" />
+    <mesh name="col_capture_ring_chamfers_75" file="collision/col_capture_ring_chamfers_75.stl" />
+    <mesh name="col_capture_ring_chamfers_76" file="collision/col_capture_ring_chamfers_76.stl" />
+    <mesh name="col_capture_ring_chamfers_77" file="collision/col_capture_ring_chamfers_77.stl" />
+    <mesh name="col_capture_ring_chamfers_78" file="collision/col_capture_ring_chamfers_78.stl" />
+    <mesh name="col_capture_ring_chamfers_79" file="collision/col_capture_ring_chamfers_79.stl" />
+    <mesh name="col_capture_ring_chamfers_80" file="collision/col_capture_ring_chamfers_80.stl" />
+    <mesh name="col_capture_ring_chamfers_81" file="collision/col_capture_ring_chamfers_81.stl" />
+    <mesh name="col_capture_ring_chamfers_82" file="collision/col_capture_ring_chamfers_82.stl" />
+    <mesh name="col_capture_ring_chamfers_83" file="collision/col_capture_ring_chamfers_83.stl" />
+    <mesh name="col_capture_ring_chamfers_84" file="collision/col_capture_ring_chamfers_84.stl" />
+    <mesh name="col_capture_ring_chamfers_85" file="collision/col_capture_ring_chamfers_85.stl" />
+    <mesh name="col_capture_ring_chamfers_86" file="collision/col_capture_ring_chamfers_86.stl" />
+    <mesh name="col_capture_ring_chamfers_87" file="collision/col_capture_ring_chamfers_87.stl" />
+    <mesh name="col_capture_ring_chamfers_88" file="collision/col_capture_ring_chamfers_88.stl" />
+    <mesh name="col_capture_ring_chamfers_89" file="collision/col_capture_ring_chamfers_89.stl" />
+    <mesh name="col_capture_ring_chamfers_90" file="collision/col_capture_ring_chamfers_90.stl" />
+    <mesh name="col_capture_ring_chamfers_91" file="collision/col_capture_ring_chamfers_91.stl" />
+    <mesh name="col_capture_ring_chamfers_92" file="collision/col_capture_ring_chamfers_92.stl" />
+    <mesh name="col_capture_ring_chamfers_93" file="collision/col_capture_ring_chamfers_93.stl" />
+    <mesh name="col_capture_ring_chamfers_94" file="collision/col_capture_ring_chamfers_94.stl" />
+    <mesh name="col_capture_ring_chamfers_95" file="collision/col_capture_ring_chamfers_95.stl" />
+    <mesh name="col_capture_ring_chamfers_96" file="collision/col_capture_ring_chamfers_96.stl" />
+    <mesh name="col_capture_ring_chamfers_97" file="collision/col_capture_ring_chamfers_97.stl" />
+    <mesh name="col_capture_ring_chamfers_98" file="collision/col_capture_ring_chamfers_98.stl" />
+    <mesh name="col_capture_ring_chamfers_99" file="collision/col_capture_ring_chamfers_99.stl" />
+    <mesh name="col_capture_ring_chamfers_100" file="collision/col_capture_ring_chamfers_100.stl" />
+    <mesh name="col_capture_ring_chamfers_101" file="collision/col_capture_ring_chamfers_101.stl" />
+    <mesh name="col_capture_ring_chamfers_102" file="collision/col_capture_ring_chamfers_102.stl" />
+    <mesh name="col_capture_ring_chamfers_103" file="collision/col_capture_ring_chamfers_103.stl" />
+    <mesh name="col_capture_ring_chamfers_104" file="collision/col_capture_ring_chamfers_104.stl" />
+    <mesh name="col_capture_ring_chamfers_105" file="collision/col_capture_ring_chamfers_105.stl" />
+    <mesh name="col_capture_ring_chamfers_106" file="collision/col_capture_ring_chamfers_106.stl" />
+    <mesh name="col_capture_ring_chamfers_107" file="collision/col_capture_ring_chamfers_107.stl" />
+    <mesh name="col_capture_ring_chamfers_108" file="collision/col_capture_ring_chamfers_108.stl" />
+    <mesh name="col_capture_ring_chamfers_109" file="collision/col_capture_ring_chamfers_109.stl" />
+    <mesh name="col_capture_ring_chamfers_110" file="collision/col_capture_ring_chamfers_110.stl" />
+    <mesh name="col_capture_ring_chamfers_111" file="collision/col_capture_ring_chamfers_111.stl" />
+    <mesh name="col_capture_ring_chamfers_112" file="collision/col_capture_ring_chamfers_112.stl" />
+    <mesh name="col_capture_ring_chamfers_113" file="collision/col_capture_ring_chamfers_113.stl" />
+    <mesh name="col_capture_ring_chamfers_114" file="collision/col_capture_ring_chamfers_114.stl" />
+    <mesh name="col_capture_ring_chamfers_115" file="collision/col_capture_ring_chamfers_115.stl" />
+    <mesh name="col_capture_ring_chamfers_116" file="collision/col_capture_ring_chamfers_116.stl" />
+    <mesh name="col_capture_ring_chamfers_117" file="collision/col_capture_ring_chamfers_117.stl" />
+    <mesh name="col_capture_ring_chamfers_118" file="collision/col_capture_ring_chamfers_118.stl" />
+    <mesh name="col_capture_ring_chamfers_119" file="collision/col_capture_ring_chamfers_119.stl" />
+    <mesh name="col_capture_ring_chamfers_120" file="collision/col_capture_ring_chamfers_120.stl" />
+    <mesh name="col_capture_ring_chamfers_121" file="collision/col_capture_ring_chamfers_121.stl" />
+    <mesh name="col_capture_ring_chamfers_122" file="collision/col_capture_ring_chamfers_122.stl" />
+    <mesh name="col_capture_ring_chamfers_123" file="collision/col_capture_ring_chamfers_123.stl" />
+    <mesh name="col_capture_ring_chamfers_124" file="collision/col_capture_ring_chamfers_124.stl" />
+    <mesh name="col_capture_ring_chamfers_125" file="collision/col_capture_ring_chamfers_125.stl" />
+    <mesh name="col_capture_ring_chamfers_126" file="collision/col_capture_ring_chamfers_126.stl" />
+    <mesh name="col_capture_ring_chamfers_127" file="collision/col_capture_ring_chamfers_127.stl" />
+    <mesh name="col_capture_ring_chamfers_128" file="collision/col_capture_ring_chamfers_128.stl" />
+    <mesh name="col_capture_ring_chamfers_129" file="collision/col_capture_ring_chamfers_129.stl" />
+    <mesh name="col_capture_ring_chamfers_130" file="collision/col_capture_ring_chamfers_130.stl" />
+    <mesh name="col_capture_ring_chamfers_131" file="collision/col_capture_ring_chamfers_131.stl" />
+    <mesh name="col_capture_ring_chamfers_132" file="collision/col_capture_ring_chamfers_132.stl" />
+    <mesh name="col_capture_ring_chamfers_133" file="collision/col_capture_ring_chamfers_133.stl" />
+    <mesh name="col_capture_ring_chamfers_134" file="collision/col_capture_ring_chamfers_134.stl" />
+    <mesh name="col_capture_ring_chamfers_135" file="collision/col_capture_ring_chamfers_135.stl" />
+    <mesh name="col_capture_ring_chamfers_136" file="collision/col_capture_ring_chamfers_136.stl" />
+    <mesh name="col_capture_ring_chamfers_137" file="collision/col_capture_ring_chamfers_137.stl" />
+    <mesh name="col_capture_ring_chamfers_138" file="collision/col_capture_ring_chamfers_138.stl" />
+    <mesh name="col_capture_ring_chamfers_139" file="collision/col_capture_ring_chamfers_139.stl" />
+    <mesh name="col_capture_ring_chamfers_140" file="collision/col_capture_ring_chamfers_140.stl" />
+    <mesh name="col_capture_ring_chamfers_141" file="collision/col_capture_ring_chamfers_141.stl" />
+    <mesh name="col_capture_ring_chamfers_142" file="collision/col_capture_ring_chamfers_142.stl" />
+    <mesh name="col_capture_ring_chamfers_143" file="collision/col_capture_ring_chamfers_143.stl" />
+    <mesh name="col_capture_ring_chamfers_144" file="collision/col_capture_ring_chamfers_144.stl" />
+    <mesh name="col_capture_ring_chamfers_145" file="collision/col_capture_ring_chamfers_145.stl" />
+    <mesh name="col_capture_ring_chamfers_146" file="collision/col_capture_ring_chamfers_146.stl" />
+    <mesh name="col_capture_ring_chamfers_147" file="collision/col_capture_ring_chamfers_147.stl" />
+    <mesh name="col_capture_ring_chamfers_148" file="collision/col_capture_ring_chamfers_148.stl" />
+    <mesh name="col_capture_ring_chamfers_149" file="collision/col_capture_ring_chamfers_149.stl" />
+    <mesh name="col_capture_ring_chamfers_150" file="collision/col_capture_ring_chamfers_150.stl" />
+    <mesh name="col_capture_ring_chamfers_151" file="collision/col_capture_ring_chamfers_151.stl" />
+    <mesh name="col_capture_ring_chamfers_152" file="collision/col_capture_ring_chamfers_152.stl" />
+    <mesh name="col_capture_ring_chamfers_153" file="collision/col_capture_ring_chamfers_153.stl" />
+    <mesh name="col_capture_ring_chamfers_154" file="collision/col_capture_ring_chamfers_154.stl" />
+    <mesh name="col_capture_ring_chamfers_155" file="collision/col_capture_ring_chamfers_155.stl" />
+    <mesh name="col_capture_ring_chamfers_156" file="collision/col_capture_ring_chamfers_156.stl" />
+    <mesh name="col_capture_ring_chamfers_157" file="collision/col_capture_ring_chamfers_157.stl" />
+    <mesh name="col_capture_ring_chamfers_158" file="collision/col_capture_ring_chamfers_158.stl" />
+    <mesh name="col_capture_ring_chamfers_159" file="collision/col_capture_ring_chamfers_159.stl" />
+    <mesh name="col_capture_ring_chamfers_160" file="collision/col_capture_ring_chamfers_160.stl" />
+    <mesh name="col_capture_ring_chamfers_161" file="collision/col_capture_ring_chamfers_161.stl" />
+    <mesh name="col_capture_ring_chamfers_162" file="collision/col_capture_ring_chamfers_162.stl" />
+    <mesh name="col_capture_ring_chamfers_163" file="collision/col_capture_ring_chamfers_163.stl" />
+    <mesh name="col_capture_ring_chamfers_164" file="collision/col_capture_ring_chamfers_164.stl" />
+    <mesh name="col_capture_ring_chamfers_165" file="collision/col_capture_ring_chamfers_165.stl" />
+    <mesh name="col_capture_ring_chamfers_166" file="collision/col_capture_ring_chamfers_166.stl" />
+    <mesh name="col_capture_ring_chamfers_167" file="collision/col_capture_ring_chamfers_167.stl" />
+    <mesh name="col_capture_ring_chamfers_168" file="collision/col_capture_ring_chamfers_168.stl" />
+    <mesh name="col_capture_ring_chamfers_169" file="collision/col_capture_ring_chamfers_169.stl" />
+    <mesh name="col_capture_ring_chamfers_170" file="collision/col_capture_ring_chamfers_170.stl" />
+    <mesh name="col_capture_ring_chamfers_171" file="collision/col_capture_ring_chamfers_171.stl" />
+    <mesh name="col_capture_ring_chamfers_172" file="collision/col_capture_ring_chamfers_172.stl" />
+    <mesh name="col_capture_ring_chamfers_173" file="collision/col_capture_ring_chamfers_173.stl" />
+    <mesh name="col_capture_ring_chamfers_174" file="collision/col_capture_ring_chamfers_174.stl" />
+    <mesh name="col_capture_ring_chamfers_175" file="collision/col_capture_ring_chamfers_175.stl" />
+    <mesh name="col_capture_ring_chamfers_176" file="collision/col_capture_ring_chamfers_176.stl" />
+    <mesh name="col_capture_ring_chamfers_177" file="collision/col_capture_ring_chamfers_177.stl" />
+    <mesh name="col_capture_ring_chamfers_178" file="collision/col_capture_ring_chamfers_178.stl" />
+    <mesh name="col_capture_ring_chamfers_179" file="collision/col_capture_ring_chamfers_179.stl" />
+    <mesh name="col_striker_2_upper1" file="collision/col_striker_2_upper1.stl" />
+    <mesh name="col_hcs_land36" file="collision/col_hcs_land36.stl" />
+    <mesh name="col_striker_1_upper2" file="collision/col_striker_1_upper2.stl" />
+    <mesh name="col_hcs_land45" file="collision/col_hcs_land45.stl" />
+    <mesh name="col_hcs_land37" file="collision/col_hcs_land37.stl" />
+    <mesh name="col_hcs_land07" file="collision/col_hcs_land07.stl" />
+    <mesh name="col_striker_2_lower1" file="collision/col_striker_2_lower1.stl" />
+    <mesh name="col_hcs_land17" file="collision/col_hcs_land17.stl" />
+    <mesh name="col_striker_1_lower0" file="collision/col_striker_1_lower0.stl" />
+    <mesh name="col_hcs_land39" file="collision/col_hcs_land39.stl" />
+    <mesh name="col_striker_1_upper7" file="collision/col_striker_1_upper7.stl" />
+    <mesh name="col_striker_3_upper0" file="collision/col_striker_3_upper0.stl" />
+    <mesh name="col_hcs_land46" file="collision/col_hcs_land46.stl" />
+    <mesh name="col_striker_2_lower0" file="collision/col_striker_2_lower0.stl" />
+    <mesh name="col_striker_2_upper6" file="collision/col_striker_2_upper6.stl" />
+    <mesh name="col_striker_1_upper6" file="collision/col_striker_1_upper6.stl" />
+    <mesh name="col_striker_3_upper7" file="collision/col_striker_3_upper7.stl" />
+    <mesh name="col_striker_2_lower4" file="collision/col_striker_2_lower4.stl" />
+    <mesh name="col_striker_2_upper4" file="collision/col_striker_2_upper4.stl" />
+    <mesh name="col_striker_2_lower6" file="collision/col_striker_2_lower6.stl" />
+    <mesh name="col_striker_3_upper1" file="collision/col_striker_3_upper1.stl" />
+    <mesh name="col_striker_1_lower6" file="collision/col_striker_1_lower6.stl" />
+    <mesh name="col_striker_1_upper4" file="collision/col_striker_1_upper4.stl" />
+    <mesh name="col_striker_2_lower3" file="collision/col_striker_2_lower3.stl" />
+    <mesh name="col_hcs_land21" file="collision/col_hcs_land21.stl" />
+    <mesh name="col_striker_3_lower7" file="collision/col_striker_3_lower7.stl" />
+    <mesh name="col_striker_2_lower7" file="collision/col_striker_2_lower7.stl" />
+    <mesh name="col_hcs_land43" file="collision/col_hcs_land43.stl" />
+    <mesh name="col_hcs_land11" file="collision/col_hcs_land11.stl" />
+    <mesh name="col_hcs_land09" file="collision/col_hcs_land09.stl" />
+    <mesh name="col_striker_2_lower5" file="collision/col_striker_2_lower5.stl" />
+    <mesh name="col_striker_1_upper5" file="collision/col_striker_1_upper5.stl" />
+    <mesh name="col_striker_1_upper1" file="collision/col_striker_1_upper1.stl" />
+    <mesh name="col_striker_2_upper7" file="collision/col_striker_2_upper7.stl" />
+    <mesh name="col_hcs_land08" file="collision/col_hcs_land08.stl" />
+    <mesh name="col_hcs_land15" file="collision/col_hcs_land15.stl" />
+    <mesh name="col_hcs_land30" file="collision/col_hcs_land30.stl" />
+    <mesh name="col_striker_3_upper6" file="collision/col_striker_3_upper6.stl" />
+    <mesh name="col_hcs_land29" file="collision/col_hcs_land29.stl" />
+    <mesh name="col_striker_3_lower5" file="collision/col_striker_3_lower5.stl" />
+    <mesh name="col_hcs_land12" file="collision/col_hcs_land12.stl" />
+    <mesh name="col_hcs_land26" file="collision/col_hcs_land26.stl" />
+    <mesh name="col_hcs_land31" file="collision/col_hcs_land31.stl" />
+    <mesh name="col_hcs_land03" file="collision/col_hcs_land03.stl" />
+    <mesh name="col_hcs_land00" file="collision/col_hcs_land00.stl" />
+    <mesh name="col_striker_2_upper0" file="collision/col_striker_2_upper0.stl" />
+    <mesh name="col_hcs_land23" file="collision/col_hcs_land23.stl" />
+    <mesh name="col_striker_3_lower0" file="collision/col_striker_3_lower0.stl" />
+    <mesh name="col_striker_3_lower4" file="collision/col_striker_3_lower4.stl" />
+    <mesh name="col_striker_3_lower6" file="collision/col_striker_3_lower6.stl" />
+    <mesh name="col_hcs_land33" file="collision/col_hcs_land33.stl" />
+    <mesh name="col_striker_1_upper0" file="collision/col_striker_1_upper0.stl" />
+    <mesh name="col_hcs_land20" file="collision/col_hcs_land20.stl" />
+    <mesh name="col_hcs_land10" file="collision/col_hcs_land10.stl" />
+    <mesh name="col_striker_3_lower3" file="collision/col_striker_3_lower3.stl" />
+    <mesh name="col_hcs_land19" file="collision/col_hcs_land19.stl" />
+    <mesh name="col_guide_pin_1" file="collision/col_guide_pin_1.stl" />
+    <mesh name="col_striker_3_upper4" file="collision/col_striker_3_upper4.stl" />
+    <mesh name="col_hcs_land47" file="collision/col_hcs_land47.stl" />
+    <mesh name="col_hook_a_00_00" file="collision/col_hook_a_00_00.stl" />
+    <mesh name="col_hook_a_00_01" file="collision/col_hook_a_00_01.stl" />
+    <mesh name="col_hook_a_00_02" file="collision/col_hook_a_00_02.stl" />
+    <mesh name="col_hook_a_01_00" file="collision/col_hook_a_01_00.stl" />
+    <mesh name="col_hook_a_01_01" file="collision/col_hook_a_01_01.stl" />
+    <mesh name="col_hook_a_01_02" file="collision/col_hook_a_01_02.stl" />
+    <mesh name="col_hook_a_02_00" file="collision/col_hook_a_02_00.stl" />
+    <mesh name="col_hook_a_02_01" file="collision/col_hook_a_02_01.stl" />
+    <mesh name="col_hook_a_02_02" file="collision/col_hook_a_02_02.stl" />
+    <mesh name="col_hook_a_03_00" file="collision/col_hook_a_03_00.stl" />
+    <mesh name="col_hook_a_03_01" file="collision/col_hook_a_03_01.stl" />
+    <mesh name="col_hook_a_03_02" file="collision/col_hook_a_03_02.stl" />
+    <mesh name="col_hook_a_04_00" file="collision/col_hook_a_04_00.stl" />
+    <mesh name="col_hook_a_04_01" file="collision/col_hook_a_04_01.stl" />
+    <mesh name="col_hook_a_04_02" file="collision/col_hook_a_04_02.stl" />
+    <mesh name="col_hook_a_05_00" file="collision/col_hook_a_05_00.stl" />
+    <mesh name="col_hook_a_05_01" file="collision/col_hook_a_05_01.stl" />
+    <mesh name="col_hook_a_05_02" file="collision/col_hook_a_05_02.stl" />
+    <mesh name="col_hook_a_06_00" file="collision/col_hook_a_06_00.stl" />
+    <mesh name="col_hook_a_06_01" file="collision/col_hook_a_06_01.stl" />
+    <mesh name="col_hook_a_06_02" file="collision/col_hook_a_06_02.stl" />
+    <mesh name="col_hook_a_07_00" file="collision/col_hook_a_07_00.stl" />
+    <mesh name="col_hook_a_07_01" file="collision/col_hook_a_07_01.stl" />
+    <mesh name="col_hook_a_07_02" file="collision/col_hook_a_07_02.stl" />
+    <mesh name="col_hook_a_08_00" file="collision/col_hook_a_08_00.stl" />
+    <mesh name="col_hook_a_08_01" file="collision/col_hook_a_08_01.stl" />
+    <mesh name="col_hook_a_08_02" file="collision/col_hook_a_08_02.stl" />
+    <mesh name="col_hook_a_09_00" file="collision/col_hook_a_09_00.stl" />
+    <mesh name="col_hook_a_09_01" file="collision/col_hook_a_09_01.stl" />
+    <mesh name="col_hook_a_09_02" file="collision/col_hook_a_09_02.stl" />
+    <mesh name="col_hook_a_10_00" file="collision/col_hook_a_10_00.stl" />
+    <mesh name="col_hook_a_10_01" file="collision/col_hook_a_10_01.stl" />
+    <mesh name="col_hook_a_10_02" file="collision/col_hook_a_10_02.stl" />
+    <mesh name="col_hook_a_11_00" file="collision/col_hook_a_11_00.stl" />
+    <mesh name="col_hook_a_11_01" file="collision/col_hook_a_11_01.stl" />
+    <mesh name="col_hook_a_11_02" file="collision/col_hook_a_11_02.stl" />
+    <mesh name="col_hook_p_00_00" file="collision/col_hook_p_00_00.stl" />
+    <mesh name="col_hook_p_00_01" file="collision/col_hook_p_00_01.stl" />
+    <mesh name="col_hook_p_00_02" file="collision/col_hook_p_00_02.stl" />
+    <mesh name="col_hook_p_00_03" file="collision/col_hook_p_00_03.stl" />
+    <mesh name="col_hook_p_00_04" file="collision/col_hook_p_00_04.stl" />
+    <mesh name="col_hook_p_00_05" file="collision/col_hook_p_00_05.stl" />
+    <mesh name="col_hook_p_00_06" file="collision/col_hook_p_00_06.stl" />
+    <mesh name="col_hook_p_01_00" file="collision/col_hook_p_01_00.stl" />
+    <mesh name="col_hook_p_01_01" file="collision/col_hook_p_01_01.stl" />
+    <mesh name="col_hook_p_01_02" file="collision/col_hook_p_01_02.stl" />
+    <mesh name="col_hook_p_01_03" file="collision/col_hook_p_01_03.stl" />
+    <mesh name="col_hook_p_01_04" file="collision/col_hook_p_01_04.stl" />
+    <mesh name="col_hook_p_01_05" file="collision/col_hook_p_01_05.stl" />
+    <mesh name="col_hook_p_01_06" file="collision/col_hook_p_01_06.stl" />
+    <mesh name="col_hook_p_02_00" file="collision/col_hook_p_02_00.stl" />
+    <mesh name="col_hook_p_02_01" file="collision/col_hook_p_02_01.stl" />
+    <mesh name="col_hook_p_02_02" file="collision/col_hook_p_02_02.stl" />
+    <mesh name="col_hook_p_02_03" file="collision/col_hook_p_02_03.stl" />
+    <mesh name="col_hook_p_02_04" file="collision/col_hook_p_02_04.stl" />
+    <mesh name="col_hook_p_02_05" file="collision/col_hook_p_02_05.stl" />
+    <mesh name="col_hook_p_02_06" file="collision/col_hook_p_02_06.stl" />
+    <mesh name="col_hook_p_03_00" file="collision/col_hook_p_03_00.stl" />
+    <mesh name="col_hook_p_03_01" file="collision/col_hook_p_03_01.stl" />
+    <mesh name="col_hook_p_03_02" file="collision/col_hook_p_03_02.stl" />
+    <mesh name="col_hook_p_03_03" file="collision/col_hook_p_03_03.stl" />
+    <mesh name="col_hook_p_03_04" file="collision/col_hook_p_03_04.stl" />
+    <mesh name="col_hook_p_03_05" file="collision/col_hook_p_03_05.stl" />
+    <mesh name="col_hook_p_03_06" file="collision/col_hook_p_03_06.stl" />
+    <mesh name="col_hook_p_04_00" file="collision/col_hook_p_04_00.stl" />
+    <mesh name="col_hook_p_04_01" file="collision/col_hook_p_04_01.stl" />
+    <mesh name="col_hook_p_04_02" file="collision/col_hook_p_04_02.stl" />
+    <mesh name="col_hook_p_04_03" file="collision/col_hook_p_04_03.stl" />
+    <mesh name="col_hook_p_04_04" file="collision/col_hook_p_04_04.stl" />
+    <mesh name="col_hook_p_04_05" file="collision/col_hook_p_04_05.stl" />
+    <mesh name="col_hook_p_04_06" file="collision/col_hook_p_04_06.stl" />
+    <mesh name="col_hook_p_05_00" file="collision/col_hook_p_05_00.stl" />
+    <mesh name="col_hook_p_05_01" file="collision/col_hook_p_05_01.stl" />
+    <mesh name="col_hook_p_05_02" file="collision/col_hook_p_05_02.stl" />
+    <mesh name="col_hook_p_05_03" file="collision/col_hook_p_05_03.stl" />
+    <mesh name="col_hook_p_05_04" file="collision/col_hook_p_05_04.stl" />
+    <mesh name="col_hook_p_05_05" file="collision/col_hook_p_05_05.stl" />
+    <mesh name="col_hook_p_05_06" file="collision/col_hook_p_05_06.stl" />
+    <mesh name="col_hook_p_06_00" file="collision/col_hook_p_06_00.stl" />
+    <mesh name="col_hook_p_06_01" file="collision/col_hook_p_06_01.stl" />
+    <mesh name="col_hook_p_06_02" file="collision/col_hook_p_06_02.stl" />
+    <mesh name="col_hook_p_06_03" file="collision/col_hook_p_06_03.stl" />
+    <mesh name="col_hook_p_06_04" file="collision/col_hook_p_06_04.stl" />
+    <mesh name="col_hook_p_06_05" file="collision/col_hook_p_06_05.stl" />
+    <mesh name="col_hook_p_06_06" file="collision/col_hook_p_06_06.stl" />
+    <mesh name="col_hook_p_07_00" file="collision/col_hook_p_07_00.stl" />
+    <mesh name="col_hook_p_07_01" file="collision/col_hook_p_07_01.stl" />
+    <mesh name="col_hook_p_07_02" file="collision/col_hook_p_07_02.stl" />
+    <mesh name="col_hook_p_07_03" file="collision/col_hook_p_07_03.stl" />
+    <mesh name="col_hook_p_07_04" file="collision/col_hook_p_07_04.stl" />
+    <mesh name="col_hook_p_07_05" file="collision/col_hook_p_07_05.stl" />
+    <mesh name="col_hook_p_07_06" file="collision/col_hook_p_07_06.stl" />
+    <mesh name="col_hook_p_08_00" file="collision/col_hook_p_08_00.stl" />
+    <mesh name="col_hook_p_08_01" file="collision/col_hook_p_08_01.stl" />
+    <mesh name="col_hook_p_08_02" file="collision/col_hook_p_08_02.stl" />
+    <mesh name="col_hook_p_08_03" file="collision/col_hook_p_08_03.stl" />
+    <mesh name="col_hook_p_08_04" file="collision/col_hook_p_08_04.stl" />
+    <mesh name="col_hook_p_08_05" file="collision/col_hook_p_08_05.stl" />
+    <mesh name="col_hook_p_08_06" file="collision/col_hook_p_08_06.stl" />
+    <mesh name="col_hook_p_09_00" file="collision/col_hook_p_09_00.stl" />
+    <mesh name="col_hook_p_09_01" file="collision/col_hook_p_09_01.stl" />
+    <mesh name="col_hook_p_09_02" file="collision/col_hook_p_09_02.stl" />
+    <mesh name="col_hook_p_09_03" file="collision/col_hook_p_09_03.stl" />
+    <mesh name="col_hook_p_09_04" file="collision/col_hook_p_09_04.stl" />
+    <mesh name="col_hook_p_09_05" file="collision/col_hook_p_09_05.stl" />
+    <mesh name="col_hook_p_09_06" file="collision/col_hook_p_09_06.stl" />
+    <mesh name="col_hook_p_10_00" file="collision/col_hook_p_10_00.stl" />
+    <mesh name="col_hook_p_10_01" file="collision/col_hook_p_10_01.stl" />
+    <mesh name="col_hook_p_10_02" file="collision/col_hook_p_10_02.stl" />
+    <mesh name="col_hook_p_10_03" file="collision/col_hook_p_10_03.stl" />
+    <mesh name="col_hook_p_10_04" file="collision/col_hook_p_10_04.stl" />
+    <mesh name="col_hook_p_10_05" file="collision/col_hook_p_10_05.stl" />
+    <mesh name="col_hook_p_10_06" file="collision/col_hook_p_10_06.stl" />
+    <mesh name="col_hook_p_11_00" file="collision/col_hook_p_11_00.stl" />
+    <mesh name="col_hook_p_11_01" file="collision/col_hook_p_11_01.stl" />
+    <mesh name="col_hook_p_11_02" file="collision/col_hook_p_11_02.stl" />
+    <mesh name="col_hook_p_11_03" file="collision/col_hook_p_11_03.stl" />
+    <mesh name="col_hook_p_11_04" file="collision/col_hook_p_11_04.stl" />
+    <mesh name="col_hook_p_11_05" file="collision/col_hook_p_11_05.stl" />
+    <mesh name="col_hook_p_11_06" file="collision/col_hook_p_11_06.stl" />
+    <mesh name="col_sensor_1" file="collision/col_sensor_1.stl" />
+    <mesh name="col_sensor_2" file="collision/col_sensor_2.stl" />
+    <mesh name="col_sensor_3" file="collision/col_sensor_3.stl" />
+    <mesh name="col_separator_1" file="collision/col_separator_1.stl" />
+    <mesh name="col_separator_2" file="collision/col_separator_2.stl" />
+    <mesh name="col_separator_3" file="collision/col_separator_3.stl" />
+  </asset>
+  <worldbody>
+    <light pos="2 -2 4" dir="-0.5 0.5 -1" diffuse="1 1 1" directional="true" />
+    <body name="ida_base" pos="0 0 0" quat="1 0 0 0">
+      <inertial pos="-0.031389 0.018983 0.297485" mass="507.2" diaginertia="117.912567 145.982956 196.980408" quat="0.992864 0.007015 0.015154 -0.118078" />
+      <geom type="mesh" mesh="ida_base__retroreflector" material="retroreflector" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__target_black" material="target_black" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__a286" material="a286" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__target_white" material="target_white" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__connector" material="connector" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__mli" material="mli" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__handrail" material="handrail" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__aluminium" material="aluminium" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__aluminium_machined" material="aluminium_machined" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__black_anodize" material="black_anodize" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__seal_silicone" material="seal_silicone" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__inconel" material="inconel" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__seal_land" material="seal_land" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__hard_anodize" material="hard_anodize" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__hcs" material="hcs" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="ida_base__chrome" material="chrome" contype="0" conaffinity="0" group="1" density="0" />
+      <geom type="mesh" mesh="col_petal_2" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_00" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_01" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_02" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_03" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_04" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_05" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_06" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_07" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_08" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_09" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_10" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_11" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_12" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_13" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_14" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_15" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_16" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_17" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_18" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_19" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_20" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_21" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_22" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_23" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_24" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_25" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_26" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_27" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_28" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_29" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_30" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_31" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_32" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_1_33" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land04" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land28" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_lower2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land27" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_lower4" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land02" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land41" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_upper5" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land06" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land13" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_lower1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_00" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_01" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_02" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_03" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_04" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_05" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_06" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_07" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_08" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_09" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_10" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_11" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_12" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_13" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_14" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_15" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_16" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_17" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_18" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_19" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_20" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_21" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_22" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_23" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_24" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_25" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_26" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_27" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_28" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_29" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_30" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_31" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_32" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_receptacle_2_33" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_upper3" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land44" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land24" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_upper5" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land34" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_lower5" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land05" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_upper2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land16" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land35" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_lower2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_upper3" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_petal_3" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land25" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land14" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land38" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land42" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_lower3" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_pin_2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_upper2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_petal_1" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_lower2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land18" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_lower7" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land32" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land01" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_upper3" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land40" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_lower1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land22" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_00" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_01" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_02" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_03" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_04" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_05" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_06" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_07" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_08" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_09" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_10" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_11" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_12" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_13" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_14" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_15" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_16" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_17" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_18" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_19" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_20" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_21" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_22" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_23" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_24" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_25" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_26" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_27" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_28" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_29" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_30" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_31" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_32" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_33" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_34" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_35" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_36" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_37" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_38" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_39" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_40" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_41" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_42" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_43" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_44" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_45" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_46" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_47" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_48" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_49" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_50" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_51" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_52" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_53" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_54" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_55" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_56" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_57" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_58" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_59" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_60" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_61" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_62" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_63" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_64" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_65" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_66" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_67" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_68" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_69" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_70" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_71" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_72" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_73" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_74" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_75" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_76" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_77" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_78" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_79" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_80" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_81" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_82" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_83" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_84" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_85" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_86" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_87" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_88" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_89" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_90" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_91" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_92" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_93" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_94" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_95" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_96" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_97" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_98" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_99" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_100" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_101" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_102" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_103" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_104" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_105" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_106" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_107" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_108" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_109" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_110" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_111" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_112" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_113" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_114" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_115" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_116" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_117" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_118" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_119" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_120" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_121" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_122" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_123" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_124" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_125" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_126" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_127" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_128" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_129" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_130" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_131" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_132" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_133" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_134" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_135" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_136" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_137" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_138" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_139" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_140" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_141" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_142" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_143" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_144" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_145" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_146" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_147" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_148" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_149" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_150" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_151" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_152" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_153" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_154" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_155" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_156" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_157" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_158" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_159" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_160" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_161" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_162" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_163" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_164" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_165" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_166" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_167" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_168" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_169" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_170" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_171" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_172" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_173" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_174" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_175" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_176" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_177" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_178" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_capture_ring_chamfers_179" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_upper1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land36" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_upper2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land45" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land37" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land07" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_lower1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land17" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_lower0" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land39" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_upper7" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_upper0" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land46" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_lower0" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_upper6" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_upper6" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_upper7" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_lower4" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_upper4" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_lower6" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_upper1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_lower6" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_upper4" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_lower3" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land21" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_lower7" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_lower7" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land43" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land11" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land09" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_lower5" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_upper5" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_upper1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_upper7" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land08" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land15" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land30" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_upper6" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land29" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_lower5" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land12" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land26" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land31" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land03" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land00" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_2_upper0" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land23" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_lower0" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_lower4" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_lower6" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land33" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_1_upper0" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land20" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land10" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_lower3" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land19" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_guide_pin_1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_striker_3_upper4" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <geom type="mesh" mesh="col_hcs_land47" contype="1" conaffinity="2" group="3" density="0" friction="0.12 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      <site name="docking_interface" pos="0 0 0.642" size="0.004" group="5" rgba="1 0.8 0 1" />
+      <site name="pma_interface" pos="0 0 0" size="0.004" group="5" rgba="1 0.8 0 1" quat="0 0.7071068 0.7071068 0" />
+      <body name="hook_c_00" pos="0.633257 0.200221 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="0.608761 0 0 0.793354" />
+        <joint name="hook_c_00" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_00__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_00" pos="0 0 0">
+          <inertial pos="0.001962 -0.007321 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="0.706014 0.144778 -0.692127 0.03929" />
+          <joint name="hook_a_00" type="hinge" axis="-0.965926 -0.258819 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_00__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_00__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_00_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_00_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_00_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_01" pos="0.448306 0.490025 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="0.270598 0.270598 0.653281 0.653281" />
+        <joint name="hook_c_01" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_01__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_01" pos="0 0 0">
+          <inertial pos="0.005359 -0.005359 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="0.671788 0.318981 -0.631072 0.220682" />
+          <joint name="hook_a_01" type="hinge" axis="-0.707107 -0.707107 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_01__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_01__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_01_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_01_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_01_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_02" pos="0.143232 0.648527 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="0.991445 -0.000274 0.000036 -0.130527" />
+        <joint name="hook_c_02" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_02__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_02" pos="0 0 0">
+          <inertial pos="0.007321 -0.001962 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="-0.387034 -0.52701 -0.471445 0.591781" />
+          <joint name="hook_a_02" type="hinge" axis="-0.258819 -0.965926 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_02__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_02__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_02_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_02_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_02_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_03" pos="-0.200221 0.633257 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="-0.130527 0 0 0.991445" />
+        <joint name="hook_c_03" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_03__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_03" pos="0 0 0">
+          <inertial pos="0.007321 0.001962 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="0.52701 0.387034 0.591781 -0.471445" />
+          <joint name="hook_a_03" type="hinge" axis="0.258819 -0.965926 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_03__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_03__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_03_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_03_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_03_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_04" pos="-0.490025 0.448306 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="-0.270598 -0.270598 0.653282 0.653282" />
+        <joint name="hook_c_04" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_04__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_04" pos="0 0 0">
+          <inertial pos="0.005359 0.005359 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="0.671789 -0.31898 -0.631072 -0.220681" />
+          <joint name="hook_a_04" type="hinge" axis="0.707107 -0.707107 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_04__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_04__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_04_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_04_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_04_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_05" pos="-0.648527 0.143232 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="-0.608761 -0.000168 0.000219 0.793354" />
+        <joint name="hook_c_05" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_05__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_05" pos="0 0 0">
+          <inertial pos="0.001962 0.007321 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="0.706014 -0.144778 -0.692127 -0.03929" />
+          <joint name="hook_a_05" type="hinge" axis="0.965926 -0.258819 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_05__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_05__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_05_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_05_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_05_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_06" pos="-0.633257 -0.200221 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="0.608761 0 0 0.793354" />
+        <joint name="hook_c_06" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_06__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_06" pos="0 0 0">
+          <inertial pos="-0.001962 0.007321 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="-0.692127 -0.03929 0.706014 -0.144778" />
+          <joint name="hook_a_06" type="hinge" axis="0.965926 0.258819 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_06__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_06__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_06_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_06_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_06_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_07" pos="-0.448306 -0.490025 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="0.270598 0.270598 0.653281 0.653281" />
+        <joint name="hook_c_07" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_07__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_07" pos="0 0 0">
+          <inertial pos="-0.005359 0.005359 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="-0.631072 -0.220682 0.671788 -0.318981" />
+          <joint name="hook_a_07" type="hinge" axis="0.707107 0.707107 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_07__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_07__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_07_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_07_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_07_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_08" pos="-0.143232 -0.648527 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="0.991445 0.000274 -0.000036 -0.130527" />
+        <joint name="hook_c_08" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_08__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_08" pos="0 0 0">
+          <inertial pos="-0.007321 0.001962 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="0.471445 0.591781 0.387034 -0.52701" />
+          <joint name="hook_a_08" type="hinge" axis="0.258819 0.965926 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_08__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_08__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_08_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_08_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_08_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_09" pos="0.200221 -0.633257 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="-0.130527 0 0 0.991445" />
+        <joint name="hook_c_09" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_09__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_09" pos="0 0 0">
+          <inertial pos="-0.007321 -0.001962 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="0.591781 0.471445 0.52701 -0.387034" />
+          <joint name="hook_a_09" type="hinge" axis="-0.258819 0.965926 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_09__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_09__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_09_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_09_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_09_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_10" pos="0.490025 -0.448306 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="-0.270598 -0.270598 0.653282 0.653282" />
+        <joint name="hook_c_10" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_10__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_10" pos="0 0 0">
+          <inertial pos="-0.005359 -0.005359 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="-0.631072 0.220681 0.671789 0.31898" />
+          <joint name="hook_a_10" type="hinge" axis="-0.707107 0.707107 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_10__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_10__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_10_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_10_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_10_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_c_11" pos="0.648527 -0.143232 0.6168">
+        <inertial pos="0 0 -0.012" mass="0.4" diaginertia="0.00006 0.000113 0.000113" quat="-0.000219 0.793354 0.608761 -0.000168" />
+        <joint name="hook_c_11" type="slide" axis="0 0 -1" armature="1000" range="0 0.008" />
+        <geom type="mesh" mesh="hook_c_11__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <body name="hook_a_11" pos="0 0 0">
+          <inertial pos="-0.001962 -0.007321 0.01691" mass="0.5" diaginertia="0.000064 0.000112 0.000127" quat="-0.692127 0.03929 0.706014 0.144778" />
+          <joint name="hook_a_11" type="hinge" axis="-0.965926 0.258819 0" armature="0.5" range="0 0.541052" />
+          <geom type="mesh" mesh="hook_a_11__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="hook_a_11__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+          <geom type="mesh" mesh="col_hook_a_11_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_11_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+          <geom type="mesh" mesh="col_hook_a_11_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        </body>
+      </body>
+      <body name="hook_p_00" pos="0.653445 0.124879 0.6188">
+        <inertial pos="0.001718 -0.006412 0.015099" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="0.705511 0.228223 -0.669286 -0.047173" />
+        <joint name="hook_p_00" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_00__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_00__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_00_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_00_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_00_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_00_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_00_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_00_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_00_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_01" pos="0.50346 0.434871 0.6188">
+        <inertial pos="0.004693 -0.004693 0.015093" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="0.587402 -0.137005 0.693707 0.393648" />
+        <joint name="hook_p_01" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_01__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_01__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_01_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_01_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_01_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_01_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_01_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_01_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_01_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_02" pos="0.218574 0.628339 0.6188">
+        <inertial pos="0.006412 -0.001718 0.015099" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="-0.532228 0.634635 0.311879 0.465515" />
+        <joint name="hook_p_02" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_02__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_02__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_02_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_02_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_02_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_02_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_02_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_02_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_02_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_03" pos="-0.124879 0.653445 0.6188">
+        <inertial pos="0.006412 0.001718 0.015099" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="0.634635 -0.532228 -0.465515 -0.311879" />
+        <joint name="hook_p_03" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_03__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_03__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_03_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_03_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_03_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_03_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_03_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_03_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_03_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_04" pos="-0.434871 0.50346 0.6188">
+        <inertial pos="0.004693 0.004693 0.015093" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="0.137005 -0.587402 0.393648 0.693707" />
+        <joint name="hook_p_04" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_04__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_04__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_04_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_04_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_04_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_04_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_04_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_04_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_04_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_05" pos="-0.628339 0.218574 0.6188">
+        <inertial pos="0.001718 0.006412 0.015099" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="0.228223 0.705511 0.047174 0.669286" />
+        <joint name="hook_p_05" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_05__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_05__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_05_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_05_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_05_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_05_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_05_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_05_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_05_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_06" pos="-0.653445 -0.124879 0.6188">
+        <inertial pos="-0.001718 0.006412 0.015099" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="0.228223 0.705511 -0.047173 -0.669286" />
+        <joint name="hook_p_06" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_06__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_06__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_06_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_06_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_06_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_06_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_06_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_06_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_06_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_07" pos="-0.50346 -0.434871 0.6188">
+        <inertial pos="-0.004693 0.004693 0.015093" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="-0.137005 0.587402 0.393648 0.693707" />
+        <joint name="hook_p_07" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_07__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_07__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_07_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_07_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_07_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_07_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_07_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_07_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_07_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_08" pos="-0.218574 -0.628339 0.6188">
+        <inertial pos="-0.006412 0.001718 0.015099" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="-0.311879 0.465515 0.532228 0.634635" />
+        <joint name="hook_p_08" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_08__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_08__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_08_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_08_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_08_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_08_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_08_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_08_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_08_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_09" pos="0.124879 -0.653445 0.6188">
+        <inertial pos="-0.006412 -0.001718 0.015099" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="-0.465515 0.311879 0.634635 0.532228" />
+        <joint name="hook_p_09" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_09__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_09__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_09_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_09_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_09_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_09_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_09_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_09_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_09_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_10" pos="0.434871 -0.50346 0.6188">
+        <inertial pos="-0.004693 -0.004693 0.015093" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="-0.587402 0.137005 0.693707 0.393648" />
+        <joint name="hook_p_10" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_10__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_10__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_10_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_10_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_10_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_10_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_10_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_10_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_10_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="hook_p_11" pos="0.628339 -0.218574 0.6188">
+        <inertial pos="-0.001718 -0.006412 0.015099" mass="0.4" diaginertia="0.000046 0.000096 0.000117" quat="0.705511 0.228223 0.669286 0.047174" />
+        <joint name="hook_p_11" type="slide" axis="0 0 1" armature="1500" range="0 0.004" stiffness="80000000" springref="-0.0001" damping="20000" />
+        <geom type="mesh" mesh="hook_p_11__titanium_dfl" material="titanium_dfl" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="hook_p_11__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_hook_p_11_00" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_11_01" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_11_02" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_11_03" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_11_04" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_11_05" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+        <geom type="mesh" mesh="col_hook_p_11_06" contype="1" conaffinity="2" group="3" density="0" friction="0.15 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="sensor_1" pos="-0.607026 0.322762 0.645">
+        <inertial pos="0 0 -0.032476" mass="0.05" diaginertia="0.000001 0.000021 0.000021" quat="-0.5 0.5 0.5 0.5" />
+        <joint name="sensor_1" type="slide" axis="0 0 -1" armature="0.05" range="0 0.004" stiffness="2000" springref="-0.002" damping="5" />
+        <geom type="mesh" mesh="sensor_1__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_sensor_1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="sensor_2" pos="0.023993 -0.687081 0.645">
+        <inertial pos="0 0 -0.032476" mass="0.05" diaginertia="0.000001 0.000021 0.000021" quat="0 0.707107 0 0.707107" />
+        <joint name="sensor_2" type="slide" axis="0 0 -1" armature="0.05" range="0 0.004" stiffness="2000" springref="-0.002" damping="5" />
+        <geom type="mesh" mesh="sensor_2__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_sensor_2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="sensor_3" pos="0.583033 0.36432 0.645">
+        <inertial pos="0 0 -0.032476" mass="0.05" diaginertia="0.000001 0.000021 0.000021" quat="-0.5 0.5 0.5 0.5" />
+        <joint name="sensor_3" type="slide" axis="0 0 -1" armature="0.05" range="0 0.004" stiffness="2000" springref="-0.002" damping="5" />
+        <geom type="mesh" mesh="sensor_3__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_sensor_3" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="separator_1" pos="0.328047 0.604187 0.6405">
+        <inertial pos="0 0 -0.032476" mass="0.4" diaginertia="0.000032 0.000176 0.000176" quat="0.5 0.5 0.5 -0.5" />
+        <joint name="separator_1" type="slide" axis="0 0 1" armature="1" range="0 0.0329" stiffness="700" springref="1.017" damping="400" />
+        <geom type="mesh" mesh="separator_1__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_separator_1" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="separator_2" pos="-0.687264 -0.017997 0.6405">
+        <inertial pos="0 0 -0.032476" mass="0.4" diaginertia="0.000032 0.000176 0.000176" quat="-0.5 0.5 0.5 0.5" />
+        <joint name="separator_2" type="slide" axis="0 0 1" armature="1" range="0 0.0329" stiffness="700" springref="1.017" damping="400" />
+        <geom type="mesh" mesh="separator_2__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_separator_2" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+      <body name="separator_3" pos="0.359218 -0.58619 0.6405">
+        <inertial pos="0 0 -0.032476" mass="0.4" diaginertia="0.000032 0.000176 0.000176" quat="0.5 0.5 0.5 -0.5" />
+        <joint name="separator_3" type="slide" axis="0 0 1" armature="1" range="0 0.0329" stiffness="700" springref="1.017" damping="400" />
+        <geom type="mesh" mesh="separator_3__steel" material="steel" contype="0" conaffinity="0" group="1" density="0" />
+        <geom type="mesh" mesh="col_separator_3" contype="1" conaffinity="2" group="3" density="0" friction="0.16 0.005 0.0001" rgba="0.9 0.3 0.2 0.4" solref="0.002 1" solimp="0.95 0.99 0.0005" />
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="hook_c_00_servo" joint="hook_c_00" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_00_servo" joint="hook_a_00" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_01_servo" joint="hook_c_01" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_01_servo" joint="hook_a_01" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_02_servo" joint="hook_c_02" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_02_servo" joint="hook_a_02" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_03_servo" joint="hook_c_03" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_03_servo" joint="hook_a_03" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_04_servo" joint="hook_c_04" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_04_servo" joint="hook_a_04" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_05_servo" joint="hook_c_05" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_05_servo" joint="hook_a_05" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_06_servo" joint="hook_c_06" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_06_servo" joint="hook_a_06" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_07_servo" joint="hook_c_07" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_07_servo" joint="hook_a_07" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_08_servo" joint="hook_c_08" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_08_servo" joint="hook_a_08" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_09_servo" joint="hook_c_09" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_09_servo" joint="hook_a_09" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_10_servo" joint="hook_c_10" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_10_servo" joint="hook_a_10" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="hook_c_11_servo" joint="hook_c_11" kp="50000000" kv="40000" forcerange="-40000 40000" forcelimited="true" ctrlrange="0 0.008" ctrllimited="true" />
+    <position name="hook_a_11_servo" joint="hook_a_11" kp="20000" kv="100" forcerange="-600 600" forcelimited="true" ctrlrange="0 0.541052" ctrllimited="true" />
+    <position name="separator_1_servo" joint="separator_1" kp="200000" kv="400" forcerange="-2000 2000" forcelimited="true" ctrlrange="0 0.0329" ctrllimited="true" />
+    <position name="separator_2_servo" joint="separator_2" kp="200000" kv="400" forcerange="-2000 2000" forcelimited="true" ctrlrange="0 0.0329" ctrllimited="true" />
+    <position name="separator_3_servo" joint="separator_3" kp="200000" kv="400" forcerange="-2000 2000" forcelimited="true" ctrlrange="0 0.0329" ctrllimited="true" />
+  </actuator>
+</mujoco>

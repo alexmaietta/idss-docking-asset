@@ -1,0 +1,5 @@
+newmtl hard_anodize
+Kd 0.1708 0.1651 0.1518
+Ks 0.5 0.5 0.5
+Ns 103.9
+map_Kd ../textures/hard_anodize.png

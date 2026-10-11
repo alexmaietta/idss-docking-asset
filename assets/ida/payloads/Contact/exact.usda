@@ -1,0 +1,167 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "ida"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "ida"
+{
+    over "Geometry"
+    {
+        over "ida_base"
+        {
+            over "separator_2"
+            {
+                over "colliders"
+                {
+                    over "col_separator_2_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "separator_3"
+            {
+                over "colliders"
+                {
+                    over "col_separator_3_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "sensor_1"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_1_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "separator_1"
+            {
+                over "colliders"
+                {
+                    over "col_separator_1_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "sensor_2"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_2_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "colliders"
+            {
+                over "col_petal_2_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_1_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_2_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_capture_ring_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_3_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_1_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_2_sdf" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_1_sdf" (
+                    active = false
+                )
+                {
+                }
+            }
+
+            over "sensor_3"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_3_sdf" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+        }
+    }
+}
+

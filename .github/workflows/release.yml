@@ -1,0 +1,50 @@
+# Publish a GitHub release when a version tag is pushed: zips the committed assets/ (USD, URDF, MJCF, Blender) for the IDA and NDS
+# for that tag. Build and package locally first (./pipeline.sh update), commit assets/, then tag vX.Y.Z.
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Check the tag matches VERSION and the packaged USD
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          test "$(cat VERSION)" = "$v" || { echo "::error::VERSION is $(cat VERSION), tag is $GITHUB_REF_NAME"; exit 1; }
+          grep -q "asset_version = \"$v\"" assets/nds/nds.usda \
+            || { echo "::error::assets/nds/nds.usda is not stamped $v: run ./pipeline.sh update and commit assets/"; exit 1; }
+
+      # LFS downloads count against the repository's LFS bandwidth quota: cache the objects between releases
+      - name: List LFS objects
+        run: git lfs ls-files --long | cut -d' ' -f1 | sort > .lfs-ids
+      - uses: actions/cache@v4
+        with:
+          path: .git/lfs
+          key: lfs-${{ hashFiles('.lfs-ids') }}
+          restore-keys: lfs-
+      - name: Pull LFS assets
+        run: git lfs pull
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build release files
+        run: python scripts/make_release.py --out dist
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          d="dist/$GITHUB_REF_NAME"
+          gh release create "$GITHUB_REF_NAME" "$d"/*.zip "$d/SHA256SUMS" \
+            --title "$GITHUB_REF_NAME" --notes-file "$d/RELEASE_NOTES.md" --verify-tag

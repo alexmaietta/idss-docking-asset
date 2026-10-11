@@ -1,0 +1,719 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "ida"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "ida"
+{
+    over "Geometry"
+    {
+        over "ida_base"
+        {
+            over "separator_2"
+            {
+                over "colliders"
+                {
+                    over "col_separator_2" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "separator_3"
+            {
+                over "colliders"
+                {
+                    over "col_separator_3" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "sensor_1"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_1" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "separator_1"
+            {
+                over "colliders"
+                {
+                    over "col_separator_1" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "sensor_2"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_2" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "colliders"
+            {
+                over "col_petal_2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land04" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land28" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land27" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land02" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land41" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land06" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land13" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_receptacle_2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land44" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land24" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land34" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land05" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land16" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land35" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land25" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land14" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land38" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land42" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_petal_1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land18" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land32" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land01" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land40" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land22" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_capture_ring_chamfers" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land36" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper2" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land45" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land37" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land07" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land17" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land39" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land46" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_lower6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land21" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land43" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land11" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land09" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_lower5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper7" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land08" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land15" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land30" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land29" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower5" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land12" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land26" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land31" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land03" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land00" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_2_upper0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land23" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower6" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land33" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_1_upper0" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land20" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land10" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_lower3" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land19" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_guide_pin_1" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_striker_3_upper4" (
+                    active = false
+                )
+                {
+                }
+
+                over "col_hcs_land47" (
+                    active = false
+                )
+                {
+                }
+            }
+
+            over "sensor_3"
+            {
+                over "colliders"
+                {
+                    over "col_sensor_3" (
+                        active = false
+                    )
+                    {
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,78 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Scope "PhysicsMaterials"
+{
+    def Material "anodize" (
+        prepend apiSchemas = ["PhysicsMaterialAPI", "NewtonMaterialAPI"]
+    )
+    {
+        float newton:contactDamping = 20000
+        float newton:contactStiffness = 20000000
+        float newton:rollingFriction = 0.0001
+        float newton:torsionalFriction = 0.002
+        float physics:dynamicFriction = 0.12
+        float physics:restitution = 0
+        float physics:staticFriction = 0.15
+    }
+
+    def Material "ptfe" (
+        prepend apiSchemas = ["PhysicsMaterialAPI", "NewtonMaterialAPI"]
+    )
+    {
+        float newton:contactDamping = 20000
+        float newton:contactStiffness = 20000000
+        float newton:rollingFriction = 0.0001
+        float newton:torsionalFriction = 0.002
+        float physics:dynamicFriction = 0.08
+        float physics:restitution = 0
+        float physics:staticFriction = 0.1
+    }
+
+    def Material "steel" (
+        prepend apiSchemas = ["PhysicsMaterialAPI", "NewtonMaterialAPI"]
+    )
+    {
+        float newton:contactDamping = 20000
+        float newton:contactStiffness = 20000000
+        float newton:rollingFriction = 0.0001
+        float newton:torsionalFriction = 0.002
+        float physics:dynamicFriction = 0.16
+        float physics:restitution = 0
+        float physics:staticFriction = 0.2
+    }
+
+    def Material "titanium" (
+        prepend apiSchemas = ["PhysicsMaterialAPI", "NewtonMaterialAPI"]
+    )
+    {
+        float newton:contactDamping = 20000
+        float newton:contactStiffness = 20000000
+        float newton:rollingFriction = 0.0001
+        float newton:torsionalFriction = 0.002
+        float physics:dynamicFriction = 0.15
+        float physics:restitution = 0
+        float physics:staticFriction = 0.18
+    }
+
+    def Material "seal" (
+        prepend apiSchemas = ["PhysicsMaterialAPI", "NewtonMaterialAPI"]
+    )
+    {
+        float newton:contactDamping = 20000
+        float newton:contactStiffness = 20000000
+        float newton:rollingFriction = 0.0001
+        float newton:torsionalFriction = 0.002
+        float physics:dynamicFriction = 0.7
+        float physics:restitution = 0
+        float physics:staticFriction = 0.8
+    }
+}
+

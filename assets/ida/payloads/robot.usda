@@ -1,0 +1,675 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "ida"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "ida" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    string isaac:description = "International Docking Adapter (passive IDSS)"
+    token isaac:license = "Other"
+    string isaac:namespace = "ida"
+    prepend rel isaac:physics:robotJoints = [
+        </ida/Physics/hook_c_00>,
+        </ida/Physics/hook_a_00>,
+        </ida/Physics/hook_c_01>,
+        </ida/Physics/hook_a_01>,
+        </ida/Physics/hook_c_02>,
+        </ida/Physics/hook_a_02>,
+        </ida/Physics/hook_c_03>,
+        </ida/Physics/hook_a_03>,
+        </ida/Physics/hook_c_04>,
+        </ida/Physics/hook_a_04>,
+        </ida/Physics/hook_c_05>,
+        </ida/Physics/hook_a_05>,
+        </ida/Physics/hook_c_06>,
+        </ida/Physics/hook_a_06>,
+        </ida/Physics/hook_c_07>,
+        </ida/Physics/hook_a_07>,
+        </ida/Physics/hook_c_08>,
+        </ida/Physics/hook_a_08>,
+        </ida/Physics/hook_c_09>,
+        </ida/Physics/hook_a_09>,
+        </ida/Physics/hook_c_10>,
+        </ida/Physics/hook_a_10>,
+        </ida/Physics/hook_c_11>,
+        </ida/Physics/hook_a_11>,
+        </ida/Physics/hook_p_00>,
+        </ida/Physics/hook_p_01>,
+        </ida/Physics/hook_p_02>,
+        </ida/Physics/hook_p_03>,
+        </ida/Physics/hook_p_04>,
+        </ida/Physics/hook_p_05>,
+        </ida/Physics/hook_p_06>,
+        </ida/Physics/hook_p_07>,
+        </ida/Physics/hook_p_08>,
+        </ida/Physics/hook_p_09>,
+        </ida/Physics/hook_p_10>,
+        </ida/Physics/hook_p_11>,
+        </ida/Physics/sensor_1>,
+        </ida/Physics/sensor_2>,
+        </ida/Physics/sensor_3>,
+        </ida/Physics/separator_1>,
+        </ida/Physics/separator_2>,
+        </ida/Physics/separator_3>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </ida/Geometry/ida_base>,
+        </ida/Geometry/ida_base/docking_interface>,
+        </ida/Geometry/ida_base/pma_interface>,
+        </ida/Geometry/ida_base/hook_c_00>,
+        </ida/Geometry/ida_base/hook_c_00/hook_a_00>,
+        </ida/Geometry/ida_base/hook_c_01>,
+        </ida/Geometry/ida_base/hook_c_01/hook_a_01>,
+        </ida/Geometry/ida_base/hook_c_02>,
+        </ida/Geometry/ida_base/hook_c_02/hook_a_02>,
+        </ida/Geometry/ida_base/hook_c_03>,
+        </ida/Geometry/ida_base/hook_c_03/hook_a_03>,
+        </ida/Geometry/ida_base/hook_c_04>,
+        </ida/Geometry/ida_base/hook_c_04/hook_a_04>,
+        </ida/Geometry/ida_base/hook_c_05>,
+        </ida/Geometry/ida_base/hook_c_05/hook_a_05>,
+        </ida/Geometry/ida_base/hook_c_06>,
+        </ida/Geometry/ida_base/hook_c_06/hook_a_06>,
+        </ida/Geometry/ida_base/hook_c_07>,
+        </ida/Geometry/ida_base/hook_c_07/hook_a_07>,
+        </ida/Geometry/ida_base/hook_c_08>,
+        </ida/Geometry/ida_base/hook_c_08/hook_a_08>,
+        </ida/Geometry/ida_base/hook_c_09>,
+        </ida/Geometry/ida_base/hook_c_09/hook_a_09>,
+        </ida/Geometry/ida_base/hook_c_10>,
+        </ida/Geometry/ida_base/hook_c_10/hook_a_10>,
+        </ida/Geometry/ida_base/hook_c_11>,
+        </ida/Geometry/ida_base/hook_c_11/hook_a_11>,
+        </ida/Geometry/ida_base/hook_p_00>,
+        </ida/Geometry/ida_base/hook_p_01>,
+        </ida/Geometry/ida_base/hook_p_02>,
+        </ida/Geometry/ida_base/hook_p_03>,
+        </ida/Geometry/ida_base/hook_p_04>,
+        </ida/Geometry/ida_base/hook_p_05>,
+        </ida/Geometry/ida_base/hook_p_06>,
+        </ida/Geometry/ida_base/hook_p_07>,
+        </ida/Geometry/ida_base/hook_p_08>,
+        </ida/Geometry/ida_base/hook_p_09>,
+        </ida/Geometry/ida_base/hook_p_10>,
+        </ida/Geometry/ida_base/hook_p_11>,
+        </ida/Geometry/ida_base/sensor_1>,
+        </ida/Geometry/ida_base/sensor_2>,
+        </ida/Geometry/ida_base/sensor_3>,
+        </ida/Geometry/ida_base/separator_1>,
+        </ida/Geometry/ida_base/separator_2>,
+        </ida/Geometry/ida_base/separator_3>,
+    ]
+    token isaac:robotType = "Manipulator"
+    string isaac:source = "idss pipeline (scripts/package.py)"
+    string isaac:version = "0.1.0"
+
+    over "Geometry"
+    {
+        over "ida_base" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "hook_c_00" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_00" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_01" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_01" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_02" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_02" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_03" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_03" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_04" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_04" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_05" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_05" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_06" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_06" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_07" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_07" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_08" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_08" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_09" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_09" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_10" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_10" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_c_11" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "hook_a_11" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "hook_p_00" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_01" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_02" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_03" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_04" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_05" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_06" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_07" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_08" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_09" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_10" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "hook_p_11" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "sensor_1" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "sensor_2" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "sensor_3" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "separator_1" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "separator_2" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "separator_3" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "docking_interface" (
+                prepend apiSchemas = ["IsaacSiteAPI", "NewtonSiteAPI"]
+            )
+            {
+                string isaac:Description = "IDSS HCS mating plane centre (VV-to-IDA plane); +Z out of the port, +X line of symmetry"
+                uniform token isaac:forwardAxis = "Z"
+            }
+
+            over "pma_interface" (
+                prepend apiSchemas = ["IsaacSiteAPI", "NewtonSiteAPI"]
+            )
+            {
+                string isaac:Description = "PMA-to-IDA interface plane (MAPAS), +Z towards the PMA"
+                uniform token isaac:forwardAxis = "Z"
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "hook_c_00" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_00" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_01" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_01" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_02" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_02" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_03" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_03" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_04" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_04" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_05" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_05" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_06" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_06" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_07" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_07" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_08" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_08" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_09" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_09" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_10" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_10" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_c_11" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_a_11" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "hook_p_00" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_01" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_02" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_03" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_04" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_05" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_06" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_07" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_08" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_09" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_10" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "hook_p_11" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "sensor_1" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "sensor_2" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "sensor_3" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [0]
+        }
+
+        over "separator_1" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "separator_2" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+
+        over "separator_3" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+            bool[] isaac:actuator = [1]
+        }
+    }
+}
+

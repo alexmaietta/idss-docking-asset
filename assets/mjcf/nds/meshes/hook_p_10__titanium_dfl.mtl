@@ -1,0 +1,5 @@
+newmtl titanium_dfl
+Kd 0.2771 0.2776 0.2824
+Ks 0.5 0.5 0.5
+Ns 75.9
+map_Kd ../textures/titanium_dfl.png

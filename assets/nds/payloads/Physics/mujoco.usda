@@ -1,0 +1,857 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "idss pipeline (scripts/package.py)"
+    }
+    defaultPrim = "nds"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "nds"
+{
+    over "Physics"
+    {
+        over "hook_c_00" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_00_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_00>
+        }
+
+        over "hook_a_00" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_00_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_00>
+        }
+
+        over "hook_c_01" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_01_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_01>
+        }
+
+        over "hook_a_01" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_01_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_01>
+        }
+
+        over "hook_c_02" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_02_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_02>
+        }
+
+        over "hook_a_02" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_02_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_02>
+        }
+
+        over "hook_c_03" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_03_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_03>
+        }
+
+        over "hook_a_03" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_03_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_03>
+        }
+
+        over "hook_c_04" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_04_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_04>
+        }
+
+        over "hook_a_04" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_04_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_04>
+        }
+
+        over "hook_c_05" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_05_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_05>
+        }
+
+        over "hook_a_05" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_05_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_05>
+        }
+
+        over "hook_c_06" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_06_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_06>
+        }
+
+        over "hook_a_06" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_06_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_06>
+        }
+
+        over "hook_c_07" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_07_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_07>
+        }
+
+        over "hook_a_07" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_07_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_07>
+        }
+
+        over "hook_c_08" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_08_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_08>
+        }
+
+        over "hook_a_08" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_08_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_08>
+        }
+
+        over "hook_c_09" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_09_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_09>
+        }
+
+        over "hook_a_09" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_09_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_09>
+        }
+
+        over "hook_c_10" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_10_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_10>
+        }
+
+        over "hook_a_10" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_10_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_10>
+        }
+
+        over "hook_c_11" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1000
+        }
+
+        def MjcActuator "hook_c_11_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -50000000, -40000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 40000
+            uniform double mjc:forceRange:min = -40000
+            uniform double[] mjc:gainPrm = [50000000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_c_11>
+        }
+
+        over "hook_a_11" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.5
+        }
+
+        def MjcActuator "hook_a_11_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -100, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 600
+            uniform double mjc:forceRange:min = -600
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/hook_a_11>
+        }
+
+        over "hook_p_00" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_01" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_02" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_03" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_04" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_05" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_06" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_07" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_08" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_09" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_10" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "hook_p_11" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1500
+        }
+
+        over "leg1_ujoint" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg1_body" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg1_rod" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 2
+        }
+
+        def MjcActuator "leg1_rod_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -4000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 4000
+            uniform double mjc:forceRange:min = -4000
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/leg1_rod>
+        }
+
+        over "latch_1" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.05
+        }
+
+        over "latch_2" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.05
+        }
+
+        over "latch_3" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.05
+        }
+
+        over "leg2_ujoint" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg2_body" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg2_rod" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 2
+        }
+
+        def MjcActuator "leg2_rod_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -4000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 4000
+            uniform double mjc:forceRange:min = -4000
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/leg2_rod>
+        }
+
+        over "leg3_ujoint" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg3_body" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg3_rod" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 2
+        }
+
+        def MjcActuator "leg3_rod_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -4000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 4000
+            uniform double mjc:forceRange:min = -4000
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/leg3_rod>
+        }
+
+        over "leg4_ujoint" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg4_body" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg4_rod" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 2
+        }
+
+        def MjcActuator "leg4_rod_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -4000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 4000
+            uniform double mjc:forceRange:min = -4000
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/leg4_rod>
+        }
+
+        over "leg5_ujoint" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg5_body" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg5_rod" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 2
+        }
+
+        def MjcActuator "leg5_rod_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -4000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 4000
+            uniform double mjc:forceRange:min = -4000
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/leg5_rod>
+        }
+
+        over "leg6_ujoint" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg6_body" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:angular", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.01
+        }
+
+        over "leg6_rod" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 2
+        }
+
+        def MjcActuator "leg6_rod_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -20000, -4000, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 4000
+            uniform double mjc:forceRange:min = -4000
+            uniform double[] mjc:gainPrm = [20000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/leg6_rod>
+        }
+
+        over "sensor_1" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.05
+        }
+
+        over "sensor_2" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.05
+        }
+
+        over "sensor_3" (
+            prepend apiSchemas = ["NewtonJointAPI", "PhysicsJointStateAPI:linear", "MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 0.05
+        }
+
+        over "separator_1" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1
+        }
+
+        def MjcActuator "separator_1_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -200000, -400, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 2000
+            uniform double mjc:forceRange:min = -2000
+            uniform double[] mjc:gainPrm = [200000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/separator_1>
+        }
+
+        over "separator_2" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1
+        }
+
+        def MjcActuator "separator_2_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -200000, -400, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 2000
+            uniform double mjc:forceRange:min = -2000
+            uniform double[] mjc:gainPrm = [200000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/separator_2>
+        }
+
+        over "separator_3" (
+            delete apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+            uniform double mjc:armature = 1
+        }
+
+        def MjcActuator "separator_3_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, -200000, -400, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform token mjc:forceLimited = "true"
+            uniform double mjc:forceRange:max = 2000
+            uniform double mjc:forceRange:min = -2000
+            uniform double[] mjc:gainPrm = [200000, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            rel mjc:target = </nds/Physics/separator_3>
+        }
+    }
+}
+

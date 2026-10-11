@@ -1,0 +1,4 @@
+newmtl target_black
+Kd 0.1121 0.1121 0.1177
+Ks 0.5 0.5 0.5
+Ns 60.0
